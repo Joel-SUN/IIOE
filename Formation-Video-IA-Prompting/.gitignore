@@ -1,0 +1,40 @@
+# 系统 / 编辑器垃圾
+.DS_Store
+Thumbs.db
+desktop.ini
+*.swp
+*~
+.vscode/
+.idea/
+
+# OneDrive 冲突副本 —— 两台机器同时改会产生，绝不该进版本库
+*冲突*
+*conflict*
+*(*)-*.docx
+*(*)-*.md
+
+# 凭据 —— 任何情况下都不提交
+*.env
+app.env
+*_Account.md
+*credential*
+*secret*
+*_token*
+
+# 大文件：课堂录屏与演示视频不进版本库，另行存放
+assets/videos/
+*.mp4
+*.mov
+*.webm
+
+# 构建产物
+_build/
+dist/
+node_modules/
+__pycache__/
+*.pyc
+
+# 临时文件
+tmp/
+*.tmp
+*.bak
