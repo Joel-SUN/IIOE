@@ -1,0 +1,36 @@
+# ---------------------------------------------------------------------------
+# Échantillons vocaux et audio rendu — DONNÉES BIOMÉTRIQUES.
+# Les clones vocaux de l'intervenant et tout audio de cours rendu ne doivent
+# jamais être téléversés sur un dépôt. Lecture locale et API Bailian uniquement.
+# ---------------------------------------------------------------------------
+**/docs/tools/tts/samples/
+**/docs/tools/tts/runs/
+**/docs/tools/tts/identify/
+
+*.wav
+*.m4a
+*.mp3
+*.aac
+*.flac
+*.ogg
+
+# Secrets — la CLI les lit hors dépôt, jamais dedans.
+.env
+.env.*
+*.pem
+*.p12
+api-key*
+apikey*
+
+# ---------------------------------------------------------------------------
+# Bureautique et système
+# ---------------------------------------------------------------------------
+.qoder-office-pptx-locks/
+~$*
+*.tmp
+Thumbs.db
+Desktop.ini
+.DS_Store
+
+# Copie de travail du générateur de diaporama ; seul le livrable est versionné.
+**/build/pptx-work/

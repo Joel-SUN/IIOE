@@ -42,6 +42,8 @@ The method taught here is deliberately **tool-independent**. Learners practise c
 
 Slide text is in English (Global English: short sentences, subject–verb–object, every acronym defined at first use). The final column is the Chinese presenter note, matching the official IIOE recording template convention (英文页面 + 中文备注).
 
+**Delivered French deck.** The recorded French version departs from that convention at the client's confirmed request: [`build/UNESCO_AI_Image_Video_Course_FR.pptx`](../build/UNESCO_AI_Image_Video_Course_FR.pptx) — 18 pages built on the official IIOE recording template — carries French slide text, with the verbatim French narration from [`scripts/UNESCO_AI_Image_Video_Script_FR.md`](scripts/UNESCO_AI_Image_Video_Script_FR.md) written into each page's speaker notes. Prompt examples stay in English in every language version.
+
 | # | Dur. | Slide title (EN) | Content and speaker cue (EN) | 中文讲授备注 |
 |---|---:|---|---|---|
 | 1 | 1 min | Can Your Business Make Its Own Images and Videos? | Central question. Poll the room: "How many of you paid an outside agency for marketing visuals in the past year? How many waited more than a week for a revision?" | 开场提问，先举手调查。目的是让学员说出自己的痛点，而不是我们替他们说。 |
