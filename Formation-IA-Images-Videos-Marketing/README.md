@@ -20,7 +20,8 @@ et recentré sur les équipes commerciales plutôt que sur des dirigeants de PME
 | [`docs/scripts/UNESCO_AI_Image_Video_Script_FR.md`](docs/scripts/UNESCO_AI_Image_Video_Script_FR.md) | Script de conférence français, ≈ 6 300 mots, aligné page à page sur l'anglais | 3 |
 | [`docs/scripts/UNESCO_AI_Image_Video_Script_ZH.md`](docs/scripts/UNESCO_AI_Image_Video_Script_ZH.md) | Script de conférence chinois, ≈ 10 200 caractères, aligné page à page sur l'anglais | 3 |
 | [`docs/UNESCO_AI_Image_Video_Course_Page.html`](docs/UNESCO_AI_Image_Video_Course_Page.html) | Page de cours trilingue (EN / FR / 中文), fichier unique sans dépendance externe, imprimable en A4 | support apprenant |
-| [`build/UNESCO_AI_Image_Video_Course_FR.pptx`](build/UNESCO_AI_Image_Video_Course_FR.pptx) | **Diaporama livré** — 18 pages françaises bâties sur le modèle officiel d'enregistrement IIOE, narration verbatim dans les notes de chaque page | 3 · PPT研发 |
+| [`build/UNESCO_AI_Image_Video_Course_EN.pptx`](build/UNESCO_AI_Image_Video_Course_EN.pptx) | **Diaporama livré (anglais)** — 18 pages anglaises bâties sur le modèle officiel d'enregistrement IIOE, narration anglaise verbatim dans les notes de chaque page | 3 · PPT研发 |
+| [`build/UNESCO_AI_Image_Video_Course_FR.pptx`](build/UNESCO_AI_Image_Video_Course_FR.pptx) | **Diaporama livré (français)** — 18 pages françaises bâties sur le modèle officiel d'enregistrement IIOE, narration verbatim dans les notes de chaque page | 3 · PPT研发 |
 
 Les trois scripts partagent une même table de minutages — 18 diapositives, 45 minutes
 exactement, 00:00 → 45:00 — et une même carte de démonstration en six temps, sur les
@@ -37,17 +38,21 @@ diapositives 4, 5, 9, 14, 15 et 16.
    du document de conception.
 
 **Langue des pages projetées.** Le document de conception et les trois scripts suivent la
-convention IIOE « pages anglaises + notes chinoises ». Le diaporama français livré s'en
-écarte, à la demande confirmée du client : ses 18 pages sont en français et la narration
-française verbatim est écrite dans les notes de chaque page. La convention 1 ci-dessus
-continue de s'y appliquer — les exemples de prompts affichés restent en anglais, et
-l'intervenant l'annonce dès la diapositive 1.
+convention IIOE « pages anglaises + notes chinoises ». Les deux diaporamas livrés s'en écartent
+sur un seul point : **la langue des notes**. Le diaporama anglais conserve les pages anglaises de
+la convention et place la narration anglaise dans les notes ; le diaporama français comporte des
+pages françaises et la narration française dans les notes, à la demande confirmée du client. Les
+deux sont alignés page à page — même ordre, mêmes numéros de diapositive — et le texte des
+marqueurs **DO** / **FAITES** / **做**, jamais prononcé, est replié dans une ligne finale
+`AT RECORDING ·` de chaque note. La convention 1 ci-dessus continue de s'appliquer aux deux :
+les exemples de prompts affichés restent en anglais, et l'intervenant l'annonce dès la
+diapositive 1.
 
 ## État
 
-Conception v0.1, scripts v0.1, diaporama français v0.1 (18 pages, conforme au contrôle
-géométrique du modèle, relecture visuelle dans PowerPoint encore à faire). Les énoncés
-réglementaires (diapositive 16, article 50 du règlement européen sur l'IA) **exigent une
+Conception v0.1, scripts v0.1, diaporamas anglais et français v0.1 (18 pages chacun, conformes
+au contrôle géométrique du modèle, relecture visuelle dans PowerPoint encore à faire). Les
+énoncés réglementaires (diapositive 16, article 50 du règlement européen sur l'IA) **exigent une
 relecture juridique avant enregistrement**. Aucun nom de fournisseur, de produit ou de prix
 n'apparaît dans le cours ; la sélection d'outil est enseignée comme cinq critères, dont le
 premier est la licence d'utilisation commerciale.

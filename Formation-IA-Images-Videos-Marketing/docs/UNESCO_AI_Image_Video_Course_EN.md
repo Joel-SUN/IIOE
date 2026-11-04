@@ -42,7 +42,12 @@ The method taught here is deliberately **tool-independent**. Learners practise c
 
 Slide text is in English (Global English: short sentences, subject–verb–object, every acronym defined at first use). The final column is the Chinese presenter note, matching the official IIOE recording template convention (英文页面 + 中文备注).
 
-**Delivered French deck.** The recorded French version departs from that convention at the client's confirmed request: [`build/UNESCO_AI_Image_Video_Course_FR.pptx`](../build/UNESCO_AI_Image_Video_Course_FR.pptx) — 18 pages built on the official IIOE recording template — carries French slide text, with the verbatim French narration from [`scripts/UNESCO_AI_Image_Video_Script_FR.md`](scripts/UNESCO_AI_Image_Video_Script_FR.md) written into each page's speaker notes. Prompt examples stay in English in every language version.
+**Delivered decks.** Two decks are built on the official IIOE recording template, 18 pages each, with the verbatim narration written into every page's speaker notes and page order identical to the table below:
+
+- [`build/UNESCO_AI_Image_Video_Course_EN.pptx`](../build/UNESCO_AI_Image_Video_Course_EN.pptx) — English slide text, with the SAY blocks of [`scripts/UNESCO_AI_Image_Video_Script_EN.md`](scripts/UNESCO_AI_Image_Video_Script_EN.md) in the notes. This deck follows the template's page-language convention; only the note language differs, since the presenter records in English.
+- [`build/UNESCO_AI_Image_Video_Course_FR.pptx`](../build/UNESCO_AI_Image_Video_Course_FR.pptx) — French slide text, with the narration of [`scripts/UNESCO_AI_Image_Video_Script_FR.md`](scripts/UNESCO_AI_Image_Video_Script_FR.md) in the notes. This one departs from the convention at the client's confirmed request.
+
+Prompt examples stay in English in every language version.
 
 | # | Dur. | Slide title (EN) | Content and speaker cue (EN) | 中文讲授备注 |
 |---|---:|---|---|---|

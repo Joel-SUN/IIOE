@@ -5,6 +5,8 @@
 **Delivery:** on-camera recording, single presenter, teleprompter-compatible
 **Script length:** ≈ 5,700 spoken words → ≈ 42 min at 135 wpm, leaving ≈ 3 min of silent demonstration inside slides 4, 9, 14, 15, 16
 
+> **Delivery note.** The English deck, [`build/UNESCO_AI_Image_Video_Course_EN.pptx`](../../build/UNESCO_AI_Image_Video_Course_EN.pptx), is built on this document: 18 pages on the official IIOE recording template, the **ON SCREEN** content on the page and the **SAY** text verbatim in that page's speaker notes. Slide numbering and page order match this script exactly, so a page can be re-recorded by opening the matching note. **DO**, **ASK**, **IF ASKED** and **TRIM** markers are folded into a trailing `AT RECORDING ·` cue line in each note and are never spoken. Prompt examples are not translated in any language version of the deck.
+
 ---
 
 ## How to use this script
