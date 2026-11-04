@@ -1,0 +1,11 @@
+Trainer Profile — Yuefeng SUN
+Yuefeng SUN is Europe Academy Lead and Cloud Architect at Alibaba Cloud, designing and delivering training on cloud computing, big data and generative AI / large language models for partners, clients and business leaders across Europe. Core topics include prompt engineering, RAG, multi-agent systems, fine-tuning and production deployment, taught through certification programmes and executive learning paths.
+
+Corporate training has been delivered for Accor, BMW, HSBC, IKEA, LVMH, Michelin, Nike and TÜV, alongside MBA and executive modules on AI for Business Leaders and Generative AI Strategy at UCL, the University of Reading, Kingston University and the University of Greenwich.
+
+Earlier experience spans a decade in business intelligence, data engineering and enterprise performance management at Capgemini, Micropole, Keyrus and Tableau Software, advising CAC 40 and Fortune 500 organisations. Current architecture work focuses on hybrid and multi-cloud design, AI cost optimisation and data sovereignty.
+
+(~155 words)
+
+Short version for slides (2 sentences):
+Yuefeng SUN is Europe Academy Lead and Cloud Architect at Alibaba Cloud, delivering cloud computing and generative AI training to enterprises including Accor, BMW, HSBC, IKEA, LVMH, Michelin, Nike and TÜV, and teaching AI strategy to MBA and executive cohorts at UCL, Reading, Kingston and Greenwich. Twenty years of experience span LLM engineering, multi-cloud architecture and enterprise data platforms.
