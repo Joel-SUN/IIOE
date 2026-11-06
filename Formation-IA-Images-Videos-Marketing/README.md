@@ -10,21 +10,25 @@ Adapted from [`../Formation-Video-IA-Prompting/docs/SYLLABUS.md`](../Formation-V
 (6 hours, 7 modules): cut down to 45 minutes, widened from video alone to image **and** video,
 and re-centred from SME executives onto commercial teams.
 
+This page is written in English. Where it names a file or a marker from the scripts, the original
+string is kept verbatim in code font — those are identifiers a reader has to be able to find, not
+untranslated prose. The lecture scripts themselves are each in the language they are delivered in.
+
 ## What is in this folder
 
 Thirteen files: eleven Markdown, HTML, text and PowerShell sources, and two binary `.pptx` decks.
 
 | File | Role | IIOE stage |
 |---|---|---|
-| [`docs/UNESCO_AI_Image_Video_Course_EN.md`](docs/UNESCO_AI_Image_Video_Course_EN.md) | Course design: 7 segments, 18 slides, objectives, timings, terminology annexes A–F, compliance self-check | 1 · 课程方案研发 |
-| [`docs/教学设计原则.md`](docs/教学设计原则.md) | Instructional-design principles: learning constraints, the parameters of a 45-minute video lesson, a blacklist of 13 myths, and a bibliography checked reference by reference (§9.4) | 2 · 教研审核 |
-| [`docs/scripts/UNESCO_AI_Image_Video_Script_EN.md`](docs/scripts/UNESCO_AI_Image_Video_Script_EN.md) | English lecture script, 5,764 spoken words. **Authoritative for structure and timings.** | 3 · PPT研发 |
+| [`docs/UNESCO_AI_Image_Video_Course_EN.md`](docs/UNESCO_AI_Image_Video_Course_EN.md) | Course design: 7 segments, 18 slides, objectives, timings, terminology annexes A–F, compliance self-check | 1 · Course design |
+| [`docs/` Instructional Design Principles](docs/教学设计原则.md) | Learning constraints, the parameters of a 45-minute video lesson, a blacklist of 13 myths, and a bibliography checked reference by reference (§9.4) | 2 · Pedagogical review |
+| [`docs/scripts/UNESCO_AI_Image_Video_Script_EN.md`](docs/scripts/UNESCO_AI_Image_Video_Script_EN.md) | English lecture script, 5,764 spoken words. **Authoritative for structure and timings.** | 3 · Slide development |
 | [`docs/scripts/UNESCO_AI_Image_Video_Script_FR.md`](docs/scripts/UNESCO_AI_Image_Video_Script_FR.md) | French lecture script, 6,145 spoken words, aligned page by page with the English | 3 |
 | [`docs/scripts/UNESCO_AI_Image_Video_Script_ZH.md`](docs/scripts/UNESCO_AI_Image_Video_Script_ZH.md) | Chinese lecture script, 9,394 spoken hanzi, aligned page by page with the English | 3 |
-| [`build/UNESCO_AI_Image_Video_Course_EN.pptx`](build/UNESCO_AI_Image_Video_Course_EN.pptx) | **Delivered deck (English)** — 18 English pages on the official IIOE recording master, the English lecture text verbatim in each page's notes | 3 · PPT研发 |
-| [`build/UNESCO_AI_Image_Video_Course_FR.pptx`](build/UNESCO_AI_Image_Video_Course_FR.pptx) | **Delivered deck (French)** — 18 French pages on the same master, the French lecture text verbatim in each page's notes | 3 · PPT研发 |
+| [`build/UNESCO_AI_Image_Video_Course_EN.pptx`](build/UNESCO_AI_Image_Video_Course_EN.pptx) | **Delivered deck (English)** — 18 English pages on the official IIOE recording master, the English lecture text verbatim in each page's notes | 3 · Slide development |
+| [`build/UNESCO_AI_Image_Video_Course_FR.pptx`](build/UNESCO_AI_Image_Video_Course_FR.pptx) | **Delivered deck (French)** — 18 French pages on the same master, the French lecture text verbatim in each page's notes | 3 · Slide development |
 | [`build/logo-placeholder.ps1`](build/logo-placeholder.ps1) | Deck tooling: removes the IIOE master's "YOUR LOGO" placeholder — two shapes, `partner-logo-frame` and `partner-logo-label` — which renders on all 18 slides at once | 3 |
-| [`docs/UNESCO_AI_Image_Video_Course_Page.html`](docs/UNESCO_AI_Image_Video_Course_Page.html) | Trilingual learner page (EN / FR / 中文), one self-contained file with no external dependency, printable to A4 | learner support |
+| [`docs/UNESCO_AI_Image_Video_Course_Page.html`](docs/UNESCO_AI_Image_Video_Course_Page.html) | Trilingual learner page (EN / FR / ZH), one self-contained file with no external dependency, printable to A4 | learner support |
 | [`docs/trainer-profile.txt`](docs/trainer-profile.txt) | Presenter biography, long and short versions | learner support |
 | [`docs/Trainer_Profile_Yuefeng_SUN.html`](docs/Trainer_Profile_Yuefeng_SUN.html) | The same biography as a standalone HTML page | learner support |
 | [`docs/Trainer_Profile_Yuefeng_SUN.pdf`](docs/Trainer_Profile_Yuefeng_SUN.pdf) | Print-ready PDF of that page | learner support |
@@ -44,32 +48,34 @@ supplied set replaces those five live gestures.
 
 ## Measured length
 
-Counted from the lecture text actually spoken — the eighteen **SAY** / **DITES** / **说** blocks
-with their markers and whole-line stage directions removed, spoken emphasis and spoken bold
-sentences kept — against the per-slide budget each script declares in its own `## SLIDE n` headers:
+Counted from the lecture text actually spoken — the eighteen spoken-text blocks of each script,
+marked `SAY` in English, `DITES` in French and `说` in Chinese, with their markers and whole-line
+stage directions removed, spoken emphasis and spoken bold sentences kept — against the per-slide
+budget each script declares in its own `## SLIDE n` headers:
 
 | Language | Spoken | Declared budget | Rate used | Running time |
 |---|---|---|---|---|
 | English | 5,764 words | 5,715 words | 135 wpm | ≈ 43 min |
-| French | 6 145 mots | 6 160 mots | 145 mots/min | ≈ 42 min |
-| 中文 | 9,394 汉字 | 10,625 汉字 | 245 字/分钟 | ≈ 38 min |
+| French | 6,145 words | 6,160 words | 145 wpm | ≈ 42 min |
+| Chinese | 9,394 hanzi | 10,625 hanzi | 245 hanzi/min | ≈ 38 min |
 
 The margin against 45:00 is what the six silent demonstration beats come out of. At about eight
 seconds each they fit comfortably; anything longer eats into the spoken running time.
 
 **The 45-minute figure is a recommendation of the IIOE format, not a selection criterion.** No
 reviewed text has been cut in order to approach it. Where a passage runs long, the scripts mark it
-**TRIM** / **COUPEZ SI RETARD** / **超时可删** instead: four such passages, on slides 4, 7, 10 and 12,
-each losing an example rather than a concept, and each applying to both broadcast languages at once
-so they do not diverge. **Slides 9 and 16 are never cut** — those two carry the enterprise and UNESCO
-compliance value of the course.
+with a trim marker instead — `TRIM` in English, `COUPEZ SI RETARD` in French, `超时可删` in Chinese:
+four such passages, on slides 4, 7, 10 and 12, each losing an example rather than a concept, and each
+applying to both broadcast languages at once so they do not diverge. **Slides 9 and 16 are never cut**
+— those two carry the enterprise and UNESCO compliance value of the course.
 
 **One discrepancy between two cutting instructions is reported here rather than silently reconciled.**
-The front matter of all three scripts also carries a **Late-running plan** / **Plan de rattrapage** /
-**超时预案** naming a different three passages: the time-of-day paragraph in slide 10, the shot-types
-paragraph in slide 11, and the reversal exercise in slide 12. Slides 10 and 12 agree with the TRIM
-markers. Slide 11 carries no TRIM marker, and the two TRIM passages on slides 4 and 7 are absent from
-the plan. Which list governs at the lectern is the presenter's call, not a documentation fix.
+The front matter of all three scripts also carries a late-running plan — `Late-running plan` in
+English, `Plan de rattrapage` in French, `超时预案` in Chinese — naming a different three passages: the
+time-of-day paragraph in slide 10, the shot-types paragraph in slide 11, and the reversal exercise in
+slide 12. Slides 10 and 12 agree with the trim markers. Slide 11 carries no trim marker, and the two
+trim passages on slides 4 and 7 are absent from the plan. Which list governs at the lectern is the
+presenter's call, not a documentation fix.
 
 The Chinese budget is the one number in that table that does not reconcile: the per-slide figures
 in the ZH script's headers add up to 10,625 while the text measures 9,394, about 12 % over-declared.
@@ -81,7 +87,7 @@ printed here rather than silently corrected.
 1. **Prompt text stays in English in all three language versions.** Image and video generation
    models respond more reliably to English prompts, and learners copy them verbatim rather than
    translating them first. The presenter says so on slide 1 and repeats it before reading a prompt.
-2. **Film-grammar terminology is always given in three languages** (中文 · English · Français),
+2. **Film-grammar terminology is always given in three languages** (Chinese · English · French),
    including inside an otherwise monolingual page, so that the three scripts can be checked against
    one another. The terminology lines come from annexes B to D of the design document.
 
@@ -90,9 +96,10 @@ convention "English pages + Chinese notes". The two delivered decks depart from 
 only: **the language of the notes**. The English deck keeps the convention's English pages and puts
 the English lecture text in the notes; the French deck carries French pages and the French lecture
 text in the notes, at the client's confirmed request. Both are aligned page by page. The
-**DO** / **FAITES** / **做** markers, which are never spoken, are folded into a trailing
-`AT RECORDING ·` cue line in each note, as are **ASK**, **IF ASKED** and **TRIM**. Convention 1
-above still applies to both decks: the prompt examples shown on screen remain in English.
+stage-direction markers — `DO` in English, `FAITES` in French, `做` in Chinese — are never spoken, and
+are folded into a trailing `AT RECORDING ·` cue line in each note, as are `ASK`, `IF ASKED` and the
+trim markers. Convention 1 above still applies to both decks: the prompt examples shown on screen
+remain in English.
 
 ## What is not in this repository
 
@@ -109,11 +116,13 @@ partner package instead, and the `.gitignore` excludes it:
 - **the IIOE documentation supplied by the partner** — Feishu extracts of the co-construction
   process and the official slide master. These are confidential.
 
-**Nine links in [`docs/教学设计原则.md`](docs/教学设计原则.md) therefore do not resolve from this
+**Nine links in the instructional-design principles document therefore do not resolve from this
 repository.** They are nine occurrences of three targets, all pointing at partner documentation that
-is deliberately not versioned here: `IIOE内容开发说明.md` (6 links), `课程素材要求与示例.md` (2) and
-`IIOE课程合作研发流程、参考与标准.md` (1). The file's tenth relative link is the only one that
-resolves: the one to [`docs/UNESCO_AI_Image_Video_Course_EN.md`](docs/UNESCO_AI_Image_Video_Course_EN.md).
+is deliberately not versioned here: the content-development guide (`IIOE内容开发说明.md`, 6 links),
+the asset requirements and examples guide (`课程素材要求与示例.md`, 2) and the co-construction process,
+references and standards document (`IIOE课程合作研发流程、参考与标准.md`, 1). That document's tenth
+relative link is the only one that resolves: the one to
+[`docs/UNESCO_AI_Image_Video_Course_EN.md`](docs/UNESCO_AI_Image_Video_Course_EN.md).
 No other file in the published set carries a link that does not resolve.
 
 ## Published copy vs. local production record
@@ -122,11 +131,11 @@ The three scripts kept in the local working directory carry production notes tha
 published here do not. Read the published copies as the authoritative **text of the lecture**; the
 local copies are that same text plus a production log.
 
-**The spoken text is identical.** Extracting the eighteen **SAY** / **DITES** / **说** blocks from both
-copies of each script and comparing them line by line gives **zero differences in any language**: 221
-spoken lines for English, 221 for French and 233 for Chinese, standing inside 436 / 436 / 448 quoted
-lines once the blank paragraph separators between spoken paragraphs are counted. What differs is three
-pieces of framing:
+**The spoken text is identical.** Extracting the eighteen spoken-text blocks (`SAY` / `DITES` / `说`)
+from both copies of each script and comparing them line by line gives **zero differences in any
+language**: 221 spoken lines for English, 221 for French and 233 for Chinese, standing inside
+436 / 436 / 448 quoted lines once the blank paragraph separators between spoken paragraphs are
+counted. What differs is three pieces of framing:
 
 | Script | Where the copies differ |
 |---|---|
@@ -141,17 +150,17 @@ the working directory that holds them, the published copies at the partner packa
 
 The third difference is not the same shape in both languages. The published English copy has **no** note
 in that slot at all; the local copy adds a production note there. The published French copy carries a
-**cut note** in it — the four **COUPEZ SI RETARD** passages and the two slides that are never cut — and
+**cut note** in it — the four `COUPEZ SI RETARD` passages and the two slides that are never cut — and
 the local copy replaces that note with a production note. The production notes are local-only by design.
 The cut note is published in French only, which is an asymmetry in the sources rather than a decision:
 an English reader gets the same information distributed through the body — the late-running plan after
-the timing table, and the four TRIM markers where they sit.
+the timing table, and the four trim markers where they sit.
 
 The disclosure obligation that attaches to the delivered narration is a compliance matter, not a
-production detail, and it is published: see §6.7 *讲师出镜与声音* of
-[`docs/教学设计原则.md`](docs/教学设计原则.md), which records that the voice used for narration is
-disclosed to learners under the deep-synthesis provision of Article 50 of the EU AI Act, applicable
-since 2 August 2026.
+production detail, and it is published: see §6.7, *Presenter on camera and voice*, of the
+instructional-design principles document ([`docs/教学设计原则.md`](docs/教学设计原则.md)), which records
+that the voice used for narration is disclosed to learners under the deep-synthesis provision of
+Article 50 of the EU AI Act, applicable since 2 August 2026.
 
 ## Status
 

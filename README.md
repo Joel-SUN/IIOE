@@ -1,43 +1,50 @@
-# IIOE · Cours co-construits avec UNESCO-ICHEI
+# IIOE · Courses co-built with UNESCO-ICHEI
 
-Matériel de cours pour la plateforme IIOE (International Online Engineering Innovation
-Platform), Centre international de l'UNESCO pour l'enseignement supérieur en innovation.
-Format : **micro-certification de 45 minutes**, un seul intervenant face caméra,
-1920 × 1080, MP4 (H.264 + AAC), sous-titres SRT.
+Course material for the IIOE platform (International Online Engineering Innovation Platform) of
+UNESCO-ICHEI, the UNESCO International Centre for Higher Education Innovation. Format: a
+**45-minute micro-credential**, one presenter on camera, 1920 × 1080, MP4 (H.264 + AAC),
+SRT subtitles.
 
-## Cours
+The two READMEs of this repository are written in English. The material they describe is not: each
+lecture script, design document and syllabus is written in the language it is delivered in, and the
+learner page carries all three at once.
 
-| Dossier | Cours | Durée | État |
+## Courses
+
+| Folder | Course | Length | Status |
 |---|---|---|---|
-| [`Formation-Video-IA-Prompting/`](Formation-Video-IA-Prompting/) | Écriture de prompts pour la génération vidéo par IA — syllabus source, enseigné en chinois avec terminologie cinématographique française | 6 h · 7 modules | v0.1 |
-| [`Formation-IA-Images-Videos-Marketing/`](Formation-IA-Images-Videos-Marketing/) | L'IA générative appliquée aux visuels marketing — génération d'images et de vidéos pour les équipes commerciales, en anglais, français et chinois | 45 min · 18 diapositives | diaporamas v0.1 · scripts EN/FR/ZH |
+| [`Formation-Video-IA-Prompting/`](Formation-Video-IA-Prompting/) | Prompt writing for AI video generation — the source syllabus, taught in Chinese with French film terminology | 6 h · 7 modules | v0.1 |
+| [`Formation-IA-Images-Videos-Marketing/`](Formation-IA-Images-Videos-Marketing/) | Generative AI applied to marketing visuals — image and video generation for commercial teams, in English, French and Chinese | 45 min · 18 slides | decks v0.1 · scripts EN/FR/ZH |
 
-Le second cours est une adaptation du premier : ramené de 6 heures à 45 minutes, élargi de
-la vidéo seule à l'image **et** la vidéo, et recentré des dirigeants de PME vers les
-responsables marketing et commerciaux.
+The second course is an adaptation of the first: cut down from 6 hours to 45 minutes, widened from
+video alone to image **and** video, and re-centred from SME executives onto marketing and sales
+leads.
 
-Les 45 minutes sont la **cible du format IIOE, pas un critère de sélection** : une durée réelle
-de 46 à 49 minutes est acceptable et aucun texte validé n'est coupé pour atteindre la cible.
+The 45 minutes is the **target of the IIOE format, not a selection criterion**: a real running time
+of 46 to 49 minutes is acceptable, and no reviewed text is cut in order to reach the target.
 
-## Flux de livraison IIOE
+## IIOE delivery workflow
 
-课程方案研发 → 教研审核 → PPT研发 → PPT审核 → 视频与素材制作 → 视频与素材审核 → 上线实施 →
-(可选) 小语种翻译. Chaque étape est validée par un formulaire d'expertise.
+Eight stages, each validated by an expert review form:
 
-## Conformité
+course design → pedagogical review → slide development → slide review → video and asset production →
+video and asset review → publication → (optional) translation into further languages
 
-Tous les cours respectent les cinq points de l'autocontrôle IIOE : aucune carte ni toponyme
-non conforme aux Nations Unies ; aucun élément sous licence non vérifiable ni filigrane ;
-pas de déséquilibre de genre ; aucune promotion commerciale ; aucune pollution sonore et une
-définition d'au moins 1080p. Aucun nom de fournisseur, de produit ou de prix n'apparaît
-dans le matériel publié.
+The stage names are those of the partner's own process document, given here in English.
 
-**Contenu du dépôt.** Ce dépôt ne versionne que des **textes et des diaporamas** : conception de
-cours, scripts de conférence, pages apprenant et fichiers `.pptx`. Tout le média rendu — audio,
-vidéo, sous-titres, diapositives exportées — et l'outillage qui le produit restent **hors dépôt**
-et sont distribués dans le paquet partenaire. Le `.gitignore` les exclut.
+## Compliance
 
-**Voix de synthèse.** La divulgation de la voix employée pour la narration est une obligation de
-conformité, traitée dans
-[`Formation-IA-Images-Videos-Marketing/docs/教学设计原则.md`](Formation-IA-Images-Videos-Marketing/docs/教学设计原则.md).
-Elle est annoncée aux apprenants.
+Every course meets the five points of the IIOE self-check: no map or toponym inconsistent with
+United Nations usage; no element under an unverifiable licence and no watermark; no gender
+imbalance; no commercial promotion; no noise pollution, and a definition of at least 1080p. No
+vendor, product or price name appears anywhere in the published material.
+
+**What this repository holds.** The repository versions **text and slide decks only**: course design,
+lecture scripts, learner pages and `.pptx` files. All rendered media — audio, video, subtitles,
+exported slide images — and the tooling that produces it stay **outside the repository** and are
+distributed in the partner package instead. The `.gitignore` excludes them.
+
+**Synthesised voice.** Disclosing the voice used for the narration is a compliance obligation. It is
+set out in the instructional-design principles document
+([`Formation-IA-Images-Videos-Marketing/docs/教学设计原则.md`](Formation-IA-Images-Videos-Marketing/docs/教学设计原则.md)),
+and the disclosure is announced to learners.
