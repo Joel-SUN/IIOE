@@ -5,9 +5,12 @@ UNESCO-ICHEI, the UNESCO International Centre for Higher Education Innovation. F
 **45-minute micro-credential**, one presenter on camera, 1920 × 1080, MP4 (H.264 + AAC),
 SRT subtitles.
 
-The two READMEs of this repository are written in English. The material they describe is not: each
-lecture script, design document and syllabus is written in the language it is delivered in, and the
-learner page carries all three at once.
+The two READMEs of this repository are written in English. Most of the material they describe is not:
+each lecture script and design document is written in the language it is delivered in, and the learner
+page carries all three at once. The source syllabus is the one exception — it is published in
+[Chinese](Formation-Video-IA-Prompting/docs/SYLLABUS.md),
+[French](Formation-Video-IA-Prompting/docs/SYLLABUS_FR.md) and
+[English](Formation-Video-IA-Prompting/docs/SYLLABUS_EN.md).
 
 ## Courses
 

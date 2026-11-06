@@ -1,6 +1,8 @@
 # 教学大纲 · AI 视频提示词工程
 # Plan de cours · Ingénierie de prompt pour la vidéo IA
 
+> 全文译文 / Traductions intégrales : [français](SYLLABUS_FR.md) · [English](SYLLABUS_EN.md)
+
 > **定位 / Positionnement**
 > 面向非法语母语、无影视制作背景的中小企业学员。教的是**镜头语言 + 提示词结构**这套可迁移的方法，不绑定任何一家云厂商或模型产品。学员课上用的工具，回去换成别家也能照做。
 >
