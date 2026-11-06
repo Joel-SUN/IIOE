@@ -1,11 +1,16 @@
 # ---------------------------------------------------------------------------
-# Échantillons vocaux et audio rendu — DONNÉES BIOMÉTRIQUES.
-# Les clones vocaux de l'intervenant et tout audio de cours rendu ne doivent
-# jamais être téléversés sur un dépôt. Lecture locale et API Bailian uniquement.
+# Média rendu et outillage de production : ne sont jamais téléversés.
+# Décision de l'intervenant du 6 nov. 2026 — tout ce chantier reste local et
+# n'est pas partagé sur Internet ; la distribution passe par le paquet
+# partenaire. Les règles ci-dessous existent pour qu'un `git add -A`
+# accidentel ne puisse pas les republier.
 # ---------------------------------------------------------------------------
-**/docs/tools/tts/samples/
-**/docs/tools/tts/runs/
-**/docs/tools/tts/identify/
+**/docs/tools/tts/
+
+# Dérivés du média rendu : lecteur de révision, contrôles, notice du paquet.
+**/build/course-site/
+**/build/qc.mjs
+**/build/README-package.txt
 
 *.wav
 *.m4a
@@ -13,6 +18,16 @@
 *.aac
 *.flac
 *.ogg
+
+# Archives partenaires : elles embarquent le média rendu et dépassent la limite
+# GitHub de 100 Mo par fichier. Distribuées hors dépôt.
+*.zip
+
+# Vidéo : démos générées et tout média rendu.
+*.mp4
+*.webm
+*.mov
+*.mkv
 
 # Secrets — la CLI les lit hors dépôt, jamais dedans.
 .env
@@ -34,3 +49,17 @@ Desktop.ini
 
 # Copie de travail du générateur de diaporama ; seul le livrable est versionné.
 **/build/pptx-work/
+
+# Journaux d'exécution et sauvegardes locales.
+*.log
+*.bak
+
+# ---------------------------------------------------------------------------
+# Documentation IIOE fournie par le partenaire (extractions Feishu, modèle
+# officiel de diaporama). Confidentielle : elle reste hors du dépôt.
+# ---------------------------------------------------------------------------
+**/docs/IIOE内容开发说明.md
+**/docs/IIOE课程合作研发流程、参考与标准.*
+**/docs/课程素材要求与示例.*
+**/docs/IIOE_通用录课PPT模板_*.pptx
+**/docs/IIOE_Course_Configuration_*.docx

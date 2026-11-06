@@ -4,9 +4,11 @@
 **Document associé :** [`docs/UNESCO_AI_Image_Video_Course_EN.md`](../UNESCO_AI_Image_Video_Course_EN.md) (conception de cours, étape 1)
 **Aligné page à page sur :** [`scripts/UNESCO_AI_Image_Video_Script_EN.md`](UNESCO_AI_Image_Video_Script_EN.md) — la version anglaise fait foi pour la structure et les minutages
 **Diffusion :** enregistrement face caméra, un seul intervenant, compatible prompteur
-**Longueur :** ≈ 6 300 mots prononcés → ≈ 43 min à 145 mots/min, soit ≈ 2 min de démonstration silencieuse sur les diapositives 4, 9, 14, 15 et 16
+**Longueur :** 6 145 mots prononcés — les dix-huit blocs **DITES**, marqueurs et didascalies retirés — soit ≈ 42 min à 145 mots/min, pour un budget annoncé page par page de 6 160 mots. Il reste donc ≈ 3 min dans le format de 45 minutes pour les six temps de démonstration silencieuse des diapositives 4, 5, 9, 14, 15 et 16. La cible de 45 minutes est le **format IIOE, pas un critère de sélection** : aucun texte validé n'est coupé pour l'atteindre.
 
 > **Note de localisation.** Le français est ici la langue de diffusion **et** la langue des supports projetés. Le diaporama livré, [`build/UNESCO_AI_Image_Video_Course_FR.pptx`](../../build/UNESCO_AI_Image_Video_Course_FR.pptx) — 18 pages bâties sur le modèle officiel d'enregistrement IIOE — comporte des **pages françaises** et reprend le texte parlé verbatim dans les **notes de chaque page**. Il s'écarte donc de la convention IIOE « pages anglaises + notes chinoises », à la demande confirmée du client. **Seuls les exemples de prompts restent en anglais**, parce que c'est la langue dans laquelle les modèles sont les plus précis ; l'intervenant l'annonce dès la diapositive 1 et le rappelle avant chaque lecture de prompt. La terminologie cinématographique suit l'usage professionnel français standard (*travelling avant*, *plan américain*, *heure dorée*), qui est aussi la terminologie du syllabus d'origine. Le terme « prompt » est employé tel quel après sa première glose en *invite*, car c'est l'usage réel des équipes marketing. Une **version anglaise du même diaporama**, [`build/UNESCO_AI_Image_Video_Course_EN.pptx`](../../build/UNESCO_AI_Image_Video_Course_EN.pptx), suit la convention des pages anglaises ; les deux diaporamas sont alignés page à page, même ordre, mêmes numéros de diapositive.
+
+> **Note de coupure.** Quatre passages sont marqués **COUPEZ SI RETARD** dans le corps du texte (diapositives 7, 10, 11 et 12). Ils ne retirent aucun concept, seulement des exemples, et ils s'appliquent **aux deux langues à la fois** pour ne pas les faire diverger. **Les diapositives 9 et 16 ne se coupent jamais** : la 9 porte la démonstration complète, la 16 les obligations de divulgation.
 
 ---
 
@@ -18,6 +20,7 @@
 | **FAITES** | Action physique ou à l'écran de l'intervenant. Jamais prononcée. |
 | **À L'ÉCRAN** | Ce que montrent la diapositive ou la démonstration à cet instant. |
 | **DÉMO n** | L'une des six étapes de la démonstration en direct. |
+| **CLIPS** | Extraits vidéo pré-enregistrés, muets, diffusés sous la narration. Ne rallongent pas le cours. |
 | **DEMANDEZ** | Question posée à la salle. Attendez en silence — n'y répondez pas vous-même. |
 | **SI ON VOUS DEMANDE** | Question anticipée et réponse validée. |
 | **COUPEZ SI RETARD** | Texte supprimable sans perte de concept, seulement d'exemple. |
@@ -41,6 +44,23 @@
 | 4 | 14 | Synonyme introduit + ancre de style supprimée → dérive ; les deux restaurés → cohérence |
 | 5 | 15 | Chaîne complète : verrouillage texte-vers-image → plans image-vers-vidéo → assemblage |
 | 6 | 16 | Le produit fini, avec la question de divulgation posée à la salle |
+
+**Carte des clips pré-enregistrés**
+
+Quarante-sept extraits vidéo générés par IA accompagnent le cours dans le lecteur web, sous la diapositive concernée. **Tous sont muets** : ils se jouent sous votre voix sans jamais la couvrir, et ils n'allongent pas le minutage d'une seule seconde. Chaque extrait est affiché avec le prompt exact qui l'a produit — les prompts restent en anglais, comme annoncé à la diapositive 1.
+
+| Diapo | Clips | Durée cumulée | Ce qui est montré |
+|---:|---:|---:|---|
+| 5 | 1 | 10,1 s | Le prompt entièrement spécifié, et le travelling arrière qu'il produit |
+| 6 | 1 | 8,1 s | La formule à six éléments appliquée ligne par ligne |
+| 8 | 4 | 61,1 s | Tons chauds · tons froids · saturation forte · saturation faible |
+| 10 | 10 | 52,0 s | Source de lumière (2) · direction et qualité (4) · heure de la journée (4) |
+| 11 | 12 | 62,8 s | Composition (4) · échelle du plan (4) · types de plans (4) |
+| 12 | 12 | 95,4 s | Travellings (4) · grue, orbite, panoramiques (4) · épaule, drone, fouetté, bascule de point (4) |
+| 13 | 7 | 50,9 s | Sept raccords : champ-contrechamp, révélation, plongée, reflet, fouetté, changement de point, ellipse |
+| **Total** | **47** | **5 min 40 s** | |
+
+Les diapositives 4, 9, 14, 15 et 16 ne reçoivent **aucun** clip : leur temps de démonstration est du direct, ou du pré-rendu que vous produisez vous-même. Aucun extrait du jeu fourni ne correspond à ces cinq gestes. La correspondance complète, fichier par fichier, est en **Annexe III**.
 
 ---
 
@@ -195,6 +215,8 @@
 
 **DÉMO 2** — *C'est l'unique génération en direct de la première moitié. Préparez l'enregistrement de secours ; si l'outil est lent ou limité, basculez dessus sans commentaire.*
 
+**CLIPS** — *Sous la diapositive : un extrait de dix secondes, un travelling arrière au coucher du soleil, affiché avec son prompt anglais de plus de six cents caractères intégralement spécifié — durée, mouvement, jeu des personnages, arrière-plan, lumière, style. Démarrez-le au moment où vous dites « chaque partie réussie l'est parce que je l'ai spécifiée » : c'est la preuve, sur un autre sujet que la commande textile, qu'un prompt entièrement écrit donne un résultat entièrement dirigé. Un second panneau, sans vidéo, oppose un prompt d'intention — montrer qu'il est nerveux — à sa version filmable, un gros plan sur les doigts qui frottent le bord d'un téléphone. Il redit la paire que vous venez de révéler à l'écran ; laissez-le affiché pendant tout l'exercice de conversion.*
+
 **DITES**
 
 > Corrigeons donc cela. Et la correction n'est pas un mot magique. C'est un changement dans la *nature* de la phrase que vous écrivez.
@@ -242,6 +264,8 @@
 ## DIAPOSITIVE 6 — La formule à six éléments
 **⏱ 10:00 → 13:00 · 3 min · ≈ 370 mots**
 **À L'ÉCRAN :** Tableau de six lignes — élément, quoi écrire, conséquence si omis. La colonne « conséquence » mise en valeur.
+
+**CLIPS** — *Sous la diapositive : un extrait de huit secondes, travelling avant dans une rue mouillée après la pluie, dont le prompt est écrit dans les six lignes de la formule — Sujet · Action · Scène · Caméra · Style · Audio. Démarrez-le quand vous arrivez à l'élément quatre. Le public voit la formule se transformer en image pendant que vous la lisez : c'est la preuve la plus courte que vous puissiez donner.*
 
 **DITES**
 
@@ -327,6 +351,8 @@
 **⏱ 16:00 → 19:00 · 3 min · ≈ 460 mots**
 **À L'ÉCRAN :** Trois panneaux. Le panneau style montre quatre curseurs légendés : température de couleur · contraste · grain · profondeur de champ. Bandeau inférieur : *Ne laissez jamais le modèle dessiner votre logo.*
 
+**CLIPS** — *Sous la diapositive : quatre extraits de quinze secondes, les plus longs du cours, tournés sur le même plan et différant uniquement par le style — tons chauds · tons froids · saturation forte · saturation faible. Lancez-les les uns après les autres au moment où vous dites « cela, c'est un style. C'est exécutable — et, ce qui compte davantage pour une entreprise, c'est répétable ». Quatre prompts, un seul réglage changé à chaque fois : c'est la démonstration la plus nette de ce que « exécutable » et « répétable » veulent dire ensemble. Les extraits étant muets, l'élément six — l'audio — n'est pas illustré ici ; dites-le, ne le laissez pas deviner.*
+
 **DITES**
 
 > Maintenant les trois éléments que l'on saute.
@@ -411,6 +437,8 @@
 **⏱ 22:00 → 24:00 · 2 min · ≈ 320 mots**
 **À L'ÉCRAN :** Trois bandes légendées — direction · qualité · heure du jour. « Lumière volumétrique » détachée visuellement.
 
+**CLIPS** — *Sous la diapositive, trois groupes de dix extraits de cinq secondes, un par bande : la source de lumière (nocturne, diffuse) · la direction et la qualité (douce, zénithale, contre-jour, par en dessous) · l'heure de la journée (plein jour, nuit, lever, coucher du soleil). Dix prompts pour dix réglages, un seul mot de lumière changé à chaque fois. Faites défiler un groupe pendant la phrase qui le concerne. Si vous appliquez le plan de rattrapage et coupez le paragraphe sur l'heure du jour, laissez le groupe affiché : il ne coûte aucune seconde de narration et continue de porter le propos.*
+
 **DITES**
 
 > Deux minutes sur la lumière, car c'est la qualité la moins chère que vous puissiez acheter avec des mots.
@@ -435,6 +463,8 @@
 **⏱ 24:00 → 26:00 · 2 min · ≈ 260 mots**
 **À L'ÉCRAN :** Six cadres alignés, du plus large au plus serré, chacun légendé par son usage métier. Dessous : cinq termes de composition.
 
+**CLIPS** — *Sous la diapositive, trois groupes de douze extraits d'environ cinq secondes : composer le cadre (centrée · symétrique · équilibre des personnages · sujet décentré) · l'échelle du plan (gros plan · plan rapproché · plan en pied · plan large) · types de plans et points de vue (un personnage · deux personnages · plan de groupe · plan de situation). Le groupe du milieu illustre quatre des six échelles que vous venez de nommer — le très gros plan et le plan d'ensemble n'ont pas d'extrait ; ne promettez pas les six. Le troisième groupe compte les personnages dans le cadre, et il n'illustre pas davantage les trois types de plans que vous nommez — le plan subjectif, le plan par-dessus l'épaule et le plan de coupe n'ont pas d'extrait. Présentez-le comme un complément, pas comme l'image de ce paragraphe. Le groupe « composition » montre le centrage par défaut à côté du sujet décentré : c'est la preuve visuelle de votre règle, « les termes de composition doivent être écrits dans le prompt ». Aucun groupe ne coûte une seconde de narration : si vous appliquez le plan de rattrapage, laissez les trois affichés.*
+
 **DITES**
 
 > Le cadrage n'est pas une décoration. Le cadrage décide de ce à quoi sert ce plan.
@@ -456,6 +486,8 @@
 ## DIAPOSITIVE 12 — Mouvement de caméra : nommez-le, donnez-lui un début et une fin
 **⏱ 26:00 → 29:00 · 3 min · ≈ 370 mots**
 **À L'ÉCRAN :** Dix mouvements en deux colonnes, chacun avec sa fonction narrative en quatre mots au plus.
+
+**CLIPS** — *Sous la diapositive, trois groupes de douze extraits : travellings (travelling avant · travelling arrière · travelling latéral · plan de suivi) · grue, orbite et panoramiques (orbite autour du sujet · descente de grue · panoramique horizontal · bascule verticale) · épaule, drone, fouetté et bascule de point (caméra portée · vue aérienne · panoramique filé · bascule de mise au point). Les dix mouvements que vous nommez ont chacun leur extrait — les deux derniers, travelling latéral et bascule de mise au point, ne sont pas dans votre liste : présentez-les comme deux ajouts, pas comme des oublis. Servez-vous-en pour l'exercice à l'envers : à chaque **DEMANDEZ**, laissez la salle répondre, puis pointez l'extrait correspondant plutôt que de répéter la réponse.*
 
 **DITES**
 
@@ -510,6 +542,8 @@
 ## DIAPOSITIVE 13 — Scripts multi-plans : trois façons de segmenter
 **⏱ 29:00 → 32:00 · 3 min · ≈ 400 mots**
 **À L'ÉCRAN :** Trois colonnes — A / B / C — chacune avec un exemple de ligne et son coût. La colonne C visuellement dominante.
+
+**CLIPS** — *Sous la diapositive, deux groupes. Le premier est écrit, sans vidéo : les trois prompts réels, un par méthode — segments en langage naturel, horodatages, ancre de style — affichés intégralement pour que la salle voie la différence de forme. Laissez ce groupe à l'écran pendant toute votre explication des trois méthodes. Notez que l'ancre affichée est plus chaude que l'exemple gris-bleu froid que vous lisez à voix haute ; les deux sont valides, et l'intérêt du panneau est la forme, pas la palette. Le second groupe est les sept raccords en sept extraits : champ-contrechamp · suivi puis révélation · plongée verticale vers l'intérieur · transition par reflet · panoramique fouetté · récit par changement de point · ellipse temporelle. Sept extraits, sept prompts, aucun mot prononcé : ils passent sous votre voix.*
 
 **DITES**
 
@@ -762,6 +796,76 @@
 - [ ] **Accessibilité** — sous-titres SRT écrits et vérifiés contre l'audio à vitesse de parole normale ; texte à l'écran lisible en 480p ; aucune information transmise par la seule couleur ; palette à fort contraste.
 - [ ] **Répétition** — une prise complète au chronomètre. Les diapositives 4, 9, 14, 15 et 16 portent des démonstrations et sont les cinq plus susceptibles de déborder.
 - [ ] **Secours hors ligne** — un enregistrement d'écran des six temps de démonstration existe et se lit correctement, en cas de panne de réseau, de quota ou de limitation de débit.
+- [ ] **Clips pré-enregistrés — format** — les 47 extraits ne sont pas en 1920×1080 (quatre résolutions différentes, de 1280×676 à 1920×1014). Pour le lecteur web, cela ne change rien. Pour le MP4 final, chaque extrait doit être recalé ou détouré dans un cadre 1920×1080 avant compositing.
+- [ ] **Clips pré-enregistrés — divulgation** — chaque extrait est généré par IA et est affiché, dans le lecteur, avec la mention de génération et le prompt qui l'a produit. La diapositive 16 enseigne la divulgation : les supports du cours s'y conforment.
+- [ ] **Clips pré-enregistrés — audio** — les 47 extraits sont muets. Vérifié. Aucune piste audio ne peut entrer en conflit avec la narration, et la piste AAC du cours reste la seule piste du MP4 final.
+
+---
+
+# Annexe III — Correspondance complète des clips pré-enregistrés
+
+Non narré. Référence de production et de vérification.
+
+Les extraits et leurs vignettes **ne figurent pas dans ce dépôt** : ils sont livrés dans le paquet partenaire sous `assets/demos/media/` et `assets/demos/posters/`, et le manifeste qui les relie aux diapositives est intégré à l'`index.html` de ce paquet. Les libellés ci-dessous sont ceux affichés par le lecteur ; toute modification du manifeste doit être reportée ici.
+
+**Tous les prompts sont en anglais**, conformément à la note de localisation en tête de ce script : c'est la langue dans laquelle les modèles sont les plus précis. Les caractères comptés ci-dessous sont donc ceux du prompt anglais réellement diffusé, pas d'une traduction française. Un tiret dans la colonne « Fichier » signale un panneau de texte seul, sans vidéo.
+
+| Diapo | Fichier | Libellé | Durée | Caractères du prompt |
+|---:|---|---|---:|---:|
+| 5 | slide20.mp4 | Travelling arrière au coucher du soleil | 10,1 s | 620 |
+| 5 | — | Intention contre description | — | 104 |
+| 6 | slide33.mp4 | Application de la formule en six éléments | 8,1 s | 459 |
+| 8 | slide28_1.mp4 | Tons chauds | 15,3 s | 161 |
+| 8 | slide28_2.mp4 | Tons froids | 15,2 s | 170 |
+| 8 | slide28_3.mp4 | Saturation forte | 15,3 s | 192 |
+| 8 | slide28_4.mp4 | Saturation faible | 15,3 s | 178 |
+| 10 | slide22_2.mp4 | Lumière nocturne | 5,2 s | 225 |
+| 10 | slide22_4.mp4 | Lumière diffuse | 5,2 s | 184 |
+| 10 | slide23_1.mp4 | Lumière douce | 5,2 s | 174 |
+| 10 | slide23_2.mp4 | Lumière zénithale | 5,2 s | 170 |
+| 10 | slide23_3.mp4 | Contre-jour | 5,2 s | 183 |
+| 10 | slide23_4.mp4 | Éclairage par en dessous | 5,2 s | 173 |
+| 10 | slide24_1.mp4 | Plein jour | 5,2 s | 154 |
+| 10 | slide24_2.mp4 | Nuit | 5,2 s | 186 |
+| 10 | slide24_3.mp4 | Lever du soleil | 5,2 s | 152 |
+| 10 | slide24_4.mp4 | Coucher du soleil — heure magique | 5,2 s | 174 |
+| 11 | slide25_1.mp4 | Composition centrée | 5,2 s | 195 |
+| 11 | slide25_2.mp4 | Composition symétrique | 5,2 s | 168 |
+| 11 | slide25_3.mp4 | Équilibre des personnages | 5,2 s | 227 |
+| 11 | slide25_4.mp4 | Sujet décentré | 5,2 s | 184 |
+| 11 | slide26_1.mp4 | Gros plan | 5,2 s | 157 |
+| 11 | slide26_2.mp4 | Plan rapproché | 5,2 s | 155 |
+| 11 | slide26_3.mp4 | Plan en pied | 5,2 s | 179 |
+| 11 | slide26_4.mp4 | Plan large | 5,2 s | 181 |
+| 11 | slide27_1.mp4 | Un personnage | 5,3 s | 161 |
+| 11 | slide27_2.mp4 | Deux personnages | 5,3 s | 154 |
+| 11 | slide27_3.mp4 | Plan de groupe | 5,3 s | 181 |
+| 11 | slide27_4.mp4 | Plan de situation | 5,3 s | 185 |
+| 12 | slide35_1.mp4 | Travelling avant | 8,2 s | 193 |
+| 12 | slide35_2.mp4 | Travelling arrière | 8,2 s | 179 |
+| 12 | slide35_3.mp4 | Travelling latéral | 5,3 s | 178 |
+| 12 | slide35_4.mp4 | Plan de suivi | 8,2 s | 178 |
+| 12 | slide36_1.mp4 | Orbite autour du sujet | 8,2 s | 193 |
+| 12 | slide36_2.mp4 | Descente de grue | 8,2 s | 162 |
+| 12 | slide36_3.mp4 | Panoramique horizontal | 8,2 s | 156 |
+| 12 | slide36_4.mp4 | Bascule verticale | 8,2 s | 169 |
+| 12 | slide37_1.mp4 | Caméra portée | 8,2 s | 158 |
+| 12 | slide37_2.mp4 | Vue aérienne | 8,2 s | 174 |
+| 12 | slide37_3.mp4 | Panoramique filé | 8,2 s | 152 |
+| 12 | slide37_4.mp4 | Bascule de mise au point | 8,1 s | 200 |
+| 13 | — | Méthode A — segments en langage naturel | — | 493 |
+| 13 | — | Méthode B — horodatages | — | 215 |
+| 13 | — | Méthode C — ancre de style | — | 78 |
+| 13 | slide45.mp4 | Champ et contrechamp | 5,2 s | 129 |
+| 13 | slide46.mp4 | Suivi puis révélation | 8,1 s | 128 |
+| 13 | slide47.mp4 | Plongée verticale vers l'intérieur | 8,1 s | 94 |
+| 13 | slide48.mp4 | Transition par reflet | 8,1 s | 142 |
+| 13 | slide49.mp4 | Panoramique fouetté | 5,2 s | 150 |
+| 13 | slide50.mp4 | Récit par changement de point | 8,1 s | 151 |
+| 13 | slide51.mp4 | Ellipse temporelle par coupes | 8,1 s | 134 |
+| **Total** | **47 extraits + 4 panneaux texte** | **51 prompts** | **5 min 40 s** | **9 592** |
+
+Les diapositives 1, 2, 3, 4, 7, 9, 14, 15, 16, 17 et 18 ne portent aucun extrait pré-enregistré. Cinq d'entre elles — 4, 9, 14, 15 et 16 — portent une démonstration en direct, qu'aucun extrait du jeu fourni ne remplace : la diapositive 4 montre la dérive de quatre générations d'un même prompt inchangé, la 9 la comparaison côte à côte entre l'image catalogue générée et la photographie réelle du produit, la 14 le contraste entre un prompt sans ancre dont les plans dérivent et le même prompt restauré, la 15 la chaîne complète de la photographie de référence au montage de huit secondes, la 16 cette même vidéo laissée à l'écran pendant que la question de divulgation est posée à la salle.
 
 ---
 

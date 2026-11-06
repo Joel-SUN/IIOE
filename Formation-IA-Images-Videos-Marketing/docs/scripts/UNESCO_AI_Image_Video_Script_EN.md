@@ -3,7 +3,7 @@
 **45-minute IIOE micro-credential lecture · English master version · v0.1**
 **Companion to:** [`docs/UNESCO_AI_Image_Video_Course_EN.md`](../UNESCO_AI_Image_Video_Course_EN.md) (course design, stage 1)
 **Delivery:** on-camera recording, single presenter, teleprompter-compatible
-**Script length:** ≈ 5,700 spoken words → ≈ 42 min at 135 wpm, leaving ≈ 3 min of silent demonstration inside slides 4, 9, 14, 15, 16
+**Script length:** 5,764 spoken words — the eighteen **SAY** blocks, with markers and stage directions removed → ≈ 43 min at 135 wpm, against a declared per-slide budget of 5,715 words. That leaves ≈ 2 min inside the 45-minute format for the six silent demonstration beats on slides 4, 5, 9, 14, 15 and 16. Budget them against that figure before assembling the video: at eight seconds each they fit, and anything longer eats into the spoken running time.
 
 > **Delivery note.** The English deck, [`build/UNESCO_AI_Image_Video_Course_EN.pptx`](../../build/UNESCO_AI_Image_Video_Course_EN.pptx), is built on this document: 18 pages on the official IIOE recording template, the **ON SCREEN** content on the page and the **SAY** text verbatim in that page's speaker notes. Slide numbering and page order match this script exactly, so a page can be re-recorded by opening the matching note. **DO**, **ASK**, **IF ASKED** and **TRIM** markers are folded into a trailing `AT RECORDING ·` cue line in each note and are never spoken. Prompt examples are not translated in any language version of the deck.
 
@@ -17,6 +17,7 @@
 | **DO** | Physical or on-screen action for the presenter. Never spoken. |
 | **ON SCREEN** | What the slide or the demonstration shows at this moment. |
 | **DEMO BEAT** | A numbered step of the six-beat live demonstration. |
+| **CLIPS** | Pre-recorded video extracts, silent, played under the narration. They add no runtime. |
 | **ASK** | A question to the room. Wait in silence — do not answer it yourself. |
 | **IF ASKED** | Anticipated question and the approved answer. |
 | **TRIM** | Text that may be cut if the segment is running late. Cutting it loses an example, not a concept. |
@@ -40,6 +41,23 @@
 | 4 | 14 | Subject synonym + style anchor deleted → drift; both restored → coherence |
 | 5 | 15 | Full workflow: text-to-image lock → image-to-video shots → assembly |
 | 6 | 16 | The finished asset, with the disclosure question put to the room |
+
+**Pre-recorded clip map**
+
+Forty-seven AI-generated video extracts accompany the course in the web player, under the slide they illustrate. **All of them are silent**: they play underneath your voice without ever covering it, and they add not one second to the timing. Each extract is displayed with the exact prompt that produced it. Prompts stay in English, as announced on slide 1 — it is the language in which the models are most accurate. Every clip carries an on-screen AI-generation notice, because slide 16 of this course teaches disclosure and the course materials comply with it.
+
+| Slide | Clips | Running time | What is shown |
+|---:|---:|---:|---|
+| 5 | 1 | 10.1 s | The fully specified prompt, and the dolly out it produces |
+| 6 | 1 | 8.1 s | The six-element formula applied line by line |
+| 8 | 4 | 61.1 s | Warm tones · cool tones · high saturation · low saturation |
+| 10 | 10 | 52.0 s | Light source (2) · direction and quality (4) · time of day (4) |
+| 11 | 12 | 62.8 s | Composition (4) · shot size (4) · shot types (4) |
+| 12 | 12 | 95.4 s | Dolly and tracking (4) · crane, orbit, pans (4) · handheld, drone, whip pan, rack focus (4) |
+| 13 | 7 | 50.9 s | Seven cuts: shot and reverse shot, reveal, vertical descent, reflection, whip pan, rack focus, ellipsis |
+| **Total** | **47** | **5 min 40 s** | |
+
+Slides 4, 9, 14, 15 and 16 receive **no** clip: their demonstration time is live, or pre-rendered by you. No extract in the supplied set matches those five gestures. The file-by-file correspondence is in **Appendix III**.
 
 ---
 
@@ -194,6 +212,8 @@
 
 **DEMO BEAT 2** — *This is the one live generation of the first half. Have the fallback screen-recording cued; if the tool is slow or rate-limited, switch to the recording without comment.*
 
+**CLIPS** — *Below the slide: a ten-second extract, a dolly out at sunset, displayed with its fully specified English prompt of over six hundred characters — duration, movement, character performance, background, light, style. Start it as you say "every part of it that is good, is good because I specified it": on a subject other than the textile brief, it is the proof that a fully written prompt gives a fully directed result. A second panel, with no video, sets an intent prompt — show that he is nervous — against its filmable version, a close-up on fingers rubbing the edge of a phone. It repeats the pair you have just revealed on screen; leave it up for the whole conversion exercise.*
+
 **SAY**
 
 > So let us fix it. And the fix is not a magic word. It is a change in what *kind* of sentence you write.
@@ -241,6 +261,8 @@
 ## SLIDE 6 — The Six-Element Formula
 **⏱ 10:00 → 13:00 · 3 min · ≈ 350 words**
 **ON SCREEN:** Six-row table — element, what to write, consequence if omitted. The "consequence" column highlighted.
+
+**CLIPS** — *Below the slide: an eight-second extract, a slow dolly in down a Tokyo street after the rain, whose prompt is written in the six lines of the formula — Subject · Action · Setting · Camera · Style · Audio. Start it as you reach element four. The room watches the formula turn into a picture while you read it out, and the prompt itself is the worked example of the table: it is the shortest proof you can give.*
 
 **SAY**
 
@@ -326,6 +348,8 @@
 **⏱ 16:00 → 19:00 · 3 min · ≈ 430 words**
 **ON SCREEN:** Three panels. Style panel shows four labelled dials: colour temperature · contrast · grain · depth of field. Bottom banner: *Never let the model draw your logo.*
 
+**CLIPS** — *Below the slide: four fifteen-second extracts, the longest in the course, shot on the same framing and differing only by style — warm tones · cool tones · high saturation · low saturation. Run them one after the other as you say "that is a style. It is executable — and, more importantly for a business, it is repeatable". Four prompts, one setting changed each time: it is the cleanest demonstration you have of what "executable" and "repeatable" mean together. Because the extracts are silent, element six — audio — is not illustrated here; say so, do not leave the room to guess.*
+
 **SAY**
 
 > Now the three elements people skip.
@@ -410,6 +434,8 @@
 **⏱ 22:00 → 24:00 · 2 min · ≈ 300 words**
 **ON SCREEN:** Three labelled strips — direction · quality · time of day. "Volumetric lighting" set apart visually.
 
+**CLIPS** — *Below the slide, three groups of ten five-second extracts, one per strip: the light source (moonlight · overcast light) · direction and quality (soft light · top light · back light · under light) · the time of day (daylight · night · sunrise · sunset — magic hour). Ten prompts for ten settings, one word of light changed each time. Scroll a group during the sentence that concerns it. If you apply the late-running plan and cut the time-of-day paragraph, leave the group displayed: it costs no seconds of narration and still carries the point.*
+
 **SAY**
 
 > Two minutes on light, because it is the cheapest quality you can buy with words.
@@ -434,6 +460,8 @@
 **⏱ 24:00 → 26:00 · 2 min · ≈ 240 words**
 **ON SCREEN:** Six frames in a row, widest to tightest, each captioned with its business use. Below: five composition terms.
 
+**CLIPS** — *Below the slide, three groups of twelve extracts of about five seconds: composing the frame (centred composition · symmetrical composition · balanced framing · off-centre subject) · shot size (close-up · medium shot · full shot · wide shot) · shot types and points of view (single shot · two shot · group shot · establishing shot). The middle group illustrates four of the six sizes you have just named — extreme wide and extreme close-up have no extract; do not promise all six. The third group counts the subjects in frame, and it does not illustrate the three shot types you name either — point of view, over-the-shoulder and the insert have no extract. Present it as a complement, not as the picture of that paragraph. The composition group shows the default centring beside the off-centre subject: it is the visual proof of your rule, "composition words must be written into the prompt." No group costs a second of narration, so if you apply the late-running plan, leave all three displayed.*
+
 **SAY**
 
 > Shot size is not decoration. Shot size decides what this shot is *for*.
@@ -455,6 +483,8 @@
 ## SLIDE 12 — Camera Movement: Name It, Give It a Start and an End
 **⏱ 26:00 → 29:00 · 3 min · ≈ 340 words**
 **ON SCREEN:** Ten movements in a two-column list, each with its narrative function in four words or fewer.
+
+**CLIPS** — *Below the slide, three groups of twelve extracts: dolly and tracking moves (dolly in · dolly out · tracking shot · follow shot) · crane, orbit and pans (orbit shot · crane down · pan · tilt) · handheld, drone, whip pan and rack focus (handheld · aerial / drone · whip pan · rack focus). Each of the ten movements you name has its own extract — the last two, follow shot and rack focus, are not on your list: present them as two additions, not as two omissions. Use them for the reversal exercise: at each **ASK**, let the room answer, then point to the matching extract instead of repeating the answer.*
 
 **SAY**
 
@@ -509,6 +539,8 @@
 ## SLIDE 13 — Multi-Shot Scripts: Three Ways to Segment
 **⏱ 29:00 → 32:00 · 3 min · ≈ 370 words**
 **ON SCREEN:** Three columns — A / B / C — each with a sample line and its cost. Column C visually dominant.
+
+**CLIPS** — *Below the slide, two groups. The first is written, with no video: the three real prompts, one per method — natural-language segments, timecodes, style anchor — displayed in full so that the room can see the difference in form. Leave that group on screen through your whole explanation of the three methods. Note that the anchor displayed is a warmer one than the cold grey-blue example you read aloud; both are valid, and the point of the panel is the form, not the palette. The second group is the seven cuts in seven extracts: shot and reverse shot · follow then reveal · vertical descent into the interior · reflection transition · whip pan · storytelling by rack focus · time ellipsis through cuts. Seven extracts, seven prompts, not one word spoken: they run under your voice.*
 
 **SAY**
 
@@ -761,6 +793,76 @@ Run this before the camera rolls. Mapped to `docs/IIOE内容开发说明.md` §6
 - [ ] **Accessibility** — SRT subtitles written and checked against the audio at normal speaking speed; on-screen text legible at 480p; no information conveyed by colour alone; high-contrast palette.
 - [ ] **Rehearsal** — full run with a timer. Slides 4, 9, 14, 15, and 16 carry demonstrations and are the five most likely to overrun.
 - [ ] **Offline backup** — a screen recording of all six demonstration beats exists and plays correctly, in case of network, quota, or rate-limit failure.
+- [ ] **Pre-recorded clips — format** — the 47 extracts are not 1920×1080 (four distinct resolutions, from 1280×676 to 1920×1014). This changes nothing for the web player. For the final MP4, every extract must be letterboxed or cropped into a 1920×1080 frame before compositing.
+- [ ] **Pre-recorded clips — disclosure** — every extract is AI-generated and is displayed in the player with a generation notice and the prompt that produced it. Slide 16 teaches disclosure: the course materials comply with it.
+- [ ] **Pre-recorded clips — audio** — all 47 extracts are silent. Verified. No audio track can conflict with the narration, and the course AAC track remains the only track in the final MP4.
+
+---
+
+# Appendix III — Full correspondence of the pre-recorded clips
+
+Not narrated. Production and verification reference.
+
+The extracts and their thumbnails are **not in this repository**: they ship in the partner package under `assets/demos/media/` and `assets/demos/posters/`, and the slide↔clip manifest is inlined in that package's `index.html`. The labels below are the ones the player displays; any change to the manifest must be carried across here.
+
+**Every prompt is in English**, in line with the localisation rule announced on slide 1: it is the language in which the models are most accurate. The characters counted below are therefore those of the English prompt actually displayed. A dash in the File column marks a text-only panel, with no video.
+
+| Slide | File | Label | Duration | Prompt characters |
+|---:|---|---|---:|---:|
+| 5 | slide20.mp4 | Dolly out at sunset | 10.1 s | 620 |
+| 5 | — | Intent versus description | — | 104 |
+| 6 | slide33.mp4 | The six-element formula applied | 8.1 s | 459 |
+| 8 | slide28_1.mp4 | Warm tones | 15.3 s | 161 |
+| 8 | slide28_2.mp4 | Cool tones | 15.2 s | 170 |
+| 8 | slide28_3.mp4 | High saturation | 15.3 s | 192 |
+| 8 | slide28_4.mp4 | Low saturation | 15.3 s | 178 |
+| 10 | slide22_2.mp4 | Moonlight | 5.2 s | 225 |
+| 10 | slide22_4.mp4 | Overcast light | 5.2 s | 184 |
+| 10 | slide23_1.mp4 | Soft light | 5.2 s | 174 |
+| 10 | slide23_2.mp4 | Top light | 5.2 s | 170 |
+| 10 | slide23_3.mp4 | Back light | 5.2 s | 183 |
+| 10 | slide23_4.mp4 | Under light | 5.2 s | 173 |
+| 10 | slide24_1.mp4 | Daylight | 5.2 s | 154 |
+| 10 | slide24_2.mp4 | Night | 5.2 s | 186 |
+| 10 | slide24_3.mp4 | Sunrise | 5.2 s | 152 |
+| 10 | slide24_4.mp4 | Sunset — magic hour | 5.2 s | 174 |
+| 11 | slide25_1.mp4 | Centred composition | 5.2 s | 195 |
+| 11 | slide25_2.mp4 | Symmetrical composition | 5.2 s | 168 |
+| 11 | slide25_3.mp4 | Balanced framing | 5.2 s | 227 |
+| 11 | slide25_4.mp4 | Off-centre subject | 5.2 s | 184 |
+| 11 | slide26_1.mp4 | Close-up | 5.2 s | 157 |
+| 11 | slide26_2.mp4 | Medium shot | 5.2 s | 155 |
+| 11 | slide26_3.mp4 | Full shot | 5.2 s | 179 |
+| 11 | slide26_4.mp4 | Wide shot | 5.2 s | 181 |
+| 11 | slide27_1.mp4 | Single shot | 5.3 s | 161 |
+| 11 | slide27_2.mp4 | Two shot | 5.3 s | 154 |
+| 11 | slide27_3.mp4 | Group shot | 5.3 s | 181 |
+| 11 | slide27_4.mp4 | Establishing shot | 5.3 s | 185 |
+| 12 | slide35_1.mp4 | Dolly in | 8.2 s | 193 |
+| 12 | slide35_2.mp4 | Dolly out | 8.2 s | 179 |
+| 12 | slide35_3.mp4 | Tracking shot | 5.3 s | 178 |
+| 12 | slide35_4.mp4 | Follow shot | 8.2 s | 178 |
+| 12 | slide36_1.mp4 | Orbit shot | 8.2 s | 193 |
+| 12 | slide36_2.mp4 | Crane down | 8.2 s | 162 |
+| 12 | slide36_3.mp4 | Pan | 8.2 s | 156 |
+| 12 | slide36_4.mp4 | Tilt | 8.2 s | 169 |
+| 12 | slide37_1.mp4 | Handheld | 8.2 s | 158 |
+| 12 | slide37_2.mp4 | Aerial / drone | 8.2 s | 174 |
+| 12 | slide37_3.mp4 | Whip pan | 8.2 s | 152 |
+| 12 | slide37_4.mp4 | Rack focus | 8.1 s | 200 |
+| 13 | — | Method A — natural-language segments | — | 493 |
+| 13 | — | Method B — timecodes | — | 215 |
+| 13 | — | Method C — style anchor | — | 78 |
+| 13 | slide45.mp4 | Shot and reverse shot | 5.2 s | 129 |
+| 13 | slide46.mp4 | Follow then reveal | 8.1 s | 128 |
+| 13 | slide47.mp4 | Vertical descent into the interior | 8.1 s | 94 |
+| 13 | slide48.mp4 | Reflection transition | 8.1 s | 142 |
+| 13 | slide49.mp4 | Whip pan | 5.2 s | 150 |
+| 13 | slide50.mp4 | Storytelling by rack focus | 8.1 s | 151 |
+| 13 | slide51.mp4 | Time ellipsis through cuts | 8.1 s | 134 |
+| **Total** | **47 extracts + 4 text panels** | **51 prompts** | **5 min 40 s** | **9,592** |
+
+Slides 1, 2, 3, 4, 7, 9, 14, 15, 16, 17 and 18 carry no pre-recorded extract. Five of them — 4, 9, 14, 15 and 16 — carry a live demonstration that no extract in the supplied set replaces: slide 4 shows the drift across four generations of one unchanged prompt; slide 9, the generated catalogue image beside the real product photograph; slide 14, the contrast between an anchorless prompt whose shots drift and the same prompt restored; slide 15, the full chain from the reference photograph to the eight-second edit; slide 16, that same video left on screen while the disclosure question is put to the room.
 
 ---
 
