@@ -791,7 +791,7 @@ Run this before the camera rolls. Mapped to `docs/IIOE内容开发说明.md` §6
 - [ ] **Data protection** — no customer personal data, employee record, or unreleased design was uploaded to any tool during recording.
 - [ ] **Legal review** — every date and regulatory statement on slide 16 has been read by a qualified reviewer.
 - [ ] **Accessibility** — SRT subtitles written and checked against the audio at normal speaking speed; on-screen text legible at 480p; no information conveyed by colour alone; high-contrast palette.
-- [ ] **Rehearsal** — full run with a timer. Slides 4, 9, 14, 15, and 16 carry demonstrations and are the five most likely to overrun.
+- [ ] **Rehearsal** — full run with a timer. Slides 4, 5, 9, 14, 15 and 16 carry the six demonstration beats and are the most likely to overrun; slide 5 is the one live generation of the first half.
 - [ ] **Offline backup** — a screen recording of all six demonstration beats exists and plays correctly, in case of network, quota, or rate-limit failure.
 - [ ] **Pre-recorded clips — format** — the 47 extracts are not 1920×1080 (four distinct resolutions, from 1280×676 to 1920×1014). This changes nothing for the web player. For the final MP4, every extract must be letterboxed or cropped into a 1920×1080 frame before compositing.
 - [ ] **Pre-recorded clips — disclosure** — every extract is AI-generated and is displayed in the player with a generation notice and the prompt that produced it. Slide 16 teaches disclosure: the course materials comply with it.

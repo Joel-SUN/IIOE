@@ -35,6 +35,13 @@ six-beat demonstration map, on slides 4, 5, 9, 14, 15 and 16. The English script
 the French and Chinese versions are aligned to it page by page, in the same order and with the
 same slide numbers, so a page can be re-recorded in any language by opening the matching note.
 
+**Do not conflate the demonstration beats with the pre-recorded extracts** — they are two different
+things and only slide 5 has both. The **six demonstration beats** are performed live by the
+presenter, on slides 4, 5, 9, 14, 15 and 16. The **47 pre-recorded extracts** are silent
+AI-generated clips that play underneath the narration on slides 5, 6, 8, 10, 11, 12 and 13; they add
+not one second to the timing. Slides 4, 9, 14, 15 and 16 receive no extract, because nothing in the
+supplied set replaces those five live gestures.
+
 ## Measured length
 
 Counted from the lecture text actually spoken — the eighteen **SAY** / **DITES** / **说** blocks
@@ -52,10 +59,17 @@ seconds each they fit comfortably; anything longer eats into the spoken running 
 
 **The 45-minute figure is a recommendation of the IIOE format, not a selection criterion.** No
 reviewed text has been cut in order to approach it. Where a passage runs long, the scripts mark it
-**TRIM** / **COUPEZ SI RETARD** / **超时可删** instead: four such passages, on slides 7, 10, 11 and
-12, each dropping examples rather than concepts, and each applying to both broadcast languages at
-once so they do not diverge. **Slides 9 and 16 are never cut** — 9 carries the full demonstration
-and 16 the disclosure obligations.
+**TRIM** / **COUPEZ SI RETARD** / **超时可删** instead: four such passages, on slides 4, 7, 10 and 12,
+each losing an example rather than a concept, and each applying to both broadcast languages at once
+so they do not diverge. **Slides 9 and 16 are never cut** — those two carry the enterprise and UNESCO
+compliance value of the course.
+
+**One discrepancy between two cutting instructions is reported here rather than silently reconciled.**
+The front matter of all three scripts also carries a **Late-running plan** / **Plan de rattrapage** /
+**超时预案** naming a different three passages: the time-of-day paragraph in slide 10, the shot-types
+paragraph in slide 11, and the reversal exercise in slide 12. Slides 10 and 12 agree with the TRIM
+markers. Slide 11 carries no TRIM marker, and the two TRIM passages on slides 4 and 7 are absent from
+the plan. Which list governs at the lectern is the presenter's call, not a documentation fix.
 
 The Chinese budget is the one number in that table that does not reconcile: the per-slide figures
 in the ZH script's headers add up to 10,625 while the text measures 9,394, about 12 % over-declared.
@@ -88,26 +102,50 @@ partner package instead, and the `.gitignore` excludes it:
 
 - **rendered media and the tooling that produces it.** Audio, video, subtitles, exported slide
   images and the build scripts behind them stay on the local machine and are not shared publicly.
-  This includes the 47 silent demonstration clips, the per-slide images and the full-length tracks;
+  This includes the 47 silent pre-recorded extracts, the per-slide images and the full-length tracks;
 - **the partner `.zip` archives.** They carry that rendered media and exceed GitHub's 100 MB
   per-file limit. The delivered package is 177 files for 530,868,005 bytes uncompressed, and its
   own `README.txt` is the authoritative inventory of what ships;
 - **the IIOE documentation supplied by the partner** — Feishu extracts of the co-construction
   process and the official slide master. These are confidential.
 
-**Three links in [`docs/教学设计原则.md`](docs/教学设计原则.md) therefore do not resolve from this
-repository.** They point at partner documentation that is deliberately not versioned here:
-`IIOE内容开发说明.md`, `IIOE课程合作研发流程、参考与标准.md` and `课程素材要求与示例.md`. The file's
-fourth relative link, to [`docs/UNESCO_AI_Image_Video_Course_EN.md`](docs/UNESCO_AI_Image_Video_Course_EN.md),
-does resolve. Nothing else in the published set links outside it.
+**Nine links in [`docs/教学设计原则.md`](docs/教学设计原则.md) therefore do not resolve from this
+repository.** They are nine occurrences of three targets, all pointing at partner documentation that
+is deliberately not versioned here: `IIOE内容开发说明.md` (6 links), `课程素材要求与示例.md` (2) and
+`IIOE课程合作研发流程、参考与标准.md` (1). The file's tenth relative link is the only one that
+resolves: the one to [`docs/UNESCO_AI_Image_Video_Course_EN.md`](docs/UNESCO_AI_Image_Video_Course_EN.md).
+No other file in the published set carries a link that does not resolve.
 
 ## Published copy vs. local production record
 
-The English and French scripts kept in the local working directory carry production notes that the
-copies published here do not — the notes recording how the lecture was turned into delivered media,
-with their run paths, measured durations and subtitle counts. Every other line of the two files is
-identical. Read the published copy as the authoritative **text of the lecture** and the local copy
-as the production log.
+The three scripts kept in the local working directory carry production notes that the copies
+published here do not. Read the published copies as the authoritative **text of the lecture**; the
+local copies are that same text plus a production log.
+
+**The spoken text is identical.** Extracting the eighteen **SAY** / **DITES** / **说** blocks from both
+copies of each script and comparing them line by line gives **zero differences in any language**: 221
+spoken lines for English, 221 for French and 233 for Chinese, standing inside 436 / 436 / 448 quoted
+lines once the blank paragraph separators between spoken paragraphs are counted. What differs is three
+pieces of framing:
+
+| Script | Where the copies differ |
+|---|---|
+| [`docs/scripts/UNESCO_AI_Image_Video_Script_EN.md`](docs/scripts/UNESCO_AI_Image_Video_Script_EN.md) | header length line · a production note the published copy does not carry · the Appendix III footer |
+| [`docs/scripts/UNESCO_AI_Image_Video_Script_FR.md`](docs/scripts/UNESCO_AI_Image_Video_Script_FR.md) | header length line · the second front-matter note, which is a different note in each copy · the Appendix III footer |
+| [`docs/scripts/UNESCO_AI_Image_Video_Script_ZH.md`](docs/scripts/UNESCO_AI_Image_Video_Script_ZH.md) | the Appendix III footer only |
+
+The header lines differ in their trailing clause alone: the local copies record how long the delivered
+narration measured, the published copies state the demonstration budget a reader has to plan against
+instead. The footers differ in where they say the 47 silent extracts live — the local copies point at
+the working directory that holds them, the published copies at the partner package that ships them.
+
+The third difference is not the same shape in both languages. The published English copy has **no** note
+in that slot at all; the local copy adds a production note there. The published French copy carries a
+**cut note** in it — the four **COUPEZ SI RETARD** passages and the two slides that are never cut — and
+the local copy replaces that note with a production note. The production notes are local-only by design.
+The cut note is published in French only, which is an asymmetry in the sources rather than a decision:
+an English reader gets the same information distributed through the body — the late-running plan after
+the timing table, and the four TRIM markers where they sit.
 
 The disclosure obligation that attaches to the delivered narration is a compliance matter, not a
 production detail, and it is published: see §6.7 *讲师出镜与声音* of
