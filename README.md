@@ -17,11 +17,16 @@ page carries all three at once. The source syllabus is the one exception — it 
 | Folder | Course | Length | Status |
 |---|---|---|---|
 | [`Formation-Video-IA-Prompting/`](Formation-Video-IA-Prompting/) | Prompt writing for AI video generation — the source syllabus, taught in Chinese with French film terminology | 6 h · 7 modules | v0.1 |
-| [`Formation-IA-Images-Videos-Marketing/`](Formation-IA-Images-Videos-Marketing/) | Generative AI applied to marketing visuals — image and video generation for commercial teams, in English, French and Chinese | 45 min · 18 slides | decks v0.1 · scripts EN/FR/ZH |
+| [`Formation-IA-Images-Videos-Marketing/`](Formation-IA-Images-Videos-Marketing/) | Generative AI applied to marketing visuals — image and video generation for commercial teams, in English, French and Chinese | 45 min · 18 slides | decks v0.1 · scripts EN/FR/ZH · lab pack EN/FR |
 
 The second course is an adaptation of the first: cut down from 6 hours to 45 minutes, widened from
 video alone to image **and** video, and re-centred from SME executives onto marketing and sales
 leads.
+
+It also carries a **practical-works pack** — [`Formation-IA-Images-Videos-Marketing/lab/`](Formation-IA-Images-Videos-Marketing/lab/),
+in English and French. Eleven exercises built around the 47 generated extracts and the prompts that
+produced them: observe first, produce second. The published copy is text only; the extracts ship in
+the partner package.
 
 The 45 minutes is the **target of the IIOE format, not a selection criterion**: a real running time
 of 46 to 49 minutes is acceptable, and no reviewed text is cut in order to reach the target.
@@ -43,9 +48,9 @@ imbalance; no commercial promotion; no noise pollution, and a definition of at l
 vendor, product or price name appears anywhere in the published material.
 
 **What this repository holds.** The repository versions **text and slide decks only**: course design,
-lecture scripts, learner pages and `.pptx` files. All rendered media — audio, video, subtitles,
-exported slide images — and the tooling that produces it stay **outside the repository** and are
-distributed in the partner package instead. The `.gitignore` excludes them.
+lecture scripts, learner pages, the practical-works pack and `.pptx` files. All rendered media —
+audio, video, subtitles, exported slide images — and the tooling that produces it stay **outside the
+repository** and are distributed in the partner package instead. The `.gitignore` excludes them.
 
 **Synthesised voice.** Disclosing the voice used for the narration is a compliance obligation. It is
 set out in the instructional-design principles document

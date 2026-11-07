@@ -16,7 +16,8 @@ untranslated prose. The lecture scripts themselves are each in the language they
 
 ## What is in this folder
 
-Thirteen files: eleven Markdown, HTML, text and PowerShell sources, and two binary `.pptx` decks.
+Seventeen files: fifteen Markdown, HTML, text and PowerShell sources, and two binary `.pptx` decks.
+Thirteen sit in `docs/` and `build/`; four are the practical-works pack in [`lab/`](lab/).
 
 | File | Role | IIOE stage |
 |---|---|---|
@@ -28,6 +29,10 @@ Thirteen files: eleven Markdown, HTML, text and PowerShell sources, and two bina
 | [`build/UNESCO_AI_Image_Video_Course_EN.pptx`](build/UNESCO_AI_Image_Video_Course_EN.pptx) | **Delivered deck (English)** — 18 English pages on the official IIOE recording master, the English lecture text verbatim in each page's notes | 3 · Slide development |
 | [`build/UNESCO_AI_Image_Video_Course_FR.pptx`](build/UNESCO_AI_Image_Video_Course_FR.pptx) | **Delivered deck (French)** — 18 French pages on the same master, the French lecture text verbatim in each page's notes | 3 · Slide development |
 | [`build/logo-placeholder.ps1`](build/logo-placeholder.ps1) | Deck tooling: removes the IIOE master's "YOUR LOGO" placeholder — two shapes, `partner-logo-frame` and `partner-logo-label` — which renders on all 18 slides at once | 3 |
+| [`lab/index-en.html`](lab/index-en.html) | **Practical-works pack (English)** — eleven exercises in two parts, built around the 47 extracts and their prompts | learner support |
+| [`lab/index-fr.html`](lab/index-fr.html) | **Practical-works pack (French)** — the same workbook, generated from the same content module | learner support |
+| [`lab/PROMPTS.md`](lab/PROMPTS.md) | The 51 prompts as plain text, grouped by course slide, for reading and diffing | learner support |
+| [`lab/README.md`](lab/README.md) | What the pack contains, how the two gates work, and what the published copy omits | learner support |
 | [`docs/UNESCO_AI_Image_Video_Course_Page.html`](docs/UNESCO_AI_Image_Video_Course_Page.html) | Trilingual learner page (EN / FR / ZH), one self-contained file with no external dependency, printable to A4 | learner support |
 | [`docs/trainer-profile.txt`](docs/trainer-profile.txt) | Presenter biography, long and short versions | learner support |
 | [`docs/Trainer_Profile_Yuefeng_SUN.html`](docs/Trainer_Profile_Yuefeng_SUN.html) | The same biography as a standalone HTML page | learner support |
@@ -101,6 +106,37 @@ are folded into a trailing `AT RECORDING ·` cue line in each note, as are `ASK`
 trim markers. Convention 1 above still applies to both decks: the prompt examples shown on screen
 remain in English.
 
+## Practical-works pack
+
+[`lab/`](lab/) holds a workbook that accompanies the 45 minutes rather than repeating them: eleven
+exercises, about 5 h 55 in total, in two parts.
+
+- **Part I — Observation** (TP 1 to TP 7, about 3 h 10) needs no tool, no account and no budget. Each
+  exercise takes one slide's extracts — the six-element formula on slide 6, temperature and saturation
+  on slide 8, light on slide 10, framing on slide 11, camera moves on slide 12, multi-shot prompting on
+  slide 13 — and works through the prompts that produced them.
+- **Part II — Production** (TP 8 to TP 11, about 2 h 45) has the learner generate their own assets
+  against a written brief, break consistency on purpose to see what causes it, then decide whether a
+  result is publishable.
+
+Two mechanisms make "predict before you play" enforceable rather than advisory. On six exercises a
+prediction textarea must be filled before that exercise's clip grid unlocks. On the style exercise the
+prompts stay hidden until each extract has been watched, so the learner cannot read the answer first.
+Progress is kept in the browser only. A trainer control unlocks everything at once, and printing opens
+every collapsible answer.
+
+Six annexes follow: the prompt library, filterable by slide and searchable; a trilingual glossary
+(中文 · English · Français); the six-element card; an abstract-to-concrete table; the tool-selection
+criteria and safeguards; and the trainer's notes with an assessment grid.
+
+Both conventions above hold in the pack. The 51 prompts are reproduced in English in the French
+workbook too, and the glossary is trilingual.
+
+**The copy published here is text only.** The 47 extracts and their 47 poster stills — about 237 MB —
+ship in the partner package. Without them each clip card renders a labelled placeholder carrying the
+slide number, the duration and the full prompt, so Part I remains workable from the prompts and the
+course. A self-contained copy with all 94 media files is built locally alongside it.
+
 ## What is not in this repository
 
 This repository versions **sources only** — course design, lecture scripts, the learner page, the
@@ -109,7 +145,8 @@ partner package instead, and the `.gitignore` excludes it:
 
 - **rendered media and the tooling that produces it.** Audio, video, subtitles, exported slide
   images and the build scripts behind them stay on the local machine and are not shared publicly.
-  This includes the 47 silent pre-recorded extracts, the per-slide images and the full-length tracks;
+  This includes the 47 silent pre-recorded extracts, the 47 poster stills the practical-works pack
+  would show beside them, the per-slide images and the full-length tracks;
 - **the partner `.zip` archives.** They carry that rendered media and exceed GitHub's 100 MB
   per-file limit. The delivered package (2026-11-07 build) is 177 files for 501,380,061 bytes
   uncompressed, and its own `README.txt` is the authoritative inventory of what ships;
