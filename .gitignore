@@ -1,13 +1,12 @@
 # ---------------------------------------------------------------------------
-# Média rendu et outillage de production : ne sont jamais téléversés.
-# Décision de l'intervenant du 6 nov. 2026 — tout ce chantier reste local et
-# n'est pas partagé sur Internet ; la distribution passe par le paquet
-# partenaire. Les règles ci-dessous existent pour qu'un `git add -A`
-# accidentel ne puisse pas les republier.
+# Rendered media and production tooling: never uploaded.
+# Trainer decision of 6 Nov 2026 — that whole workstream stays local and is not
+# shared on the Internet; distribution goes through the partner package. The
+# rules below exist so that an accidental `git add -A` cannot republish it.
 # ---------------------------------------------------------------------------
 **/docs/tools/tts/
 
-# Dérivés du média rendu : lecteur de révision, contrôles, notice du paquet.
+# Derivatives of rendered media: review player, checks, package notice.
 **/build/course-site/
 **/build/qc.mjs
 **/build/README-package.txt
@@ -19,17 +18,25 @@
 *.flac
 *.ogg
 
-# Archives partenaires : elles embarquent le média rendu et dépassent la limite
-# GitHub de 100 Mo par fichier. Distribuées hors dépôt.
+# Partner archives: they carry the rendered media and exceed GitHub's 100 MB
+# per-file limit. Distributed outside the repository.
 *.zip
 
-# Vidéo : démos générées et tout média rendu.
+# Video: generated demos and any rendered media.
 *.mp4
 *.webm
 *.mov
 *.mkv
 
-# Secrets — la CLI les lit hors dépôt, jamais dedans.
+# Sole exception — the practical-works pack versions its 47 demo extracts, so
+# the workbook plays exactly as it was verified. Largest clip 21,275,720 bytes,
+# well under GitHub's 100 MB per-file limit; 248,915,344 bytes for all 94 media
+# files. The negation is scoped to that one directory, so no other *.mp4
+# anywhere in the repository can be staged. The poster stills are .jpg and were
+# never excluded. The narrated audio stays out: biometric data, local only.
+!Formation-IA-Images-Videos-Marketing/lab/assets/demos/media/*.mp4
+
+# Secrets — the CLI reads them outside the repository, never inside it.
 .env
 .env.*
 *.pem
@@ -38,7 +45,7 @@ api-key*
 apikey*
 
 # ---------------------------------------------------------------------------
-# Bureautique et système
+# Office and system files
 # ---------------------------------------------------------------------------
 .qoder-office-pptx-locks/
 ~$*
@@ -47,16 +54,16 @@ Thumbs.db
 Desktop.ini
 .DS_Store
 
-# Copie de travail du générateur de diaporama ; seul le livrable est versionné.
+# Working copy of the slide generator; only the deliverable is versioned.
 **/build/pptx-work/
 
-# Journaux d'exécution et sauvegardes locales.
+# Run logs and local backups.
 *.log
 *.bak
 
 # ---------------------------------------------------------------------------
-# Documentation IIOE fournie par le partenaire (extractions Feishu, modèle
-# officiel de diaporama). Confidentielle : elle reste hors du dépôt.
+# IIOE documentation supplied by the partner (Feishu extracts, official slide
+# template). Confidential: it stays out of the repository.
 # ---------------------------------------------------------------------------
 **/docs/IIOE内容开发说明.md
 **/docs/IIOE课程合作研发流程、参考与标准.*

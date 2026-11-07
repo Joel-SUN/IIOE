@@ -7,7 +7,11 @@ The prompts are in English on purpose. That is the language the models were driv
 translating a prompt changes the result. Film-grammar terms are given trilingually in Annex B of
 the workbook; the prompt text itself is not translated.
 
-Every extract is AI-generated and silent. None may be presented as a photograph or as footage.
+Every extract is AI-generated. None may be presented as a photograph or as footage.
+
+Each extract also carries an audio track the video model generated on its own — never prompted,
+never composed. The workbook opens each clip muted. Anyone assembling these clips into another
+video must strip or mute that audio explicitly; muting is a property of the player, not of the file.
 
 Companion files: [`index-en.html`](index-en.html) · [`index-fr.html`](index-fr.html)
 

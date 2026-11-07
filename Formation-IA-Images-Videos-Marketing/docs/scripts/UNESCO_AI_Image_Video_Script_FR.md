@@ -20,7 +20,7 @@
 | **FAITES** | Action physique ou à l'écran de l'intervenant. Jamais prononcée. |
 | **À L'ÉCRAN** | Ce que montrent la diapositive ou la démonstration à cet instant. |
 | **DÉMO n** | L'une des six étapes de la démonstration en direct. |
-| **CLIPS** | Extraits vidéo pré-enregistrés, muets, diffusés sous la narration. Ne rallongent pas le cours. |
+| **CLIPS** | Extraits vidéo pré-enregistrés, coupés par le lecteur, diffusés sous la narration. Ne rallongent pas le cours. |
 | **DEMANDEZ** | Question posée à la salle. Attendez en silence — n'y répondez pas vous-même. |
 | **SI ON VOUS DEMANDE** | Question anticipée et réponse validée. |
 | **COUPEZ SI RETARD** | Texte supprimable sans perte de concept, seulement d'exemple. |
@@ -47,7 +47,7 @@
 
 **Carte des clips pré-enregistrés**
 
-Quarante-sept extraits vidéo générés par IA accompagnent le cours dans le lecteur web, sous la diapositive concernée. **Tous sont muets** : ils se jouent sous votre voix sans jamais la couvrir, et ils n'allongent pas le minutage d'une seule seconde. Chaque extrait est affiché avec le prompt exact qui l'a produit — les prompts restent en anglais, comme annoncé à la diapositive 1.
+Quarante-sept extraits vidéo générés par IA accompagnent le cours dans le lecteur web, sous la diapositive concernée. **Tous sont coupés par le lecteur, et non muets** : chacun comporte une piste audio générée, que le lecteur coupe systématiquement ; ils se jouent donc sous votre voix sans jamais la couvrir, et ils n'allongent pas le minutage d'une seule seconde. Chaque extrait est affiché avec le prompt exact qui l'a produit — les prompts restent en anglais, comme annoncé à la diapositive 1.
 
 | Diapo | Clips | Durée cumulée | Ce qui est montré |
 |---:|---:|---:|---|
@@ -351,7 +351,7 @@ Les diapositives 4, 9, 14, 15 et 16 ne reçoivent **aucun** clip : leur temps de
 **⏱ 16:00 → 19:00 · 3 min · ≈ 460 mots**
 **À L'ÉCRAN :** Trois panneaux. Le panneau style montre quatre curseurs légendés : température de couleur · contraste · grain · profondeur de champ. Bandeau inférieur : *Ne laissez jamais le modèle dessiner votre logo.*
 
-**CLIPS** — *Sous la diapositive : quatre extraits de quinze secondes, les plus longs du cours, tournés sur le même plan et différant uniquement par le style — tons chauds · tons froids · saturation forte · saturation faible. Lancez-les les uns après les autres au moment où vous dites « cela, c'est un style. C'est exécutable — et, ce qui compte davantage pour une entreprise, c'est répétable ». Quatre prompts, un seul réglage changé à chaque fois : c'est la démonstration la plus nette de ce que « exécutable » et « répétable » veulent dire ensemble. Les extraits étant muets, l'élément six — l'audio — n'est pas illustré ici ; dites-le, ne le laissez pas deviner.*
+**CLIPS** — *Sous la diapositive : quatre extraits de quinze secondes, les plus longs du cours, tournés sur le même plan et différant uniquement par le style — tons chauds · tons froids · saturation forte · saturation faible. Lancez-les les uns après les autres au moment où vous dites « cela, c'est un style. C'est exécutable — et, ce qui compte davantage pour une entreprise, c'est répétable ». Quatre prompts, un seul réglage changé à chaque fois : c'est la démonstration la plus nette de ce que « exécutable » et « répétable » veulent dire ensemble. Les extraits étant coupés, et l'audio qu'ils comportent n'ayant jamais été prompté, l'élément six — l'audio — n'est pas illustré ici ; dites-le, ne le laissez pas deviner. (Ce ne sont pas des fichiers muets : chacun comporte une piste audio générée, dans les graves, coupée de force par le lecteur. Savoir si cette piste mérite d'être faite entendre à la salle — comme leçon de choses sur ce qu'émet un modèle lorsque l'audio n'est pas prompté — est votre décision, et demande une écoute préalable.)*
 
 **DITES**
 
@@ -798,7 +798,9 @@ Les diapositives 4, 9, 14, 15 et 16 ne reçoivent **aucun** clip : leur temps de
 - [ ] **Secours hors ligne** — un enregistrement d'écran des six temps de démonstration existe et se lit correctement, en cas de panne de réseau, de quota ou de limitation de débit.
 - [ ] **Clips pré-enregistrés — format** — les 47 extraits ne sont pas en 1920×1080 (quatre résolutions différentes, de 1280×676 à 1920×1014). Pour le lecteur web, cela ne change rien. Pour le MP4 final, chaque extrait doit être recalé ou détouré dans un cadre 1920×1080 avant compositing.
 - [ ] **Clips pré-enregistrés — divulgation** — chaque extrait est généré par IA et est affiché, dans le lecteur, avec la mention de génération et le prompt qui l'a produit. La diapositive 16 enseigne la divulgation : les supports du cours s'y conforment.
-- [ ] **Clips pré-enregistrés — audio** — les 47 extraits sont muets. Vérifié. Aucune piste audio ne peut entrer en conflit avec la narration, et la piste AAC du cours reste la seule piste du MP4 final.
+- [ ] **Clips pré-enregistrés — audio** — les 47 extraits comportent une véritable piste audio générée et sont **coupés par le lecteur, non muets**. Mesuré sur l'ensemble : −16,2 à −29,5 dBFS RMS, crêtes à −2,2 dBFS, bande limitée à environ 1 kHz, contenu non stationnaire. Vérifié de deux façons : les comptes d'échantillons `stsz` correspondent exactement à la durée au taux d'échantillonnage encodé, et Media Foundation et Chromium décodent le même PCM à 0,01 dB près.
+- [ ] **Clips pré-enregistrés — audio, dans le lecteur web** — le lecteur pose `v.muted = true` sur chaque extrait à la construction ; aucun son de clip n'est donc audible par-dessus la narration. **Réserve à trancher avant livraison :** le lecteur pose aussi `v.controls = true`, ce qui expose le bouton de coupure du son — un apprenant peut donc rétablir le son d'un clip par-dessus la narration. Trois options : retirer `controls`, rétablir `muted` sur l'événement `volumechange`, ou l'accepter et le dire.
+- [ ] **Clips pré-enregistrés — audio, dans le MP4 final** — l'assembleur doit **supprimer ou couper l'audio des clips sur la timeline** ; un logiciel de montage n'hérite pas de la coupure posée par le lecteur. C'est à cette condition seulement que la piste AAC du cours reste l'unique piste du MP4 final.
 
 ---
 
@@ -806,7 +808,7 @@ Les diapositives 4, 9, 14, 15 et 16 ne reçoivent **aucun** clip : leur temps de
 
 Non narré. Référence de production et de vérification.
 
-Les extraits et leurs vignettes **ne figurent pas dans ce dépôt** : ils sont livrés dans le paquet partenaire sous `assets/demos/media/` et `assets/demos/posters/`, et le manifeste qui les relie aux diapositives est intégré à l'`index.html` de ce paquet. Les libellés ci-dessous sont ceux affichés par le lecteur ; toute modification du manifeste doit être reportée ici.
+Les extraits et leurs vignettes **sont versionnés dans ce dépôt**, sous [`../../lab/assets/demos/media/`](../../lab/assets/demos/media/) et [`../../lab/assets/demos/posters/`](../../lab/assets/demos/posters/). Le manifeste qui les relie aux diapositives est intégré à chaque page qui les diffuse : le lecteur de révision, livré dans le paquet partenaire et non versionné ici, et les deux classeurs de travaux pratiques rangés à côté des médias, qui le sont. Les libellés ci-dessous sont ceux affichés par le lecteur ; toute modification du manifeste doit être reportée ici.
 
 **Tous les prompts sont en anglais**, conformément à la note de localisation en tête de ce script : c'est la langue dans laquelle les modèles sont les plus précis. Les caractères comptés ci-dessous sont donc ceux du prompt anglais réellement diffusé, pas d'une traduction française. Un tiret dans la colonne « Fichier » signale un panneau de texte seul, sans vidéo.
 

@@ -16,8 +16,9 @@ untranslated prose. The lecture scripts themselves are each in the language they
 
 ## What is in this folder
 
-Seventeen files: fifteen Markdown, HTML, text and PowerShell sources, and two binary `.pptx` decks.
-Thirteen sit in `docs/` and `build/`; four are the practical-works pack in [`lab/`](lab/).
+Seventeen source files — fifteen Markdown, HTML, text and PowerShell sources, and two binary `.pptx`
+decks — plus the 94 media files of the practical-works pack. Thirteen sources sit in `docs/` and
+`build/`; the other four, and the media, are the pack in [`lab/`](lab/).
 
 | File | Role | IIOE stage |
 |---|---|---|
@@ -32,7 +33,8 @@ Thirteen sit in `docs/` and `build/`; four are the practical-works pack in [`lab
 | [`lab/index-en.html`](lab/index-en.html) | **Practical-works pack (English)** — eleven exercises in two parts, built around the 47 extracts and their prompts | learner support |
 | [`lab/index-fr.html`](lab/index-fr.html) | **Practical-works pack (French)** — the same workbook, generated from the same content module | learner support |
 | [`lab/PROMPTS.md`](lab/PROMPTS.md) | The 51 prompts as plain text, grouped by course slide, for reading and diffing | learner support |
-| [`lab/README.md`](lab/README.md) | What the pack contains, how the two gates work, and what the published copy omits | learner support |
+| [`lab/README.md`](lab/README.md) | What the pack contains, how the two gates work, and how the extracts are provenanced | learner support |
+| [`lab/assets/demos/`](lab/assets/demos/) | The 47 AI-generated extracts (`media/`, 246,868,311 bytes) and their 47 poster stills (`posters/`, 2,047,033 bytes), played by both workbooks | 5 · Video and asset production |
 | [`docs/UNESCO_AI_Image_Video_Course_Page.html`](docs/UNESCO_AI_Image_Video_Course_Page.html) | Trilingual learner page (EN / FR / ZH), one self-contained file with no external dependency, printable to A4 | learner support |
 | [`docs/trainer-profile.txt`](docs/trainer-profile.txt) | Presenter biography, long and short versions | learner support |
 | [`docs/Trainer_Profile_Yuefeng_SUN.html`](docs/Trainer_Profile_Yuefeng_SUN.html) | The same biography as a standalone HTML page | learner support |
@@ -46,10 +48,18 @@ same slide numbers, so a page can be re-recorded in any language by opening the 
 
 **Do not conflate the demonstration beats with the pre-recorded extracts** — they are two different
 things and only slide 5 has both. The **six demonstration beats** are performed live by the
-presenter, on slides 4, 5, 9, 14, 15 and 16. The **47 pre-recorded extracts** are silent
-AI-generated clips that play underneath the narration on slides 5, 6, 8, 10, 11, 12 and 13; they add
-not one second to the timing. Slides 4, 9, 14, 15 and 16 receive no extract, because nothing in the
-supplied set replaces those five live gestures.
+presenter, on slides 4, 5, 9, 14, 15 and 16. The **47 pre-recorded extracts** are AI-generated clips
+that play underneath the narration on slides 5, 6, 8, 10, 11, 12 and 13; they add not one second to
+the timing. Slides 4, 9, 14, 15 and 16 receive no extract, because nothing in the supplied set
+replaces those five live gestures.
+
+Each extract is **muted by the player, not a silent file.** All 47 carry a real AAC audio track —
+incidental low-frequency sound the video model emitted on its own, never prompted and never composed,
+measured across the set at −16.2 to −29.5 dBFS RMS with peaks to −2.2 dBFS. The player sets `muted`
+on every clip so that bed can never cover the narration, and anyone re-cutting an extract into
+another video must strip or mute it explicitly: muting is a property of the player, not of the file.
+The full measurement, and the two ways it was verified, are in
+[`docs/UNESCO_AI_Image_Video_Course_EN.md`](docs/UNESCO_AI_Image_Video_Course_EN.md).
 
 ## Measured length
 
@@ -132,24 +142,31 @@ criteria and safeguards; and the trainer's notes with an assessment grid.
 Both conventions above hold in the pack. The 51 prompts are reproduced in English in the French
 workbook too, and the glossary is trilingual.
 
-**The copy published here is text only.** The 47 extracts and their 47 poster stills — about 237 MB —
-ship in the partner package. Without them each clip card renders a labelled placeholder carrying the
-slide number, the duration and the full prompt, so Part I remains workable from the prompts and the
-course. A self-contained copy with all 94 media files is built locally alongside it.
+**The copy published here is self-contained.** The 47 extracts and their 47 poster stills — 94 files
+for 248,915,344 bytes, the largest single clip 21,275,720 bytes — are versioned beside the workbooks
+under [`lab/assets/demos/`](lab/assets/demos/), so what a reader opens here plays exactly as it was
+verified. If a copy is ever distributed without that media, each clip card falls back to a labelled
+placeholder carrying the slide number, the duration and the full prompt, so Part I remains workable
+from the prompts and the course.
 
 ## What is not in this repository
 
-This repository versions **sources only** — course design, lecture scripts, the learner page, the
-presenter profile and the two slide decks. Everything derived from them is distributed in the
-partner package instead, and the `.gitignore` excludes it:
+This repository versions the **sources** — course design, lecture scripts, the learner page, the
+presenter profile and the two slide decks — plus the one piece of rendered media the practical-works
+pack teaches from: the 47 demo extracts and their 47 poster stills. Everything else derived from
+those sources is distributed in the partner package instead, and the `.gitignore` excludes it:
 
-- **rendered media and the tooling that produces it.** Audio, video, subtitles, exported slide
-  images and the build scripts behind them stay on the local machine and are not shared publicly.
-  This includes the 47 silent pre-recorded extracts, the 47 poster stills the practical-works pack
-  would show beside them, the per-slide images and the full-length tracks;
-- **the partner `.zip` archives.** They carry that rendered media and exceed GitHub's 100 MB
-  per-file limit. The delivered package (2026-11-07 build) is 177 files for 501,380,061 bytes
-  uncompressed, and its own `README.txt` is the authoritative inventory of what ships;
+- **the narrated audio.** It is a voice biometric, so the per-slide tracks, the full-length tracks
+  and the subtitles built from them stay on the local machine and are never shared publicly;
+- **exported slide images, and the tooling that produces any of it.** The per-slide PNGs, the review
+  player, the build scripts and the synthesis command line behind them stay out of the repository.
+  The `.gitignore` carries a single scoped negation — `lab/assets/demos/media/*.mp4` — so no other
+  video anywhere in the tree can be staged;
+- **the partner `.zip` archives.** They carry the whole rendered course — narration, subtitles,
+  per-slide images and the demo extracts together. The delivered package (2026-11-07 build) is
+  177 files for 501,380,061 bytes uncompressed, and the archive itself is 466,264,926 bytes, four
+  times GitHub's 100 MB per-file limit. Its own `README.txt` is the authoritative inventory of what
+  ships;
 - **the IIOE documentation supplied by the partner** — Feishu extracts of the co-construction
   process and the official slide master. These are confidential.
 
@@ -182,8 +199,9 @@ counted. What differs is three pieces of framing:
 
 The header lines differ in their trailing clause alone: the local copies record how long the delivered
 narration measured, the published copies state the demonstration budget a reader has to plan against
-instead. The footers differ in where they say the 47 silent extracts live — the local copies point at
-the working directory that holds them, the published copies at the partner package that ships them.
+instead. The footers differ in where they say the 47 extracts live — the local copies point at the
+working directory that holds them, the published copies at the copy versioned under
+[`lab/assets/demos/`](lab/assets/demos/).
 
 The third difference is not the same shape in both languages. The published English copy has **no** note
 in that slot at all; the local copy adds a production note there. The published French copy carries a

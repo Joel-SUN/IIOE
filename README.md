@@ -25,8 +25,9 @@ leads.
 
 It also carries a **practical-works pack** — [`Formation-IA-Images-Videos-Marketing/lab/`](Formation-IA-Images-Videos-Marketing/lab/),
 in English and French. Eleven exercises built around the 47 generated extracts and the prompts that
-produced them: observe first, produce second. The published copy is text only; the extracts ship in
-the partner package.
+produced them: observe first, produce second. The extracts and their 47 poster stills are versioned
+beside the workbooks under `lab/assets/demos/`, so what is published here plays exactly as it was
+verified.
 
 The 45 minutes is the **target of the IIOE format, not a selection criterion**: a real running time
 of 46 to 49 minutes is acceptable, and no reviewed text is cut in order to reach the target.
@@ -47,10 +48,16 @@ United Nations usage; no element under an unverifiable licence and no watermark;
 imbalance; no commercial promotion; no noise pollution, and a definition of at least 1080p. No
 vendor, product or price name appears anywhere in the published material.
 
-**What this repository holds.** The repository versions **text and slide decks only**: course design,
-lecture scripts, learner pages, the practical-works pack and `.pptx` files. All rendered media —
-audio, video, subtitles, exported slide images — and the tooling that produces it stay **outside the
-repository** and are distributed in the partner package instead. The `.gitignore` excludes them.
+**What this repository holds.** The repository versions text, slide decks, and the generated video
+the practical-works pack teaches from: course design, lecture scripts, learner pages, `.pptx` files,
+and the 47 demo extracts with their 47 poster stills — 94 files for 248,915,344 bytes, the largest
+single clip 21,275,720 bytes, well under GitHub's 100 MB per-file limit.
+
+**What it does not hold.** The narrated audio is a voice biometric and never leaves the local
+machine. Subtitles, exported slide images, and the tooling that produces any of it stay outside the
+repository too, and are distributed in the partner package instead. The `.gitignore` excludes all of
+them, with one scoped negation for `Formation-IA-Images-Videos-Marketing/lab/assets/demos/media/` —
+no other `.mp4` anywhere in the tree can be staged.
 
 **Synthesised voice.** Disclosing the voice used for the narration is a compliance obligation. It is
 set out in the instructional-design principles document

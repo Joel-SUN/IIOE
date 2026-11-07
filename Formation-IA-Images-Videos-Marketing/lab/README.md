@@ -14,6 +14,8 @@ so they cannot drift apart.
 | `index-en.html` | The English workbook. Open it in a browser. |
 | `index-fr.html` | The French workbook. Same content, same structure. |
 | `PROMPTS.md` | The 51 prompts as plain text, for reading and diffing. |
+| `assets/demos/media/` | The 47 AI-generated video extracts, referenced by both workbooks. |
+| `assets/demos/posters/` | One poster still per extract, shown before the video loads. |
 
 ## Structure
 
@@ -38,12 +40,12 @@ collapsible answer.
 
 ## The video files
 
-This published copy carries **text only**. The 47 extracts and 47 poster
-stills — about 237 MB — are distributed with the course package, not through this repository.
+The 47 extracts and 47 poster stills — about 249 MB — are versioned
+in this repository under [`assets/demos/`](assets/demos/), so the workbook here plays exactly as
+it was verified. Each clip card shows the video, its duration and the full prompt that produced it.
 
-Without them each clip card shows a labelled placeholder instead of a video, carrying the slide
-number, the duration and the full prompt. Part I still works in that mode: the learner predicts from
-the prompt and checks against the course.
+The extracts are not 1920 by 1080: they run at four resolutions, from 1280 by 676 to 1920 by
+1014. The workbook displays each in its own aspect ratio.
 
 ## Provenance
 
@@ -51,4 +53,10 @@ Prompts, labels, durations and section structure are copied verbatim from the co
 exercises, the drift table, the publication sheet and the assessment grid are additions built only
 out of rules the course design document already states.
 
-Every extract is AI-generated and silent. None may be presented as a photograph or as footage.
+Every extract is AI-generated. None may be presented as a photograph or as footage.
+
+Each extract also carries an audio track the video model generated on its own — never prompted,
+never composed. The workbook opens each clip muted so nothing plays over the narration; the controls
+let you restore the sound deliberately, to hear what that bed is. Muting is a property of the player,
+not of the file: anyone assembling these clips into another video must strip or mute that audio
+explicitly.

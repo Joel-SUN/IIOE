@@ -17,7 +17,7 @@
 | **DO** | Physical or on-screen action for the presenter. Never spoken. |
 | **ON SCREEN** | What the slide or the demonstration shows at this moment. |
 | **DEMO BEAT** | A numbered step of the six-beat live demonstration. |
-| **CLIPS** | Pre-recorded video extracts, silent, played under the narration. They add no runtime. |
+| **CLIPS** | Pre-recorded video extracts, muted by the player, played under the narration. They add no runtime. |
 | **ASK** | A question to the room. Wait in silence — do not answer it yourself. |
 | **IF ASKED** | Anticipated question and the approved answer. |
 | **TRIM** | Text that may be cut if the segment is running late. Cutting it loses an example, not a concept. |
@@ -44,7 +44,7 @@
 
 **Pre-recorded clip map**
 
-Forty-seven AI-generated video extracts accompany the course in the web player, under the slide they illustrate. **All of them are silent**: they play underneath your voice without ever covering it, and they add not one second to the timing. Each extract is displayed with the exact prompt that produced it. Prompts stay in English, as announced on slide 1 — it is the language in which the models are most accurate. Every clip carries an on-screen AI-generation notice, because slide 16 of this course teaches disclosure and the course materials comply with it.
+Forty-seven AI-generated video extracts accompany the course in the web player, under the slide they illustrate. **All of them are muted by the player, not silent**: each carries a generated audio bed, and the player force-mutes every clip, so they play underneath your voice without ever covering it, and they add not one second to the timing. Each extract is displayed with the exact prompt that produced it. Prompts stay in English, as announced on slide 1 — it is the language in which the models are most accurate. Every clip carries an on-screen AI-generation notice, because slide 16 of this course teaches disclosure and the course materials comply with it.
 
 | Slide | Clips | Running time | What is shown |
 |---:|---:|---:|---|
@@ -348,7 +348,7 @@ Slides 4, 9, 14, 15 and 16 receive **no** clip: their demonstration time is live
 **⏱ 16:00 → 19:00 · 3 min · ≈ 430 words**
 **ON SCREEN:** Three panels. Style panel shows four labelled dials: colour temperature · contrast · grain · depth of field. Bottom banner: *Never let the model draw your logo.*
 
-**CLIPS** — *Below the slide: four fifteen-second extracts, the longest in the course, shot on the same framing and differing only by style — warm tones · cool tones · high saturation · low saturation. Run them one after the other as you say "that is a style. It is executable — and, more importantly for a business, it is repeatable". Four prompts, one setting changed each time: it is the cleanest demonstration you have of what "executable" and "repeatable" mean together. Because the extracts are silent, element six — audio — is not illustrated here; say so, do not leave the room to guess.*
+**CLIPS** — *Below the slide: four fifteen-second extracts, the longest in the course, shot on the same framing and differing only by style — warm tones · cool tones · high saturation · low saturation. Run them one after the other as you say "that is a style. It is executable — and, more importantly for a business, it is repeatable". Four prompts, one setting changed each time: it is the cleanest demonstration you have of what "executable" and "repeatable" mean together. The extracts are muted, and the audio they do carry was never prompted, so element six — audio — is not illustrated here; say so, do not leave the room to guess. (These are not silent files: each carries a low-frequency generated audio bed, force-muted by the player. Whether that bed is worth letting the room hear — as an object lesson in what a model emits when audio is left out of the prompt — is your call, and it needs a listen first.)*
 
 **SAY**
 
@@ -795,7 +795,9 @@ Run this before the camera rolls. Mapped to `docs/IIOE内容开发说明.md` §6
 - [ ] **Offline backup** — a screen recording of all six demonstration beats exists and plays correctly, in case of network, quota, or rate-limit failure.
 - [ ] **Pre-recorded clips — format** — the 47 extracts are not 1920×1080 (four distinct resolutions, from 1280×676 to 1920×1014). This changes nothing for the web player. For the final MP4, every extract must be letterboxed or cropped into a 1920×1080 frame before compositing.
 - [ ] **Pre-recorded clips — disclosure** — every extract is AI-generated and is displayed in the player with a generation notice and the prompt that produced it. Slide 16 teaches disclosure: the course materials comply with it.
-- [ ] **Pre-recorded clips — audio** — all 47 extracts are silent. Verified. No audio track can conflict with the narration, and the course AAC track remains the only track in the final MP4.
+- [ ] **Pre-recorded clips — audio** — all 47 extracts carry a real generated audio track and are **muted by the player, not silent**. Measured across the set: −16.2 to −29.5 dBFS RMS, peaks to −2.2 dBFS, band-limited below roughly 1 kHz, non-stationary. Verified two ways: `stsz` sample counts match duration at the encoded sample rate exactly, and Media Foundation and Chromium decode the same PCM to within 0.01 dB.
+- [ ] **Pre-recorded clips — audio, in the web player** — the player sets `v.muted = true` on every clip at construction, so no clip audio is heard over the narration. **Caveat to resolve before delivery:** the player also sets `v.controls = true`, which exposes the mute toggle, so a learner can unmute a clip over the narration. Either drop `controls`, or re-assert `muted` on the `volumechange` event, or accept it and state it.
+- [ ] **Pre-recorded clips — audio, in the final MP4** — the assembler must **strip or mute the clip audio on the timeline**; a video editor does not inherit the player's muting. Only after that does the course AAC track remain the sole track in the final MP4.
 
 ---
 
@@ -803,7 +805,7 @@ Run this before the camera rolls. Mapped to `docs/IIOE内容开发说明.md` §6
 
 Not narrated. Production and verification reference.
 
-The extracts and their thumbnails are **not in this repository**: they ship in the partner package under `assets/demos/media/` and `assets/demos/posters/`, and the slide↔clip manifest is inlined in that package's `index.html`. The labels below are the ones the player displays; any change to the manifest must be carried across here.
+The extracts and their thumbnails **are versioned in this repository**, under [`../../lab/assets/demos/media/`](../../lab/assets/demos/media/) and [`../../lab/assets/demos/posters/`](../../lab/assets/demos/posters/). The slide↔clip manifest is inlined in each page that plays them: the review player, which ships in the partner package and is not versioned here, and the two practical-works workbooks filed beside the media, which are. The labels below are the ones the player displays; any change to the manifest must be carried across here.
 
 **Every prompt is in English**, in line with the localisation rule announced on slide 1: it is the language in which the models are most accurate. The characters counted below are therefore those of the English prompt actually displayed. A dash in the File column marks a text-only panel, with no video.
 
