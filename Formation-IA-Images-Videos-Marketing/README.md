@@ -111,8 +111,8 @@ partner package instead, and the `.gitignore` excludes it:
   images and the build scripts behind them stay on the local machine and are not shared publicly.
   This includes the 47 silent pre-recorded extracts, the per-slide images and the full-length tracks;
 - **the partner `.zip` archives.** They carry that rendered media and exceed GitHub's 100 MB
-  per-file limit. The delivered package is 177 files for 530,868,005 bytes uncompressed, and its
-  own `README.txt` is the authoritative inventory of what ships;
+  per-file limit. The delivered package (2026-11-07 build) is 177 files for 501,380,061 bytes
+  uncompressed, and its own `README.txt` is the authoritative inventory of what ships;
 - **the IIOE documentation supplied by the partner** — Feishu extracts of the co-construction
   process and the official slide master. These are confidential.
 
