@@ -1,11 +1,11 @@
 # AI for Image and Video Generation — Lecture Script (EN)
 
-**45-minute IIOE micro-credential lecture · English master version · v0.1**
+**47-minute IIOE micro-credential lecture · English master version · v0.1**
 **Companion to:** [`docs/UNESCO_AI_Image_Video_Course_EN.md`](../UNESCO_AI_Image_Video_Course_EN.md) (course design, stage 1)
 **Delivery:** on-camera recording, single presenter, teleprompter-compatible
-**Script length:** 5,764 spoken words — the eighteen **SAY** blocks, with markers and stage directions removed → ≈ 43 min at 135 wpm, against a declared per-slide budget of 5,715 words. That leaves ≈ 2 min inside the 45-minute format for the six silent demonstration beats on slides 4, 5, 9, 14, 15 and 16. Budget them against that figure before assembling the video: at eight seconds each they fit, and anything longer eats into the spoken running time.
+**Script length:** 6,057 spoken words — the twenty **SAY** blocks, with markers and stage directions removed → ≈ 45 min at 135 wpm, against a declared per-slide budget of 6,008 words. That leaves ≈ 2 min inside the 47-minute plan for the six silent demonstration beats on slides 6, 7, 11, 16, 17 and 18. Budget them against that figure before assembling the video: at twenty seconds each they fit, and anything longer eats into the spoken running time.
 
-> **Delivery note.** The English deck, [`build/UNESCO_AI_Image_Video_Course_EN.pptx`](../../build/UNESCO_AI_Image_Video_Course_EN.pptx), is built on this document: 18 pages on the official IIOE recording template, the **ON SCREEN** content on the page and the **SAY** text verbatim in that page's speaker notes. Slide numbering and page order match this script exactly, so a page can be re-recorded by opening the matching note. **DO**, **ASK**, **IF ASKED** and **TRIM** markers are folded into a trailing `AT RECORDING ·` cue line in each note and are never spoken. Prompt examples are not translated in any language version of the deck.
+> **Delivery note.** The English deck, [`build/UNESCO_AI_Image_Video_Course_EN.pptx`](../../build/UNESCO_AI_Image_Video_Course_EN.pptx), is built on this document: 20 pages on the official IIOE recording template, the **ON SCREEN** content on the page and the **SAY** text verbatim in that page's speaker notes. Slide numbering and page order match this script exactly, so a page can be re-recorded by opening the matching note. **DO**, **ASK**, **IF ASKED** and **TRIM** markers are folded into a trailing `AT RECORDING ·` cue line in each note and are never spoken. Prompt examples are not translated in any language version of the deck.
 
 ---
 
@@ -29,35 +29,35 @@
 - Every acronym is spoken in full at first use: *text-to-image*, *image-to-video*, *Artificial Intelligence Act*.
 - No vendor name, product name, price, or recognisable interface chrome is spoken or shown at any point.
 - No map appears in this course. Country names follow official United Nations terminology and are illustrative market examples only.
-- The regulatory segment (slide 16) opens with an explicit "this is not legal advice" disclaimer. Do not cut that sentence.
+- The regulatory segment (slide 18) opens with an explicit "this is not legal advice" disclaimer. Do not cut that sentence.
 
 **Six-beat demonstration map** — the live demonstration is woven into the lecture, not run separately.
 
 | Beat | Slide | What is shown |
 |---|---:|---|
-| 1 | 4 | One unchanged wish prompt, generated four times → drift |
-| 2 | 5 | Same brief rewritten as a shooting script, generated once → directed |
-| 3 | 9 | Generated catalogue image beside a real product photograph → fidelity gap |
-| 4 | 14 | Subject synonym + style anchor deleted → drift; both restored → coherence |
-| 5 | 15 | Full workflow: text-to-image lock → image-to-video shots → assembly |
-| 6 | 16 | The finished asset, with the disclosure question put to the room |
+| 1 | 6 | One unchanged wish prompt, generated four times → drift |
+| 2 | 7 | Same brief rewritten as a shooting script, generated once → directed |
+| 3 | 11 | Generated catalogue image beside a real product photograph → fidelity gap |
+| 4 | 16 | Subject synonym + style anchor deleted → drift; both restored → coherence |
+| 5 | 17 | Full workflow: text-to-image lock → image-to-video shots → assembly |
+| 6 | 18 | The finished asset, with the disclosure question put to the room |
 
 **Pre-recorded clip map**
 
-Forty-seven AI-generated video extracts accompany the course in the web player, under the slide they illustrate. **All of them are muted by the player, not silent**: each carries a generated audio bed, and the player force-mutes every clip, so they play underneath your voice without ever covering it, and they add not one second to the timing. Each extract is displayed with the exact prompt that produced it. Prompts stay in English, as announced on slide 1 — it is the language in which the models are most accurate. Every clip carries an on-screen AI-generation notice, because slide 16 of this course teaches disclosure and the course materials comply with it.
+Forty-seven AI-generated video extracts accompany the course in the web player, under the slide they illustrate. **All of them are muted by the player, not silent**: each carries a generated audio bed, and the player force-mutes every clip, so they play underneath your voice without ever covering it, and they add not one second to the timing. Each extract is displayed with the exact prompt that produced it. Prompts stay in English, as announced on slide 1 — it is the language in which the models are most accurate. Every clip carries an on-screen AI-generation notice, because slide 18 of this course teaches disclosure and the course materials comply with it.
 
 | Slide | Clips | Running time | What is shown |
 |---:|---:|---:|---|
-| 5 | 1 | 10.1 s | The fully specified prompt, and the dolly out it produces |
-| 6 | 1 | 8.1 s | The six-element formula applied line by line |
-| 8 | 4 | 61.1 s | Warm tones · cool tones · high saturation · low saturation |
-| 10 | 10 | 52.0 s | Light source (2) · direction and quality (4) · time of day (4) |
-| 11 | 12 | 62.8 s | Composition (4) · shot size (4) · shot types (4) |
-| 12 | 12 | 95.4 s | Dolly and tracking (4) · crane, orbit, pans (4) · handheld, drone, whip pan, rack focus (4) |
-| 13 | 7 | 50.9 s | Seven cuts: shot and reverse shot, reveal, vertical descent, reflection, whip pan, rack focus, ellipsis |
+| 7 | 1 | 10.1 s | The fully specified prompt, and the dolly out it produces |
+| 8 | 1 | 8.1 s | The six-element formula applied line by line |
+| 10 | 4 | 61.1 s | Warm tones · cool tones · high saturation · low saturation |
+| 12 | 10 | 52.0 s | Light source (2) · direction and quality (4) · time of day (4) |
+| 13 | 12 | 62.8 s | Composition (4) · shot size (4) · shot types (4) |
+| 14 | 12 | 95.4 s | Dolly and tracking (4) · crane, orbit, pans (4) · handheld, drone, whip pan, rack focus (4) |
+| 15 | 7 | 50.9 s | Seven cuts: shot and reverse shot, reveal, vertical descent, reflection, whip pan, rack focus, ellipsis |
 | **Total** | **47** | **5 min 40 s** | |
 
-Slides 4, 9, 14, 15 and 16 receive **no** clip: their demonstration time is live, or pre-rendered by you. No extract in the supplied set matches those five gestures. The file-by-file correspondence is in **Appendix III**.
+Slides 6, 11, 16, 17 and 18 receive **no** clip: their demonstration time is live, or pre-rendered by you. No extract in the supplied set matches those five gestures. The file-by-file correspondence is in **Appendix III**.
 
 ---
 
@@ -66,29 +66,31 @@ Slides 4, 9, 14, 15 and 16 receive **no** clip: their demonstration time is live
 | Slide | In | Out | Dur. | Segment |
 |---:|---:|---:|---:|---|
 | 1 | 00:00 | 01:00 | 1 | Introduction: the marketing content bottleneck |
-| 2 | 01:00 | 03:00 | 2 | " |
-| 3 | 03:00 | 05:00 | 2 | " |
-| 4 | 05:00 | 07:00 | 2 | How generation works, and what the model cannot infer |
-| 5 | 07:00 | 10:00 | 3 | " |
-| 6 | 10:00 | 13:00 | 3 | The six-element prompt |
-| 7 | 13:00 | 16:00 | 3 | " |
-| 8 | 16:00 | 19:00 | 3 | " |
-| 9 | 19:00 | 22:00 | 3 | Fidelity, light, and framing |
-| 10 | 22:00 | 24:00 | 2 | " |
-| 11 | 24:00 | 26:00 | 2 | " |
-| 12 | 26:00 | 29:00 | 3 | Camera movement and multi-shot video |
-| 13 | 29:00 | 32:00 | 3 | " |
-| 14 | 32:00 | 35:00 | 3 | " |
-| 15 | 35:00 | 38:00 | 3 | Workflow, rights, and disclosure |
-| 16 | 38:00 | 41:00 | 3 | " |
-| 17 | 41:00 | 43:00 | 2 | " |
-| 18 | 43:00 | 45:00 | 2 | Closing and questions |
+| 2 | 01:00 | 02:00 | 1 | " |
+| 3 | 02:00 | 03:00 | 1 | " |
+| 4 | 03:00 | 05:00 | 2 | " |
+| 5 | 05:00 | 07:00 | 2 | " |
+| 6 | 07:00 | 09:00 | 2 | How generation works, and what the model cannot infer |
+| 7 | 09:00 | 12:00 | 3 | " |
+| 8 | 12:00 | 15:00 | 3 | The six-element prompt |
+| 9 | 15:00 | 18:00 | 3 | " |
+| 10 | 18:00 | 21:00 | 3 | " |
+| 11 | 21:00 | 24:00 | 3 | Fidelity, light, and framing |
+| 12 | 24:00 | 26:00 | 2 | " |
+| 13 | 26:00 | 28:00 | 2 | " |
+| 14 | 28:00 | 31:00 | 3 | Camera movement and multi-shot video |
+| 15 | 31:00 | 34:00 | 3 | " |
+| 16 | 34:00 | 37:00 | 3 | " |
+| 17 | 37:00 | 40:00 | 3 | Workflow, rights, and disclosure |
+| 18 | 40:00 | 43:00 | 3 | " |
+| 19 | 43:00 | 45:00 | 2 | " |
+| 20 | 45:00 | 47:00 | 2 | Closing and questions |
 
-**Late-running plan.** If you are more than 60 seconds behind at slide 10, cut in this order: the time-of-day paragraph in slide 10, the shot-types paragraph in slide 11, the reversal exercise in slide 12. **Never cut slide 9 (fidelity tiers) or slide 16 (rights and disclosure)** — those two carry the enterprise and UNESCO compliance value of the course.
+**Late-running plan.** If you are more than 60 seconds behind at slide 12, cut in this order: the time-of-day paragraph in slide 12, the shot-types paragraph in slide 13, the reversal exercise in slide 14. **Never cut slide 11 (fidelity tiers) or slide 18 (rights and disclosure)** — those two carry the enterprise and UNESCO compliance value of the course.
 
 ---
 
-# SEGMENT 1 — Introduction: the marketing content bottleneck (00:00 – 05:00)
+# SEGMENT 1 — Introduction: the marketing content bottleneck (00:00 – 07:00)
 
 ## SLIDE 1 — Can Your Business Make Its Own Images and Videos?
 **⏱ 00:00 → 01:00 · 1 min · ≈ 140 words**
@@ -112,8 +114,48 @@ Slides 4, 9, 14, 15 and 16 receive **no** clip: their demonstration time is live
 
 ---
 
-## SLIDE 2 — The Marketing Content Bottleneck
-**⏱ 01:00 → 03:00 · 2 min · ≈ 290 words**
+## SLIDE 2 — Your Trainer
+**⏱ 01:00 → 02:00 · 1 min · ≈ 112 words**
+**ON SCREEN:** Trainer page. Portrait, name, title line, a short biography naming the client and university cohorts taught, four capability chips, and an INDEPENDENCE band at the foot: *No product, no price, no interface is promoted.*
+
+**SAY**
+
+> Before I give you that method — let me tell you who is speaking. My name is Yuefeng SUN.
+>
+> I have spent twenty years building enterprise data platforms and cloud architecture. And for most of those twenty years, my job has been to teach generative AI to the people who have to use it in a business — not to the people who build it.
+>
+> Marketing teams. Online commerce teams. Communications teams. People who have no designer and no engineer — and who still have to publish on Monday morning.
+>
+> That is exactly who this session was written for. So everything you are about to see is built for your constraints — not for a laboratory.
+
+**DO:** Say the name once, slowly, then stop. The companies and universities are written on the slide and the viewer reads them faster than you can speak them, so do not read them aloud. Land the last sentence on the independence band — it is what makes the rest of the session credible.
+
+---
+
+## SLIDE 3 — You Will Be Able To:
+**⏱ 02:00 → 03:00 · 1 min · ≈ 181 words**
+**ON SCREEN:** Six numbered cards in a 3 × 2 grid, each a promise the learner can check. Footer line: *This session will not teach you a product. Tools change every six months. The method does not.*
+
+**SAY**
+
+> So — what will you actually be able to do at the end of this session? Let me be precise. A promise you can check is worth more than an impressive one.
+>
+> Six things.
+>
+> One — you will write a prompt the model can execute. Six elements, in order, with nothing left to chance. Two — you will tell a wish from a shooting script, and turn any adjective into something a camera can actually capture.
+>
+> Three — you will choose the right capability for the job. Lock the subject as a still image first — then make it move. Four — you will sort every asset into one of three fidelity tiers, and know when a real photograph must replace a generated one.
+>
+> Five — you will hold one brand consistent across a whole campaign — instead of rediscovering it every morning. And six — you will publish without hurting yourself. Rights, disclosure, and the four artefacts that turn one person's skill into a team capability.
+>
+> One thing this session will not do. It will not teach you a product. Tools change every six months. The method does not.
+
+**DO:** Do not read the cards — they are on screen. Count them off on your fingers as you go, and slow down on the sixth. End on the footer line: it is what makes the other six credible, and it is the same sentence you will repeat at the close. Then move straight on to the bottleneck itself.
+
+---
+
+## SLIDE 4 — The Marketing Content Bottleneck
+**⏱ 03:00 → 05:00 · 2 min · ≈ 290 words**
 **ON SCREEN:** Four labelled pressure blocks. Bottom line in large type: *Generation removes the production bottleneck, not the judgement bottleneck.*
 
 **SAY**
@@ -142,8 +184,8 @@ Slides 4, 9, 14, 15 and 16 receive **no** clip: their demonstration time is live
 
 ---
 
-## SLIDE 3 — Two Capabilities: Text-to-Image and Image-to-Video
-**⏱ 03:00 → 05:00 · 2 min · ≈ 265 words**
+## SLIDE 5 — Two Capabilities: Text-to-Image and Image-to-Video
+**⏱ 05:00 → 07:00 · 2 min · ≈ 265 words**
 **ON SCREEN:** Two boxes. Left: *words → still image*. Right: *still image + words → moving shot*. A third box, greyed out: *words → moving shot (not your default)*.
 
 **SAY**
@@ -172,13 +214,13 @@ Slides 4, 9, 14, 15 and 16 receive **no** clip: their demonstration time is live
 
 ---
 
-# SEGMENT 2 — How generation works, and what the model cannot infer (05:00 – 10:00)
+# SEGMENT 2 — How generation works, and what the model cannot infer (07:00 – 12:00)
 
-## SLIDE 4 — The Model Does Not Guess
-**⏱ 05:00 → 07:00 · 2 min · ≈ 185 words + DEMO BEAT 1**
+## SLIDE 6 — The Model Does Not Guess
+**⏱ 07:00 → 09:00 · 2 min · ≈ 185 words + DEMO BEAT 1**
 **ON SCREEN:** Split screen — the prompt text on the left, four generated results on the right.
 
-**DEMO BEAT 1** — *Have the four generations already rendered. Do not wait on a live model here; the pause kills the segment. Keep a live generation for slide 5 only.*
+**DEMO BEAT 1** — *Have the four generations already rendered. Do not wait on a live model here; the pause kills the segment. Keep a live generation for slide 7 only.*
 
 **SAY**
 
@@ -206,8 +248,8 @@ Slides 4, 9, 14, 15 and 16 receive **no** clip: their demonstration time is live
 
 ---
 
-## SLIDE 5 — A Prompt Is a Shooting Script, Not a Wish
-**⏱ 07:00 → 10:00 · 3 min · ≈ 370 words + DEMO BEAT 2**
+## SLIDE 7 — A Prompt Is a Shooting Script, Not a Wish
+**⏱ 09:00 → 12:00 · 3 min · ≈ 370 words + DEMO BEAT 2**
 **ON SCREEN:** Two columns. Left, struck through: *wish words*. Right: *filmable facts*. Four conversion pairs.
 
 **DEMO BEAT 2** — *This is the one live generation of the first half. Have the fallback screen-recording cued; if the tool is slow or rate-limited, switch to the recording without comment.*
@@ -256,10 +298,10 @@ Slides 4, 9, 14, 15 and 16 receive **no** clip: their demonstration time is live
 
 ---
 
-# SEGMENT 3 — The six-element prompt (10:00 – 19:00)
+# SEGMENT 3 — The six-element prompt (12:00 – 21:00)
 
-## SLIDE 6 — The Six-Element Formula
-**⏱ 10:00 → 13:00 · 3 min · ≈ 350 words**
+## SLIDE 8 — The Six-Element Formula
+**⏱ 12:00 → 15:00 · 3 min · ≈ 350 words**
 **ON SCREEN:** Six-row table — element, what to write, consequence if omitted. The "consequence" column highlighted.
 
 **CLIPS** — *Below the slide: an eight-second extract, a slow dolly in down a Tokyo street after the rain, whose prompt is written in the six lines of the formula — Subject · Action · Setting · Camera · Style · Audio. Start it as you reach element four. The room watches the formula turn into a picture while you read it out, and the prompt itself is the worked example of the table: it is the shortest proof you can give.*
@@ -298,12 +340,12 @@ Slides 4, 9, 14, 15 and 16 receive **no** clip: their demonstration time is live
 >
 > Elements four and five are the ones almost everybody omits. They are also the two that carry the most visual quality per word. So if you remember nothing else from this slide, remember this: **camera and style are where the money is.**
 
-**DO:** Ask the room to check the prompt still on screen from slide 5, and count the six elements in it. Ten seconds, no discussion.
+**DO:** Ask the room to check the prompt still on screen from slide 7, and count the six elements in it. Ten seconds, no discussion.
 
 ---
 
-## SLIDE 7 — Elements 1–3: Subject, Action, Setting
-**⏱ 13:00 → 16:00 · 3 min · ≈ 415 words**
+## SLIDE 9 — Elements 1–3: Subject, Action, Setting
+**⏱ 15:00 → 18:00 · 3 min · ≈ 415 words**
 **ON SCREEN:** Three panels. The reference-photography rule set in large type. Lower half: the model prompt, with the six elements colour-coded.
 
 **SAY**
@@ -340,12 +382,12 @@ Slides 4, 9, 14, 15 and 16 receive **no** clip: their demonstration time is live
 >
 > Count the elements. All six are there. That is why it works — and that is why it will still work in three years, on a tool that does not exist yet.
 
-**TRIM:** If behind, cut the "props are where cultural mistakes happen" paragraph here and cover it in slide 16 instead.
+**TRIM:** If behind, cut the "props are where cultural mistakes happen" paragraph here and cover it in slide 18 instead.
 
 ---
 
-## SLIDE 8 — Elements 4–6: Camera, Style, Audio — Where the "AI Look" Comes From
-**⏱ 16:00 → 19:00 · 3 min · ≈ 430 words**
+## SLIDE 10 — Elements 4–6: Camera, Style, Audio — Where the "AI Look" Comes From
+**⏱ 18:00 → 21:00 · 3 min · ≈ 430 words**
 **ON SCREEN:** Three panels. Style panel shows four labelled dials: colour temperature · contrast · grain · depth of field. Bottom banner: *Never let the model draw your logo.*
 
 **CLIPS** — *Below the slide: four fifteen-second extracts, the longest in the course, shot on the same framing and differing only by style — warm tones · cool tones · high saturation · low saturation. Run them one after the other as you say "that is a style. It is executable — and, more importantly for a business, it is repeatable". Four prompts, one setting changed each time: it is the cleanest demonstration you have of what "executable" and "repeatable" mean together. The extracts are muted, and the audio they do carry was never prompted, so element six — audio — is not illustrated here; say so, do not leave the room to guess. (These are not silent files: each carries a low-frequency generated audio bed, force-muted by the player. Whether that bed is worth letting the room hear — as an object lesson in what a model emits when audio is left out of the prompt — is your call, and it needs a listen first.)*
@@ -382,10 +424,10 @@ Slides 4, 9, 14, 15 and 16 receive **no** clip: their demonstration time is live
 
 ---
 
-# SEGMENT 4 — Fidelity, light, and framing (19:00 – 26:00)
+# SEGMENT 4 — Fidelity, light, and framing (21:00 – 28:00)
 
-## SLIDE 9 — Three Fidelity Tiers
-**⏱ 19:00 → 22:00 · 3 min · ≈ 380 words + DEMO BEAT 3**
+## SLIDE 11 — Three Fidelity Tiers
+**⏱ 21:00 → 24:00 · 3 min · ≈ 380 words + DEMO BEAT 3**
 **ON SCREEN:** Three-tier table with a rule under each tier. Then a side-by-side: generated catalogue image | real product photograph.
 
 **DEMO BEAT 3** — *Have both images pre-rendered at the same display size. The comparison must be instant; searching for a file destroys the moment.*
@@ -430,8 +472,8 @@ Slides 4, 9, 14, 15 and 16 receive **no** clip: their demonstration time is live
 
 ---
 
-## SLIDE 10 — Light: Direction, Quality, and Colour
-**⏱ 22:00 → 24:00 · 2 min · ≈ 300 words**
+## SLIDE 12 — Light: Direction, Quality, and Colour
+**⏱ 24:00 → 26:00 · 2 min · ≈ 300 words**
 **ON SCREEN:** Three labelled strips — direction · quality · time of day. "Volumetric lighting" set apart visually.
 
 **CLIPS** — *Below the slide, three groups of ten five-second extracts, one per strip: the light source (moonlight · overcast light) · direction and quality (soft light · top light · back light · under light) · the time of day (daylight · night · sunrise · sunset — magic hour). Ten prompts for ten settings, one word of light changed each time. Scroll a group during the sentence that concerns it. If you apply the late-running plan and cut the time-of-day paragraph, leave the group displayed: it costs no seconds of narration and still carries the point.*
@@ -456,8 +498,8 @@ Slides 4, 9, 14, 15 and 16 receive **no** clip: their demonstration time is live
 
 ---
 
-## SLIDE 11 — Shot Size and Composition
-**⏱ 24:00 → 26:00 · 2 min · ≈ 240 words**
+## SLIDE 13 — Shot Size and Composition
+**⏱ 26:00 → 28:00 · 2 min · ≈ 240 words**
 **ON SCREEN:** Six frames in a row, widest to tightest, each captioned with its business use. Below: five composition terms.
 
 **CLIPS** — *Below the slide, three groups of twelve extracts of about five seconds: composing the frame (centred composition · symmetrical composition · balanced framing · off-centre subject) · shot size (close-up · medium shot · full shot · wide shot) · shot types and points of view (single shot · two shot · group shot · establishing shot). The middle group illustrates four of the six sizes you have just named — extreme wide and extreme close-up have no extract; do not promise all six. The third group counts the subjects in frame, and it does not illustrate the three shot types you name either — point of view, over-the-shoulder and the insert have no extract. Present it as a complement, not as the picture of that paragraph. The composition group shows the default centring beside the off-centre subject: it is the visual proof of your rule, "composition words must be written into the prompt." No group costs a second of narration, so if you apply the late-running plan, leave all three displayed.*
@@ -478,10 +520,10 @@ Slides 4, 9, 14, 15 and 16 receive **no** clip: their demonstration time is live
 
 ---
 
-# SEGMENT 5 — Camera movement and multi-shot video (26:00 – 35:00)
+# SEGMENT 5 — Camera movement and multi-shot video (28:00 – 37:00)
 
-## SLIDE 12 — Camera Movement: Name It, Give It a Start and an End
-**⏱ 26:00 → 29:00 · 3 min · ≈ 340 words**
+## SLIDE 14 — Camera Movement: Name It, Give It a Start and an End
+**⏱ 28:00 → 31:00 · 3 min · ≈ 340 words**
 **ON SCREEN:** Ten movements in a two-column list, each with its narrative function in four words or fewer.
 
 **CLIPS** — *Below the slide, three groups of twelve extracts: dolly and tracking moves (dolly in · dolly out · tracking shot · follow shot) · crane, orbit and pans (orbit shot · crane down · pan · tilt) · handheld, drone, whip pan and rack focus (handheld · aerial / drone · whip pan · rack focus). Each of the ten movements you name has its own extract — the last two, follow shot and rack focus, are not on your list: present them as two additions, not as two omissions. Use them for the reversal exercise: at each **ASK**, let the room answer, then point to the matching extract instead of repeating the answer.*
@@ -536,8 +578,8 @@ Slides 4, 9, 14, 15 and 16 receive **no** clip: their demonstration time is live
 
 ---
 
-## SLIDE 13 — Multi-Shot Scripts: Three Ways to Segment
-**⏱ 29:00 → 32:00 · 3 min · ≈ 370 words**
+## SLIDE 15 — Multi-Shot Scripts: Three Ways to Segment
+**⏱ 31:00 → 34:00 · 3 min · ≈ 370 words**
 **ON SCREEN:** Three columns — A / B / C — each with a sample line and its cost. Column C visually dominant.
 
 **CLIPS** — *Below the slide, two groups. The first is written, with no video: the three real prompts, one per method — natural-language segments, timecodes, style anchor — displayed in full so that the room can see the difference in form. Leave that group on screen through your whole explanation of the three methods. Note that the anchor displayed is a warmer one than the cold grey-blue example you read aloud; both are valid, and the point of the panel is the form, not the palette. The second group is the seven cuts in seven extracts: shot and reverse shot · follow then reveal · vertical descent into the interior · reflection transition · whip pan · storytelling by rack focus · time ellipsis through cuts. Seven extracts, seven prompts, not one word spoken: they run under your voice.*
@@ -578,8 +620,8 @@ Slides 4, 9, 14, 15 and 16 receive **no** clip: their demonstration time is live
 
 ---
 
-## SLIDE 14 — Brand Consistency: The Style Anchor
-**⏱ 32:00 → 35:00 · 3 min · ≈ 390 words + DEMO BEAT 4**
+## SLIDE 16 — Brand Consistency: The Style Anchor
+**⏱ 34:00 → 37:00 · 3 min · ≈ 390 words + DEMO BEAT 4**
 **ON SCREEN:** Three levers, numbered. Then the demonstration: broken prompt → drifted shots; restored prompt → coherent shots.
 
 **DEMO BEAT 4** — *Pre-render both versions. The value of this beat is the contrast, not the generation.*
@@ -612,14 +654,14 @@ Slides 4, 9, 14, 15 and 16 receive **no** clip: their demonstration time is live
 >
 > At that point it is no longer a prompt trick. It is a **brand asset**, stored in a file, that anyone on your team can pick up and use.
 >
-> That is the moment prompting stops being a personal skill and starts being an organisational capability. Hold that thought — it is the whole of slide seventeen.
+> That is the moment prompting stops being a personal skill and starts being an organisational capability. Hold that thought — it is the whole of slide nineteen.
 
 ---
 
-# SEGMENT 6 — Workflow, rights, and disclosure (35:00 – 43:00)
+# SEGMENT 6 — Workflow, rights, and disclosure (37:00 – 45:00)
 
-## SLIDE 15 — The Default Business Workflow
-**⏱ 35:00 → 38:00 · 3 min · ≈ 360 words + DEMO BEAT 5**
+## SLIDE 17 — The Default Business Workflow
+**⏱ 37:00 → 40:00 · 3 min · ≈ 360 words + DEMO BEAT 5**
 **ON SCREEN:** The nine-step workflow diagram, revealed step by step. Then the demonstration, full screen.
 
 **DEMO BEAT 5** — *Run the chain end to end: text-to-image from a real reference photograph → approve one still → three image-to-video shots from that still under one style anchor → assemble into eight seconds. Use the offline recording if the live tool is slow.*
@@ -666,11 +708,11 @@ Slides 4, 9, 14, 15 and 16 receive **no** clip: their demonstration time is live
 
 ---
 
-## SLIDE 16 — Rights, Disclosure, and Trust
-**⏱ 38:00 → 41:00 · 3 min · ≈ 390 words + DEMO BEAT 6**
+## SLIDE 18 — Rights, Disclosure, and Trust
+**⏱ 40:00 → 43:00 · 3 min · ≈ 390 words + DEMO BEAT 6**
 **ON SCREEN:** Four numbered obligations. A separate small box: *provenance mark ≠ disclosure label*. Dates shown as text only — no flags, no maps.
 
-**DEMO BEAT 6** — *Return to the finished eight-second asset from slide 15 and leave it on screen while the disclosure question is put to the room.*
+**DEMO BEAT 6** — *Return to the finished eight-second asset from slide 17 and leave it on screen while the disclosure question is put to the room.*
 
 **SAY**
 
@@ -684,7 +726,7 @@ Slides 4, 9, 14, 15 and 16 receive **no** clip: their demonstration time is live
 >
 > **Two: platform labels.** Completely independently of any law, the major advertising and social platforms each run their own artificial-intelligence labelling rule — and they are not the same rule. Check the one you actually publish on. Every time.
 >
-> **Three: substantiation.** Generating an image does not relax advertising law. Your claims still need evidence, and a generated image must not materially mislead a consumer about the product. This is exactly the Tier 1 problem from slide nine — now with a regulator attached to it.
+> **Three: substantiation.** Generating an image does not relax advertising law. Your claims still need evidence, and a generated image must not materially mislead a consumer about the product. This is exactly the Tier 1 problem from slide eleven — now with a regulator attached to it.
 >
 > **Four: likeness and data.** Get consent before you generate the face of a real, identifiable person. Some jurisdictions now impose specific advertising disclosure duties for synthetic performers.
 >
@@ -702,8 +744,8 @@ Slides 4, 9, 14, 15 and 16 receive **no** clip: their demonstration time is live
 
 ---
 
-## SLIDE 17 — Building a Repeatable Team Practice
-**⏱ 41:00 → 43:00 · 2 min · ≈ 250 words**
+## SLIDE 19 — Building a Repeatable Team Practice
+**⏱ 43:00 → 45:00 · 2 min · ≈ 250 words**
 **ON SCREEN:** Four artefacts as four labelled boxes. Nothing else on the slide.
 
 **SAY**
@@ -726,10 +768,10 @@ Slides 4, 9, 14, 15 and 16 receive **no** clip: their demonstration time is live
 
 ---
 
-# SEGMENT 7 — Closing and questions (43:00 – 45:00)
+# SEGMENT 7 — Closing and questions (45:00 – 47:00)
 
-## SLIDE 18 — Conclusions and Questions
-**⏱ 43:00 → 45:00 · 2 min · ≈ 250 words**
+## SLIDE 20 — Conclusions and Questions
+**⏱ 45:00 → 47:00 · 2 min · ≈ 250 words**
 **ON SCREEN:** The three messages, one line each. Then the closing question alone on screen. Logos in the footer.
 
 **SAY**
@@ -767,11 +809,11 @@ Slides 4, 9, 14, 15 and 16 receive **no** clip: their demonstration time is live
 | Question | Approved answer |
 |---|---|
 | Which tool should we use? | The course is deliberately tool-independent; capability categories outlive products. Apply the five criteria in Appendix F of the course material — commercial-use licensing first, then vendor lock-in, image-to-video consistency, free quota, and interface language. Record the tool, the licence, and the date you verified it. |
-| Is this legal? | I cannot advise on your jurisdiction. Slide 16 gives you the four things to check and the habit of checking them. Have a qualified reviewer read your specific case before publishing. |
+| Is this legal? | I cannot advise on your jurisdiction. Slide 18 gives you the four things to check and the habit of checking them. Have a qualified reviewer read your specific case before publishing. |
 | Will this replace our agency? | It moves work, it does not delete it. Variant production and Tier 2 illustration move in house. Strategy, art direction, Tier 1 product photography, and legal review generally should not. Discussion prompt 4 in your material asks exactly this. |
 | Our products are technical. Does the method still work? | Yes, and Tier 1 becomes stricter. Supply real photographs, generate less, and verify against the physical object. The six elements are unchanged. |
 | The output still looks artificial. | Check elements four and five first — camera movement and style. Those two produce most of the generic look. Then check that you have converted every adjective into a filmable fact. |
-| How do we keep a person consistent across a whole campaign? | Levers on slide 14: verbatim subject repetition, image-to-video from one approved still, key props named in every shot, and one style anchor. In that order. |
+| How do we keep a person consistent across a whole campaign? | Levers on slide 16: verbatim subject repetition, image-to-video from one approved still, key props named in every shot, and one style anchor. In that order. |
 | Can we generate a spokesperson? | That is Tier 3. Consent and disclosure obligations apply, some jurisdictions impose specific advertising duties for synthetic performers, and you must state on screen that the person does not exist. Never generate an identifiable real person without consent. |
 | Does it cost a lot to run? | Generation consumes compute and energy. Generate deliberately, reuse approved references, and keep the prompt library so a shot is never regenerated from scratch. |
 
@@ -789,12 +831,12 @@ Run this before the camera rolls. Mapped to `docs/IIOE内容开发说明.md` §6
 - [ ] **Cultural accuracy** — no generated cultural dress, religious object, sacred site, or traditional pattern that has not been verified.
 - [ ] **Commercial licensing** — the demonstration tool's terms permit commercial use of the output, verified in writing, with the verification date recorded in the production file.
 - [ ] **Data protection** — no customer personal data, employee record, or unreleased design was uploaded to any tool during recording.
-- [ ] **Legal review** — every date and regulatory statement on slide 16 has been read by a qualified reviewer.
+- [ ] **Legal review** — every date and regulatory statement on slide 18 has been read by a qualified reviewer.
 - [ ] **Accessibility** — SRT subtitles written and checked against the audio at normal speaking speed; on-screen text legible at 480p; no information conveyed by colour alone; high-contrast palette.
-- [ ] **Rehearsal** — full run with a timer. Slides 4, 5, 9, 14, 15 and 16 carry the six demonstration beats and are the most likely to overrun; slide 5 is the one live generation of the first half.
+- [ ] **Rehearsal** — full run with a timer. Slides 6, 7, 11, 16, 17 and 18 carry the six demonstration beats and are the most likely to overrun; slide 7 is the one live generation of the first half.
 - [ ] **Offline backup** — a screen recording of all six demonstration beats exists and plays correctly, in case of network, quota, or rate-limit failure.
 - [ ] **Pre-recorded clips — format** — the 47 extracts are not 1920×1080 (four distinct resolutions, from 1280×676 to 1920×1014). This changes nothing for the web player. For the final MP4, every extract must be letterboxed or cropped into a 1920×1080 frame before compositing.
-- [ ] **Pre-recorded clips — disclosure** — every extract is AI-generated and is displayed in the player with a generation notice and the prompt that produced it. Slide 16 teaches disclosure: the course materials comply with it.
+- [ ] **Pre-recorded clips — disclosure** — every extract is AI-generated and is displayed in the player with a generation notice and the prompt that produced it. Slide 18 teaches disclosure: the course materials comply with it.
 - [ ] **Pre-recorded clips — audio** — all 47 extracts carry a real generated audio track and are **muted by the player, not silent**. Measured across the set: −16.2 to −29.5 dBFS RMS, peaks to −2.2 dBFS, band-limited below roughly 1 kHz, non-stationary. Verified two ways: `stsz` sample counts match duration at the encoded sample rate exactly, and Media Foundation and Chromium decode the same PCM to within 0.01 dB.
 - [ ] **Pre-recorded clips — audio, in the web player** — the player sets `v.muted = true` on every clip at construction, so no clip audio is heard over the narration. **Caveat to resolve before delivery:** the player also sets `v.controls = true`, which exposes the mute toggle, so a learner can unmute a clip over the narration. Either drop `controls`, or re-assert `muted` on the `volumechange` event, or accept it and state it.
 - [ ] **Pre-recorded clips — audio, in the final MP4** — the assembler must **strip or mute the clip audio on the timeline**; a video editor does not inherit the player's muting. Only after that does the course AAC track remain the sole track in the final MP4.
@@ -811,60 +853,60 @@ The extracts and their thumbnails **are versioned in this repository**, under [`
 
 | Slide | File | Label | Duration | Prompt characters |
 |---:|---|---|---:|---:|
-| 5 | slide20.mp4 | Dolly out at sunset | 10.1 s | 620 |
-| 5 | — | Intent versus description | — | 104 |
-| 6 | slide33.mp4 | The six-element formula applied | 8.1 s | 459 |
-| 8 | slide28_1.mp4 | Warm tones | 15.3 s | 161 |
-| 8 | slide28_2.mp4 | Cool tones | 15.2 s | 170 |
-| 8 | slide28_3.mp4 | High saturation | 15.3 s | 192 |
-| 8 | slide28_4.mp4 | Low saturation | 15.3 s | 178 |
-| 10 | slide22_2.mp4 | Moonlight | 5.2 s | 225 |
-| 10 | slide22_4.mp4 | Overcast light | 5.2 s | 184 |
-| 10 | slide23_1.mp4 | Soft light | 5.2 s | 174 |
-| 10 | slide23_2.mp4 | Top light | 5.2 s | 170 |
-| 10 | slide23_3.mp4 | Back light | 5.2 s | 183 |
-| 10 | slide23_4.mp4 | Under light | 5.2 s | 173 |
-| 10 | slide24_1.mp4 | Daylight | 5.2 s | 154 |
-| 10 | slide24_2.mp4 | Night | 5.2 s | 186 |
-| 10 | slide24_3.mp4 | Sunrise | 5.2 s | 152 |
-| 10 | slide24_4.mp4 | Sunset — magic hour | 5.2 s | 174 |
-| 11 | slide25_1.mp4 | Centred composition | 5.2 s | 195 |
-| 11 | slide25_2.mp4 | Symmetrical composition | 5.2 s | 168 |
-| 11 | slide25_3.mp4 | Balanced framing | 5.2 s | 227 |
-| 11 | slide25_4.mp4 | Off-centre subject | 5.2 s | 184 |
-| 11 | slide26_1.mp4 | Close-up | 5.2 s | 157 |
-| 11 | slide26_2.mp4 | Medium shot | 5.2 s | 155 |
-| 11 | slide26_3.mp4 | Full shot | 5.2 s | 179 |
-| 11 | slide26_4.mp4 | Wide shot | 5.2 s | 181 |
-| 11 | slide27_1.mp4 | Single shot | 5.3 s | 161 |
-| 11 | slide27_2.mp4 | Two shot | 5.3 s | 154 |
-| 11 | slide27_3.mp4 | Group shot | 5.3 s | 181 |
-| 11 | slide27_4.mp4 | Establishing shot | 5.3 s | 185 |
-| 12 | slide35_1.mp4 | Dolly in | 8.2 s | 193 |
-| 12 | slide35_2.mp4 | Dolly out | 8.2 s | 179 |
-| 12 | slide35_3.mp4 | Tracking shot | 5.3 s | 178 |
-| 12 | slide35_4.mp4 | Follow shot | 8.2 s | 178 |
-| 12 | slide36_1.mp4 | Orbit shot | 8.2 s | 193 |
-| 12 | slide36_2.mp4 | Crane down | 8.2 s | 162 |
-| 12 | slide36_3.mp4 | Pan | 8.2 s | 156 |
-| 12 | slide36_4.mp4 | Tilt | 8.2 s | 169 |
-| 12 | slide37_1.mp4 | Handheld | 8.2 s | 158 |
-| 12 | slide37_2.mp4 | Aerial / drone | 8.2 s | 174 |
-| 12 | slide37_3.mp4 | Whip pan | 8.2 s | 152 |
-| 12 | slide37_4.mp4 | Rack focus | 8.1 s | 200 |
-| 13 | — | Method A — natural-language segments | — | 493 |
-| 13 | — | Method B — timecodes | — | 215 |
-| 13 | — | Method C — style anchor | — | 78 |
-| 13 | slide45.mp4 | Shot and reverse shot | 5.2 s | 129 |
-| 13 | slide46.mp4 | Follow then reveal | 8.1 s | 128 |
-| 13 | slide47.mp4 | Vertical descent into the interior | 8.1 s | 94 |
-| 13 | slide48.mp4 | Reflection transition | 8.1 s | 142 |
-| 13 | slide49.mp4 | Whip pan | 5.2 s | 150 |
-| 13 | slide50.mp4 | Storytelling by rack focus | 8.1 s | 151 |
-| 13 | slide51.mp4 | Time ellipsis through cuts | 8.1 s | 134 |
+| 7 | slide20.mp4 | Dolly out at sunset | 10.1 s | 620 |
+| 7 | — | Intent versus description | — | 104 |
+| 8 | slide33.mp4 | The six-element formula applied | 8.1 s | 459 |
+| 10 | slide28_1.mp4 | Warm tones | 15.3 s | 161 |
+| 10 | slide28_2.mp4 | Cool tones | 15.2 s | 170 |
+| 10 | slide28_3.mp4 | High saturation | 15.3 s | 192 |
+| 10 | slide28_4.mp4 | Low saturation | 15.3 s | 178 |
+| 12 | slide22_2.mp4 | Moonlight | 5.2 s | 225 |
+| 12 | slide22_4.mp4 | Overcast light | 5.2 s | 184 |
+| 12 | slide23_1.mp4 | Soft light | 5.2 s | 174 |
+| 12 | slide23_2.mp4 | Top light | 5.2 s | 170 |
+| 12 | slide23_3.mp4 | Back light | 5.2 s | 183 |
+| 12 | slide23_4.mp4 | Under light | 5.2 s | 173 |
+| 12 | slide24_1.mp4 | Daylight | 5.2 s | 154 |
+| 12 | slide24_2.mp4 | Night | 5.2 s | 186 |
+| 12 | slide24_3.mp4 | Sunrise | 5.2 s | 152 |
+| 12 | slide24_4.mp4 | Sunset — magic hour | 5.2 s | 174 |
+| 13 | slide25_1.mp4 | Centred composition | 5.2 s | 195 |
+| 13 | slide25_2.mp4 | Symmetrical composition | 5.2 s | 168 |
+| 13 | slide25_3.mp4 | Balanced framing | 5.2 s | 227 |
+| 13 | slide25_4.mp4 | Off-centre subject | 5.2 s | 184 |
+| 13 | slide26_1.mp4 | Close-up | 5.2 s | 157 |
+| 13 | slide26_2.mp4 | Medium shot | 5.2 s | 155 |
+| 13 | slide26_3.mp4 | Full shot | 5.2 s | 179 |
+| 13 | slide26_4.mp4 | Wide shot | 5.2 s | 181 |
+| 13 | slide27_1.mp4 | Single shot | 5.3 s | 161 |
+| 13 | slide27_2.mp4 | Two shot | 5.3 s | 154 |
+| 13 | slide27_3.mp4 | Group shot | 5.3 s | 181 |
+| 13 | slide27_4.mp4 | Establishing shot | 5.3 s | 185 |
+| 14 | slide35_1.mp4 | Dolly in | 8.2 s | 193 |
+| 14 | slide35_2.mp4 | Dolly out | 8.2 s | 179 |
+| 14 | slide35_3.mp4 | Tracking shot | 5.3 s | 178 |
+| 14 | slide35_4.mp4 | Follow shot | 8.2 s | 178 |
+| 14 | slide36_1.mp4 | Orbit shot | 8.2 s | 193 |
+| 14 | slide36_2.mp4 | Crane down | 8.2 s | 162 |
+| 14 | slide36_3.mp4 | Pan | 8.2 s | 156 |
+| 14 | slide36_4.mp4 | Tilt | 8.2 s | 169 |
+| 14 | slide37_1.mp4 | Handheld | 8.2 s | 158 |
+| 14 | slide37_2.mp4 | Aerial / drone | 8.2 s | 174 |
+| 14 | slide37_3.mp4 | Whip pan | 8.2 s | 152 |
+| 14 | slide37_4.mp4 | Rack focus | 8.1 s | 200 |
+| 15 | — | Method A — natural-language segments | — | 493 |
+| 15 | — | Method B — timecodes | — | 215 |
+| 15 | — | Method C — style anchor | — | 78 |
+| 15 | slide45.mp4 | Shot and reverse shot | 5.2 s | 129 |
+| 15 | slide46.mp4 | Follow then reveal | 8.1 s | 128 |
+| 15 | slide47.mp4 | Vertical descent into the interior | 8.1 s | 94 |
+| 15 | slide48.mp4 | Reflection transition | 8.1 s | 142 |
+| 15 | slide49.mp4 | Whip pan | 5.2 s | 150 |
+| 15 | slide50.mp4 | Storytelling by rack focus | 8.1 s | 151 |
+| 15 | slide51.mp4 | Time ellipsis through cuts | 8.1 s | 134 |
 | **Total** | **47 extracts + 4 text panels** | **51 prompts** | **5 min 40 s** | **9,592** |
 
-Slides 1, 2, 3, 4, 7, 9, 14, 15, 16, 17 and 18 carry no pre-recorded extract. Five of them — 4, 9, 14, 15 and 16 — carry a live demonstration that no extract in the supplied set replaces: slide 4 shows the drift across four generations of one unchanged prompt; slide 9, the generated catalogue image beside the real product photograph; slide 14, the contrast between an anchorless prompt whose shots drift and the same prompt restored; slide 15, the full chain from the reference photograph to the eight-second edit; slide 16, that same video left on screen while the disclosure question is put to the room.
+Slides 1, 2, 3, 4, 5, 6, 9, 11, 16, 17, 18, 19 and 20 carry no pre-recorded extract. Five of them — 6, 11, 16, 17 and 18 — carry a live demonstration that no extract in the supplied set replaces: slide 6 shows the drift across four generations of one unchanged prompt; slide 11, the generated catalogue image beside the real product photograph; slide 16, the contrast between an anchorless prompt whose shots drift and the same prompt restored; slide 17, the full chain from the reference photograph to the eight-second edit; slide 18, that same video left on screen while the disclosure question is put to the room.
 
 ---
 

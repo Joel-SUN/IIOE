@@ -2,7 +2,7 @@
   Removes the IIOE template's "YOUR LOGO" partner placeholder from a deck.
 
   The placeholder is two shapes on the deck's single slide master, so it renders
-  on all 18 slides at once: partner-logo-frame (an outlined box) and
+  on all 20 slides at once: partner-logo-frame (an outlined box) and
   partner-logo-label (the text). The MCP ops layer refuses master part targets,
   which is why this goes through PowerPoint COM.
 

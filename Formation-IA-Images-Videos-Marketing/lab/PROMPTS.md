@@ -16,7 +16,7 @@ video must strip or mute that audio explicitly; muting is a property of the play
 Companion files: [`index-en.html`](index-en.html) · [`index-fr.html`](index-fr.html)
 
 
-## Course slide 5
+## Course slide 7
 
 ### The full prompt behind the clip
 
@@ -39,7 +39,7 @@ Weak: "show that he is nervous". Strong: "close-up on fingers repeatedly rubbing
 ```
 
 
-## Course slide 6
+## Course slide 8
 
 ### The six elements, line by line
 
@@ -54,7 +54,7 @@ Subject: a woman in her thirties, shoulder-length black hair, navy blue suit. Ac
 ```
 
 
-## Course slide 8
+## Course slide 10
 
 ### Element 5 — style: temperature and saturation
 
@@ -93,7 +93,7 @@ Two people meet in a misty outdoor space. An almost grey palette with slight blu
 ```
 
 
-## Course slide 10
+## Course slide 12
 
 ### The light source
 
@@ -188,7 +188,7 @@ Two people sit side by side on a bench. The low sun draws a golden outline in th
 ```
 
 
-## Course slide 11
+## Course slide 13
 
 ### Composing the frame
 
@@ -299,7 +299,7 @@ A narrow street stretches between old façades. Two figures enter in the distanc
 ```
 
 
-## Course slide 12
+## Course slide 14
 
 ### Dolly and tracking moves
 
@@ -410,7 +410,7 @@ Two people are placed at different distances from the camera. The foreground fac
 ```
 
 
-## Course slide 13
+## Course slide 15
 
 ### The three ways to segment, written out
 

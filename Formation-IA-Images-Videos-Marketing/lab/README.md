@@ -1,6 +1,6 @@
 # Practical works — Applied Generative AI for Marketing Visuals
 
-A workbook to accompany the 45-minute IIOE course. Eleven exercises, in two parts: observe first, produce second.
+A workbook to accompany the 47-minute IIOE course. Eleven exercises, in two parts: observe first, produce second.
 
 Companion to the course one level up — see [`../README.md`](../README.md) and the design document
 [`UNESCO_AI_Image_Video_Course_EN.md`](../docs/UNESCO_AI_Image_Video_Course_EN.md). The French
