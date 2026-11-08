@@ -4,11 +4,18 @@
 # workbooks with their 47 demo extracts, the learner page, the trainer profile,
 # both .pptx decks. Nothing is built, nothing is generated, no external dependency.
 #
-# `enablement: true` lets actions/configure-pages turn Pages on by itself the first
-# time this workflow runs, using the pages:write scope declared below. If that is
-# refused, Pages has to be switched on once by hand:
+# `enablement: true` asks actions/configure-pages to turn Pages on by itself. It
+# cannot: creating a Pages site is a repository-administration operation, and the
+# GITHUB_TOKEN a workflow runs under can never administer the repository, whatever
+# scopes are declared below. GitHub closed that deliberately
+# (actions/configure-pages issue 40). Until Pages has been switched on once by
+# hand, this workflow fails at the "Set up Pages" step — a red run here means that
+# one setting is still off, not that anything in the tree is wrong.
+#
 #   Settings -> Pages -> Build and deployment -> Source -> GitHub Actions
-# After that, every push to main redeploys.
+#
+# The step then passes on its own. Re-run the workflow from the Actions tab, or
+# push to main, and the site appears at https://joel-sun.github.io/IIOE/.
 
 name: Deploy to GitHub Pages
 
