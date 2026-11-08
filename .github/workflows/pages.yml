@@ -1,0 +1,57 @@
+# Publishes this repository as a static site on GitHub Pages.
+#
+# The whole tracked tree is served as-is: index.html at the root, the two lab
+# workbooks with their 47 demo extracts, the learner page, the trainer profile,
+# both .pptx decks. Nothing is built, nothing is generated, no external dependency.
+#
+# `enablement: true` lets actions/configure-pages turn Pages on by itself the first
+# time this workflow runs, using the pages:write scope declared below. If that is
+# refused, Pages has to be switched on once by hand:
+#   Settings -> Pages -> Build and deployment -> Source -> GitHub Actions
+# After that, every push to main redeploys.
+
+name: Deploy to GitHub Pages
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out the repository
+        uses: actions/checkout@v4
+
+      - name: Set up Pages
+        uses: actions/configure-pages@v5
+        with:
+          enablement: true
+
+      # The checkout carries the repository's own object store, which holds the
+      # same 249 MB of media a second time. Drop it before uploading: the site
+      # artifact only needs the working tree.
+      - name: Drop the object store from the artifact
+        run: rm -rf .git
+
+      - name: Upload the site artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: .
+
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4

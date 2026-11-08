@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>IIOE · Images et vidéos génératives pour le marketing / AI Image and Video Generation for Marketing</title>
+<meta name="description" content="Micro-certification IIOE de 45 minutes : page du cours, travaux pratiques avec 47 extraits générés, scripts de leçon en trois langues et diaporamas. A 45-minute IIOE micro-credential: course page, practical works with 47 generated extracts, lecture scripts in three languages and slide decks.">
+<script>
+(function () {
+  var l = (navigator.language || navigator.userLanguage || 'fr').toLowerCase();
+  var p = l.indexOf('en') === 0 ? 'en' : 'fr';
+  var h = document.documentElement;
+  h.className = p;
+  h.setAttribute('lang', p);
+})();
+</script>
+<style>
+:root{
+  --ink:#0f1a24; --muted:#5a6875; --line:#dde4eb; --wash:#f5f7fa;
+  --brand:#0d4f8b; --brand-dk:#08355f; --accent:#0e7c6b; --paper:#ffffff;
+  --note-bg:#fff9e8; --note-line:#e3cd93; --note-ink:#59470f;
+  --radius:12px;
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;scroll-behavior:smooth}
+body{
+  margin:0;background:var(--wash);color:var(--ink);
+  font:16px/1.62 system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif;
+}
+a{color:var(--brand);text-decoration:none}
+a:hover,a:focus{text-decoration:underline}
+a:focus-visible,button:focus-visible{outline:3px solid #4a90d9;outline-offset:2px}
+.wrap{max-width:1080px;margin:0 auto;padding:0 20px}
+
+/* ---------- language switch ---------- */
+html.fr .i18n[lang="en"]{display:none}
+html.en .i18n[lang="fr"]{display:none}
+
+/* ---------- masthead ---------- */
+header{background:linear-gradient(135deg,var(--brand-dk),var(--brand) 58%,#14708f);color:#fff;padding:44px 0 38px}
+.kicker{font-size:.78rem;letter-spacing:.16em;text-transform:uppercase;opacity:.86;margin:0 0 14px}
+h1{font-size:clamp(1.7rem,4.2vw,2.6rem);line-height:1.2;margin:0 0 14px;font-weight:650;max-width:24ch}
+.lede{margin:0 0 22px;font-size:1.06rem;max-width:64ch;opacity:.94}
+.facts{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 28px;padding:0;list-style:none}
+.facts li{background:rgba(255,255,255,.15);border:1px solid rgba(255,255,255,.28);border-radius:999px;padding:5px 14px;font-size:.86rem}
+.cta{display:flex;flex-wrap:wrap;gap:12px;align-items:center}
+.btn{display:inline-block;padding:12px 22px;border-radius:9px;font-weight:600;font-size:.97rem;border:2px solid transparent}
+.btn-primary{background:#fff;color:var(--brand-dk)}
+.btn-primary:hover,.btn-primary:focus{background:#e8f0f9;text-decoration:none}
+.btn-ghost{border-color:rgba(255,255,255,.6);color:#fff}
+.btn-ghost:hover,.btn-ghost:focus{background:rgba(255,255,255,.15);text-decoration:none}
+.langbar{display:flex;gap:8px;justify-content:flex-end;margin-bottom:-8px}
+.langbar button{
+  background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.4);color:#fff;
+  padding:6px 15px;border-radius:999px;font:inherit;font-size:.85rem;cursor:pointer
+}
+.langbar button:hover{background:rgba(255,255,255,.28)}
+.langbar button[aria-pressed="true"]{background:#fff;color:var(--brand-dk);border-color:#fff;font-weight:650}
+
+/* ---------- the no-audio note ---------- */
+.note{
+  background:var(--note-bg);border:1px solid var(--note-line);border-left:5px solid #d4a72c;
+  border-radius:var(--radius);padding:20px 24px;margin:34px 0 0;color:var(--note-ink)
+}
+.note h2{margin:0 0 8px;font-size:1.02rem;letter-spacing:.01em}
+.note p{margin:0 0 8px;font-size:.95rem}
+.note p:last-child{margin-bottom:0}
+
+/* ---------- sections ---------- */
+main{padding:0 0 56px}
+section{margin-top:44px}
+h2.sec{font-size:1.28rem;margin:0 0 4px;font-weight:640;color:var(--brand-dk)}
+p.sechint{margin:0 0 18px;color:var(--muted);font-size:.95rem;max-width:74ch}
+.grid{display:grid;gap:14px;grid-template-columns:repeat(auto-fill,minmax(300px,1fr))}
+.card{
+  background:var(--paper);border:1px solid var(--line);border-radius:var(--radius);
+  padding:18px 20px;display:flex;flex-direction:column;transition:border-color .15s,box-shadow .15s
+}
+.card:hover{border-color:#b9c6d4;box-shadow:0 2px 10px rgba(15,26,36,.07)}
+.card h3{margin:0 0 6px;font-size:1.02rem;line-height:1.35}
+.card h3 a{color:var(--ink)}
+.card h3 a:hover,.card h3 a:focus{color:var(--brand)}
+.card p{margin:0 0 12px;font-size:.9rem;color:var(--muted);line-height:1.55}
+.tag{margin-top:auto;align-self:flex-start;font-size:.73rem;letter-spacing:.07em;text-transform:uppercase;
+  color:var(--accent);border:1px solid #bfdcd5;background:#eef7f5;border-radius:5px;padding:3px 9px}
+.tag.dl{color:#8a5a12;border-color:#e0c79a;background:#fbf4e6}
+.tag.lead{color:var(--brand);border-color:#c2d6ea;background:#eff5fb}
+
+/* ---------- footer ---------- */
+footer{border-top:1px solid var(--line);background:var(--paper);padding:30px 0 40px;font-size:.9rem;color:var(--muted)}
+footer p{margin:0 0 10px;max-width:82ch}
+footer p:last-child{margin-bottom:0}
+@media (max-width:560px){
+  header{padding:32px 0 30px}
+  .langbar{justify-content:flex-start;margin-bottom:14px}
+  .grid{grid-template-columns:1fr}
+}
+@media print{header{background:#fff;color:#000}.langbar{display:none}}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <div class="langbar" role="group" aria-label="Language / Langue">
+      <button type="button" data-set="fr" aria-pressed="true">Français</button>
+      <button type="button" data-set="en" aria-pressed="false">English</button>
+    </div>
+
+    <p class="kicker">IIOE · UNESCO-ICHEI</p>
+
+    <h1>
+      <span class="i18n" lang="fr">Images et vidéos génératives pour le marketing</span>
+      <span class="i18n" lang="en">AI Image and Video Generation for Marketing</span>
+    </h1>
+
+    <p class="lede">
+      <span class="i18n" lang="fr">Une micro-certification qui apprend aux équipes commerciales et marketing à produire elles-mêmes leurs visuels : écrire une invite qui se comporte comme un découpage technique, tenir une identité de marque, et publier sans sortir du cadre du droit.</span>
+      <span class="i18n" lang="en">A micro-credential that teaches commercial and marketing teams to produce their own visuals: write a prompt that behaves like a shooting script, hold a brand identity, and publish without stepping outside the law.</span>
+    </p>
+
+    <ul class="facts">
+      <li><span class="i18n" lang="fr">45 minutes</span><span class="i18n" lang="en">45 minutes</span></li>
+      <li><span class="i18n" lang="fr">20 diapositives</span><span class="i18n" lang="en">20 slides</span></li>
+      <li><span class="i18n" lang="fr">3 langues</span><span class="i18n" lang="en">3 languages</span></li>
+      <li><span class="i18n" lang="fr">11 travaux pratiques</span><span class="i18n" lang="en">11 exercises</span></li>
+      <li><span class="i18n" lang="fr">47 extraits générés</span><span class="i18n" lang="en">47 generated extracts</span></li>
+    </ul>
+
+    <div class="cta">
+      <a class="btn btn-primary" href="Formation-IA-Images-Videos-Marketing/docs/UNESCO_AI_Image_Video_Course_Page.html">
+        <span class="i18n" lang="fr">Ouvrir la page du cours</span>
+        <span class="i18n" lang="en">Open the course page</span>
+      </a>
+      <a class="btn btn-ghost i18n" lang="fr" href="Formation-IA-Images-Videos-Marketing/lab/index-fr.html">Faire les travaux pratiques</a>
+      <a class="btn btn-ghost i18n" lang="en" href="Formation-IA-Images-Videos-Marketing/lab/index-en.html">Do the practical works</a>
+    </div>
+  </div>
+</header>
+
+<div class="wrap">
+  <div class="note">
+    <h2>
+      <span class="i18n" lang="fr">Ce site ne publie aucune narration audio</span>
+      <span class="i18n" lang="en">This site publishes no narration audio</span>
+    </h2>
+    <p>
+      <span class="i18n" lang="fr">La voix qui porte la leçon est une donnée biométrique : elle ne quitte pas la machine du formateur. Le texte intégral est publié à sa place — page par page dans les trois scripts ci-dessous, et mot pour mot dans les notes de chaque diapositive des deux diaporamas. Ouvrez un diaporama, passez en mode normal plutôt qu'en mode diaporama, et le texte lu à l'écran s'affiche sous chaque page.</span>
+      <span class="i18n" lang="en">The voice that carries the lesson is a biometric: it does not leave the trainer's machine. The full text is published in its place — page by page in the three scripts below, and verbatim in the notes of every slide of both decks. Open a deck, stay in normal view rather than slide-show view, and the spoken text appears beneath each page.</span>
+    </p>
+    <p>
+      <span class="i18n" lang="fr">Recourir à une voix synthétisée est une obligation de divulgation, pas un détail technique. Elle est énoncée dans le document de principes de conception pédagogique, et annoncée aux apprenants. Les 47 extraits vidéo, eux, sont générés par IA et présentés comme tels dans le cahier de travaux pratiques.</span>
+      <span class="i18n" lang="en">Using a synthesised voice is a disclosure obligation, not a technical detail. It is set out in the instructional-design principles document and announced to learners. The 47 video extracts are AI-generated and presented as such in the practical-works workbook.</span>
+    </p>
+  </div>
+</div>
+
+<main class="wrap">
+
+  <section id="course">
+    <h2 class="sec">
+      <span class="i18n" lang="fr">1 · Suivre le cours</span>
+      <span class="i18n" lang="en">1 · Follow the course</span>
+    </h2>
+    <p class="sechint">
+      <span class="i18n" lang="fr">Trois pages qui s'ouvrent dans le navigateur, sans rien installer. Commencez par la première : elle porte les trois langues à la fois.</span>
+      <span class="i18n" lang="en">Three pages that open in the browser with nothing to install. Start with the first: it carries all three languages at once.</span>
+    </p>
+    <div class="grid">
+      <div class="card">
+        <h3><a href="Formation-IA-Images-Videos-Marketing/docs/UNESCO_AI_Image_Video_Course_Page.html">
+          <span class="i18n" lang="fr">La page du cours</span><span class="i18n" lang="en">The course page</span></a></h3>
+        <p>
+          <span class="i18n" lang="fr">Le parcours complet en une seule page, avec la terminologie en français, en anglais et en chinois côte à côte. Autoportante : aucune ressource externe, elle fonctionne aussi hors ligne.</span>
+          <span class="i18n" lang="en">The whole course on a single page, with the terminology in French, English and Chinese side by side. Self-contained: no external resource, and it works offline too.</span>
+        </p>
+        <span class="tag lead"><span class="i18n" lang="fr">point d'entrée</span><span class="i18n" lang="en">start here</span></span>
+      </div>
+
+      <div class="card">
+        <h3><a href="Formation-IA-Images-Videos-Marketing/lab/index-fr.html">
+          <span class="i18n" lang="fr">Travaux pratiques — français</span><span class="i18n" lang="en">Practical works — French</span></a></h3>
+        <p>
+          <span class="i18n" lang="fr">Onze exercices en deux parties : observer d'abord, produire ensuite. Les 47 extraits se lisent en flux dans la page, chacun avec l'invite qui l'a produit. Aucun compte, aucun outil à acheter.</span>
+          <span class="i18n" lang="en">Eleven exercises in two parts: observe first, produce second. All 47 extracts stream inside the page, each with the prompt that produced it. No account, no tool to buy.</span>
+        </p>
+        <span class="tag"><span class="i18n" lang="fr">11 exercices · 47 extraits</span><span class="i18n" lang="en">11 exercises · 47 extracts</span></span>
+      </div>
+
+      <div class="card">
+        <h3><a href="Formation-IA-Images-Videos-Marketing/lab/index-en.html">
+          <span class="i18n" lang="fr">Travaux pratiques — anglais</span><span class="i18n" lang="en">Practical works — English</span></a></h3>
+        <p>
+          <span class="i18n" lang="fr">Le même cahier en anglais, sur les mêmes extraits. Les deux versions se renvoient l'une à l'autre, exercice par exercice.</span>
+          <span class="i18n" lang="en">The same workbook in English, over the same extracts. The two versions cross-link to each other, exercise by exercise.</span>
+        </p>
+        <span class="tag"><span class="i18n" lang="fr">11 exercices · 47 extraits</span><span class="i18n" lang="en">11 exercises · 47 extracts</span></span>
+      </div>
+    </div>
+  </section>
+
+  <section id="scripts">
+    <h2 class="sec">
+      <span class="i18n" lang="fr">2 · Lire le texte de la leçon</span>
+      <span class="i18n" lang="en">2 · Read the lecture text</span>
+    </h2>
+    <p class="sechint">
+      <span class="i18n" lang="fr">Ce que le formateur dit, diapositive par diapositive, dans la langue où il le dit. Ces liens s'ouvrent sur GitHub, qui met en forme le texte ; les trois versions sont alignées page à page.</span>
+      <span class="i18n" lang="en">What the trainer says, slide by slide, in the language it is delivered in. These links open on GitHub, which renders the text; the three versions are aligned page by page.</span>
+    </p>
+    <div class="grid">
+      <div class="card">
+        <h3><a href="https://github.com/Joel-SUN/IIOE/blob/main/Formation-IA-Images-Videos-Marketing/docs/scripts/UNESCO_AI_Image_Video_Script_FR.md">
+          <span class="i18n" lang="fr">Script de leçon — français</span><span class="i18n" lang="en">Lecture script — French</span></a></h3>
+        <p>
+          <span class="i18n" lang="fr">Registre délibérément soutenu : le public professionnel francophone attend un cours magistral explicite. Les noms de sociétés et d'universités cités à l'écran ne sont pas répétés à l'oral — ils sont déjà écrits sur la diapositive.</span>
+          <span class="i18n" lang="en">A deliberately formal register: a French-speaking professional audience expects an explicit lecture. Company and university names shown on screen are not repeated aloud — they are already written on the slide.</span>
+        </p>
+        <span class="tag">Markdown</span>
+      </div>
+
+      <div class="card">
+        <h3><a href="https://github.com/Joel-SUN/IIOE/blob/main/Formation-IA-Images-Videos-Marketing/docs/scripts/UNESCO_AI_Image_Video_Script_EN.md">
+          <span class="i18n" lang="fr">Script de leçon — anglais</span><span class="i18n" lang="en">Lecture script — English</span></a></h3>
+        <p>
+          <span class="i18n" lang="fr">La version qui fait autorité pour la structure et les minutages. C'est elle que les deux autres suivent, page à page.</span>
+          <span class="i18n" lang="en">The version that is authoritative for structure and timings. The other two follow it, page by page.</span>
+        </p>
+        <span class="tag lead"><span class="i18n" lang="fr">référence</span><span class="i18n" lang="en">authoritative</span></span>
+      </div>
+
+      <div class="card">
+        <h3><a href="https://github.com/Joel-SUN/IIOE/blob/main/Formation-IA-Images-Videos-Marketing/docs/scripts/UNESCO_AI_Image_Video_Script_ZH.md">
+          <span class="i18n" lang="fr">Script de leçon — chinois</span><span class="i18n" lang="en">Lecture script — Chinese</span></a></h3>
+        <p>
+          <span class="i18n" lang="fr">Le même cours en chinois, aligné sur la structure anglaise. Chaque page porte son titre et son minutage.</span>
+          <span class="i18n" lang="en">The same course in Chinese, aligned to the English structure. Every page carries its title and its timing.</span>
+        </p>
+        <span class="tag">Markdown</span>
+      </div>
+    </div>
+  </section>
+
+  <section id="decks">
+    <h2 class="sec">
+      <span class="i18n" lang="fr">3 · Ouvrir les diaporamas</span>
+      <span class="i18n" lang="en">3 · Open the slide decks</span>
+    </h2>
+    <p class="sechint">
+      <span class="i18n" lang="fr">Les deux diaporamas livrés, montés sur le masque d'enregistrement officiel. GitHub ne prévisualise pas ce format : le fichier se télécharge, puis s'ouvre dans PowerPoint ou LibreOffice. Les 20 pages de chaque version portent le texte de la leçon mot pour mot dans leurs notes.</span>
+      <span class="i18n" lang="en">The two delivered decks, built on the official recording master. GitHub does not preview this format: the file downloads, then opens in PowerPoint or LibreOffice. All 20 pages of each version carry the lecture text verbatim in their notes.</span>
+    </p>
+    <div class="grid">
+      <div class="card">
+        <h3><a href="Formation-IA-Images-Videos-Marketing/build/UNESCO_AI_Image_Video_Course_FR.pptx">
+          <span class="i18n" lang="fr">Diaporama — français</span><span class="i18n" lang="en">Slide deck — French</span></a></h3>
+        <p>
+          <span class="i18n" lang="fr">20 pages en français, texte de la leçon dans les notes de chaque page.</span>
+          <span class="i18n" lang="en">20 pages in French, the lecture text in the notes of every page.</span>
+        </p>
+        <span class="tag dl"><span class="i18n" lang="fr">téléchargement</span><span class="i18n" lang="en">download</span></span>
+      </div>
+
+      <div class="card">
+        <h3><a href="Formation-IA-Images-Videos-Marketing/build/UNESCO_AI_Image_Video_Course_EN.pptx">
+          <span class="i18n" lang="fr">Diaporama — anglais</span><span class="i18n" lang="en">Slide deck — English</span></a></h3>
+        <p>
+          <span class="i18n" lang="fr">20 pages en anglais, sur le même masque, avec le même texte dans les notes.</span>
+          <span class="i18n" lang="en">20 pages in English, on the same master, with the same text in the notes.</span>
+        </p>
+        <span class="tag dl"><span class="i18n" lang="fr">téléchargement</span><span class="i18n" lang="en">download</span></span>
+      </div>
+    </div>
+  </section>
+
+  <section id="design">
+    <h2 class="sec">
+      <span class="i18n" lang="fr">4 · Conception et conformité</span>
+      <span class="i18n" lang="en">4 · Design and compliance</span>
+    </h2>
+    <p class="sechint">
+      <span class="i18n" lang="fr">Pour qui veut voir comment le cours est construit, et pourquoi il est construit ainsi. Ces documents s'ouvrent sur GitHub.</span>
+      <span class="i18n" lang="en">For whoever wants to see how the course is built, and why it is built that way. These documents open on GitHub.</span>
+    </p>
+    <div class="grid">
+      <div class="card">
+        <h3><a href="https://github.com/Joel-SUN/IIOE/blob/main/Formation-IA-Images-Videos-Marketing/docs/UNESCO_AI_Image_Video_Course_EN.md">
+          <span class="i18n" lang="fr">Conception du cours</span><span class="i18n" lang="en">Course design</span></a></h3>
+        <p>
+          <span class="i18n" lang="fr">Sept segments, 20 diapositives, objectifs, minutages, six annexes terminologiques et l'autocontrôle de conformité.</span>
+          <span class="i18n" lang="en">Seven segments, 20 slides, objectives, timings, six terminology annexes and the compliance self-check.</span>
+        </p>
+        <span class="tag">Markdown</span>
+      </div>
+
+      <div class="card">
+        <h3><a href="https://github.com/Joel-SUN/IIOE/blob/main/Formation-IA-Images-Videos-Marketing/docs/%E6%95%99%E5%AD%A6%E8%AE%BE%E8%AE%A1%E5%8E%9F%E5%88%99.md">
+          <span class="i18n" lang="fr">Principes de conception pédagogique</span><span class="i18n" lang="en">Instructional-design principles</span></a></h3>
+        <p>
+          <span class="i18n" lang="fr">En chinois. Les contraintes d'apprentissage, les paramètres d'une leçon vidéo de 45 minutes, une liste noire de 13 mythes pédagogiques, et une bibliographie vérifiée référence par référence.</span>
+          <span class="i18n" lang="en">In Chinese. The learning constraints, the parameters of a 45-minute video lesson, a blacklist of 13 teaching myths, and a bibliography checked reference by reference.</span>
+        </p>
+        <span class="tag">Markdown · 中文</span>
+      </div>
+
+      <div class="card">
+        <h3><a href="https://github.com/Joel-SUN/IIOE/blob/main/Formation-IA-Images-Videos-Marketing/lab/PROMPTS.md">
+          <span class="i18n" lang="fr">Les invites des 47 extraits</span><span class="i18n" lang="en">The prompts behind the 47 extracts</span></a></h3>
+        <p>
+          <span class="i18n" lang="fr">Chaque extrait du cahier de travaux pratiques, avec l'invite complète qui l'a produit. C'est le document à lire si vous voulez reproduire la démarche.</span>
+          <span class="i18n" lang="en">Every extract in the workbook, with the full prompt that produced it. This is the document to read if you want to reproduce the approach.</span>
+        </p>
+        <span class="tag">Markdown</span>
+      </div>
+
+      <div class="card">
+        <h3><a href="https://github.com/Joel-SUN/IIOE/blob/main/Formation-IA-Images-Videos-Marketing/README.md">
+          <span class="i18n" lang="fr">L'inventaire du cours</span><span class="i18n" lang="en">The course inventory</span></a></h3>
+        <p>
+          <span class="i18n" lang="fr">Tout ce que contient le dossier du cours, fichier par fichier, avec l'étape de livraison à laquelle chacun correspond.</span>
+          <span class="i18n" lang="en">Everything the course folder holds, file by file, with the delivery stage each one belongs to.</span>
+        </p>
+        <span class="tag">Markdown</span>
+      </div>
+
+      <div class="card">
+        <h3><a href="https://github.com/Joel-SUN/IIOE/blob/main/Formation-IA-Images-Videos-Marketing/lab/README.md">
+          <span class="i18n" lang="fr">Mode d'emploi du labo</span><span class="i18n" lang="en">How the lab pack works</span></a></h3>
+        <p>
+          <span class="i18n" lang="fr">Ce dont vous avez besoin, comment les extraits sont présentés, et les règles qui valent pour tous les exercices.</span>
+          <span class="i18n" lang="en">What you need, how the extracts are presented, and the rules that apply to every exercise.</span>
+        </p>
+        <span class="tag">Markdown</span>
+      </div>
+    </div>
+  </section>
+
+  <section id="trainer">
+    <h2 class="sec">
+      <span class="i18n" lang="fr">5 · Le formateur</span>
+      <span class="i18n" lang="en">5 · The trainer</span>
+    </h2>
+    <p class="sechint">
+      <span class="i18n" lang="fr">La deuxième diapositive du cours présente le formateur ; voici le détail.</span>
+      <span class="i18n" lang="en">Slide two of the course introduces the trainer; here is the detail.</span>
+    </p>
+    <div class="grid">
+      <div class="card">
+        <h3><a href="Formation-IA-Images-Videos-Marketing/docs/Trainer_Profile_Yuefeng_SUN.html">
+          <span class="i18n" lang="fr">Profil — page web</span><span class="i18n" lang="en">Profile — web page</span></a></h3>
+        <p>
+          <span class="i18n" lang="fr">Yuefeng SUN. S'ouvre directement dans le navigateur.</span>
+          <span class="i18n" lang="en">Yuefeng SUN. Opens straight in the browser.</span>
+        </p>
+        <span class="tag">HTML</span>
+      </div>
+
+      <div class="card">
+        <h3><a href="Formation-IA-Images-Videos-Marketing/docs/Trainer_Profile_Yuefeng_SUN.pdf">
+          <span class="i18n" lang="fr">Profil — PDF</span><span class="i18n" lang="en">Profile — PDF</span></a></h3>
+        <p>
+          <span class="i18n" lang="fr">La même présentation, à imprimer ou à joindre à un dossier.</span>
+          <span class="i18n" lang="en">The same presentation, to print or attach to a file.</span>
+        </p>
+        <span class="tag">PDF</span>
+      </div>
+
+      <div class="card">
+        <h3><a href="https://github.com/Joel-SUN/IIOE/blob/main/Formation-IA-Images-Videos-Marketing/docs/trainer-profile.txt">
+          <span class="i18n" lang="fr">Profil — texte brut</span><span class="i18n" lang="en">Profile — plain text</span></a></h3>
+        <p>
+          <span class="i18n" lang="fr">La version texte, pour citation ou réutilisation.</span>
+          <span class="i18n" lang="en">The text version, for quotation or reuse.</span>
+        </p>
+        <span class="tag">TXT</span>
+      </div>
+    </div>
+  </section>
+
+  <section id="syllabus">
+    <h2 class="sec">
+      <span class="i18n" lang="fr">6 · Le programme source</span>
+      <span class="i18n" lang="en">6 · The source syllabus</span>
+    </h2>
+    <p class="sechint">
+      <span class="i18n" lang="fr">Cette micro-certification est l'adaptation d'un cours de six heures en sept modules, enseigné en chinois avec la terminologie cinématographique française. Réduit à 45 minutes, élargi de la vidéo seule à l'image <em>et</em> à la vidéo, et recentré des dirigeants de PME sur les responsables marketing et commerciaux.</span>
+      <span class="i18n" lang="en">This micro-credential is an adaptation of a six-hour course in seven modules, taught in Chinese with French film terminology. Cut down to 45 minutes, widened from video alone to image <em>and</em> video, and re-centred from SME executives onto marketing and sales leads.</span>
+    </p>
+    <div class="grid">
+      <div class="card">
+        <h3><a href="https://github.com/Joel-SUN/IIOE/blob/main/Formation-Video-IA-Prompting/docs/SYLLABUS.md">
+          <span class="i18n" lang="fr">Programme — chinois</span><span class="i18n" lang="en">Syllabus — Chinese</span></a></h3>
+        <p><span class="i18n" lang="fr">La version d'origine. 6 heures, 7 modules.</span><span class="i18n" lang="en">The original version. 6 hours, 7 modules.</span></p>
+        <span class="tag">Markdown · 中文</span>
+      </div>
+      <div class="card">
+        <h3><a href="https://github.com/Joel-SUN/IIOE/blob/main/Formation-Video-IA-Prompting/docs/SYLLABUS_FR.md">
+          <span class="i18n" lang="fr">Programme — français</span><span class="i18n" lang="en">Syllabus — French</span></a></h3>
+        <p><span class="i18n" lang="fr">La traduction française du programme.</span><span class="i18n" lang="en">The French translation of the syllabus.</span></p>
+        <span class="tag">Markdown</span>
+      </div>
+      <div class="card">
+        <h3><a href="https://github.com/Joel-SUN/IIOE/blob/main/Formation-Video-IA-Prompting/docs/SYLLABUS_EN.md">
+          <span class="i18n" lang="fr">Programme — anglais</span><span class="i18n" lang="en">Syllabus — English</span></a></h3>
+        <p><span class="i18n" lang="fr">La traduction anglaise du programme.</span><span class="i18n" lang="en">The English translation of the syllabus.</span></p>
+        <span class="tag">Markdown</span>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <p>
+      <span class="i18n" lang="fr">Support de cours pour la plateforme IIOE (International Online Engineering Innovation Platform) de l'UNESCO-ICHEI, le Centre international UNESCO pour l'innovation dans l'enseignement supérieur. Format visé : une micro-certification de 45 minutes, un intervenant à l'image, 1920 × 1080.</span>
+      <span class="i18n" lang="en">Course material for the IIOE platform (International Online Engineering Innovation Platform) of UNESCO-ICHEI, the UNESCO International Centre for Higher Education Innovation. Target format: a 45-minute micro-credential, one presenter on camera, 1920 × 1080.</span>
+    </p>
+    <p>
+      <span class="i18n" lang="fr">Les 45 minutes sont l'objectif du format IIOE, pas un critère de sélection : une durée réelle de 46 à 49 minutes est acceptable, et aucun texte déjà revu n'est coupé pour atteindre la cible.</span>
+      <span class="i18n" lang="en">The 45 minutes is the target of the IIOE format, not a selection criterion: a real running time of 46 to 49 minutes is acceptable, and no reviewed text is cut in order to reach the target.</span>
+    </p>
+    <p>
+      <span class="i18n" lang="fr">Aucun nom de fournisseur, de produit ou de prix n'apparaît dans le support publié. Dépôt public : <a href="https://github.com/Joel-SUN/IIOE">github.com/Joel-SUN/IIOE</a> · <a href="https://github.com/Joel-SUN/IIOE/blob/main/README.md">lisez-moi du dépôt</a>.</span>
+      <span class="i18n" lang="en">No vendor, product or price name appears anywhere in the published material. Public repository: <a href="https://github.com/Joel-SUN/IIOE">github.com/Joel-SUN/IIOE</a> · <a href="https://github.com/Joel-SUN/IIOE/blob/main/README.md">repository read-me</a>.</span>
+    </p>
+  </div>
+</footer>
+
+<script>
+(function () {
+  var h = document.documentElement;
+  var btns = Array.prototype.slice.call(document.querySelectorAll('.langbar button'));
+  function set(lang) {
+    h.className = lang;
+    h.setAttribute('lang', lang);
+    btns.forEach(function (b) {
+      b.setAttribute('aria-pressed', String(b.getAttribute('data-set') === lang));
+    });
+  }
+  btns.forEach(function (b) {
+    b.addEventListener('click', function () { set(b.getAttribute('data-set')); });
+  });
+  if (h.className === 'en' || h.className === 'fr') set(h.className);
+})();
+</script>
+
+</body>
+</html>

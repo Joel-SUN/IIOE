@@ -5,6 +5,14 @@ UNESCO-ICHEI, the UNESCO International Centre for Higher Education Innovation. F
 **45-minute micro-credential**, one presenter on camera, 1920 × 1080, MP4 (H.264 + AAC),
 SRT subtitles.
 
+**Read it as a website.** GitHub Pages serves this repository at
+<https://joel-sun.github.io/IIOE/>, from [`index.html`](index.html) at the root. That is the
+learner's entry point: the course page, both practical-works workbooks with their 47 extracts
+streaming in place, the trainer profile, and both decks. Going through github.com instead does
+not work for those — GitHub renders Markdown and PDF, but an `.html` file opened there is shown
+as source code. Pages is deployed by [`.github/workflows/pages.yml`](.github/workflows/pages.yml)
+on every push to `main`, and `.nojekyll` keeps it serving the tree exactly as committed.
+
 The two READMEs of this repository are written in English. Most of the material they describe is not:
 each lecture script and design document is written in the language it is delivered in, and the learner
 page carries all three at once. The source syllabus is the one exception — it is published in
@@ -17,7 +25,7 @@ page carries all three at once. The source syllabus is the one exception — it 
 | Folder | Course | Length | Status |
 |---|---|---|---|
 | [`Formation-Video-IA-Prompting/`](Formation-Video-IA-Prompting/) | Prompt writing for AI video generation — the source syllabus, taught in Chinese with French film terminology | 6 h · 7 modules | v0.1 |
-| [`Formation-IA-Images-Videos-Marketing/`](Formation-IA-Images-Videos-Marketing/) | Generative AI applied to marketing visuals — image and video generation for commercial teams, in English, French and Chinese | 45 min · 18 slides | decks v0.1 · scripts EN/FR/ZH · lab pack EN/FR |
+| [`Formation-IA-Images-Videos-Marketing/`](Formation-IA-Images-Videos-Marketing/) | Generative AI applied to marketing visuals — image and video generation for commercial teams, in English, French and Chinese | 45 min · 20 slides | decks v0.1 · scripts EN/FR/ZH · lab pack EN/FR |
 
 The second course is an adaptation of the first: cut down from 6 hours to 45 minutes, widened from
 video alone to image **and** video, and re-centred from SME executives onto marketing and sales
