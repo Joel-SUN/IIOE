@@ -21,7 +21,7 @@ binaries: the two `.pptx` decks and the presenter-profile PDF. Twelve sit in `do
 are the practical-works pack in [`lab/`](lab/), and this file is the seventeenth.
 
 Two kinds of rendered output are versioned beside them. The **listening player** in
-[`course/`](course/) is 87 files for 264,089,188 bytes: the page itself, the narration and its
+[`course/`](course/) is 87 files for 264,089,372 bytes: the page itself, the narration and its
 subtitles, and the exported slide images. The **practical-works media** in
 [`lab/assets/demos/`](lab/assets/demos/) is 94 files for 248,915,344 bytes: the 47 demo extracts and
 their 47 poster stills. Together with the 17 sources that is 198 tracked files.
@@ -41,7 +41,7 @@ their 47 poster stills. Together with the 17 sources that is 198 tracked files.
 | [`lab/PROMPTS.md`](lab/PROMPTS.md) | The 51 prompts as plain text, grouped by course slide, for reading and diffing | learner support |
 | [`lab/README.md`](lab/README.md) | What the pack contains, how the two gates work, and how the extracts are provenanced | learner support |
 | [`lab/assets/demos/`](lab/assets/demos/) | The 47 AI-generated extracts (`media/`, 246,868,311 bytes) and their 47 poster stills (`posters/`, 2,047,033 bytes), played by both workbooks | 5 · Video and asset production |
-| [`course/`](course/) | **Listening player** — one page, [`course/index.html`](course/index.html), 275,635 bytes, with the assets it plays beside it: 40 slide PNGs at 1920×1080 (5,023,185 bytes) and 46 audio files (258,790,368 bytes), being 22 AAC tracks per language — a welcome message, one per slide, and the whole lesson in one piece — plus that language's SRT. French and English. 87 files for 264,089,188 bytes. Not an IIOE upload artefact, since the partner package asks for MP4 video; this is how a visitor listens to the lesson on the site | learner support |
+| [`course/`](course/) | **Listening player** — one page, [`course/index.html`](course/index.html), 275,819 bytes, with the assets it plays beside it: 40 slide PNGs at 1920×1080 (5,023,185 bytes) and 46 audio files (258,790,368 bytes), being 22 AAC tracks per language — a welcome message, one per slide, and the whole lesson in one piece — plus that language's SRT. French and English. 87 files for 264,089,372 bytes. Not an IIOE upload artefact, since the partner package asks for MP4 video; this is how a visitor listens to the lesson on the site | learner support |
 | [`docs/UNESCO_AI_Image_Video_Course_Page.html`](docs/UNESCO_AI_Image_Video_Course_Page.html) | Trilingual learner page (EN / FR / ZH), one self-contained file with no external dependency, printable to A4 | learner support |
 | [`docs/trainer-profile.txt`](docs/trainer-profile.txt) | Presenter biography, long and short versions | learner support |
 | [`docs/Trainer_Profile_Yuefeng_SUN.html`](docs/Trainer_Profile_Yuefeng_SUN.html) | The same biography as a standalone HTML page | learner support |

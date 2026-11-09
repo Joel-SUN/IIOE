@@ -71,7 +71,7 @@ title on the profile page, and the generation tool named in the provenance state
 the generated video the practical-works pack teaches from: course design, lecture scripts, learner
 pages, `.pptx` files, the listening player, and the 47 demo extracts with their 47 poster stills —
 94 files for 248,915,344 bytes, the largest single clip 21,275,720 bytes. The player and its assets
-add 87 files for 264,089,188 bytes: 44 AAC tracks and 2 subtitle files, 258,790,368 bytes between
+add 87 files for 264,089,372 bytes: 44 AAC tracks and 2 subtitle files, 258,790,368 bytes between
 them, plus 40 renders of the two decks at 1920 × 1080 for 5,023,185 bytes. The largest single file
 in the repository is the full-length English track at 67,285,562 bytes — still under GitHub's 100 MB
 per-file limit.
