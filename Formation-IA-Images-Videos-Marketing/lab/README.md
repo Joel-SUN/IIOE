@@ -49,7 +49,8 @@ The extracts are not 1920 by 1080: they run at four resolutions, from 1280 by 67
 
 ## Provenance
 
-Prompts, labels, durations and section structure are copied verbatim from the course manifest. The
+The prompts are copied verbatim from the generation record: the exact text submitted to the model
+that produced each extract. Labels, durations and section structure follow the same record. The
 exercises, the drift table, the publication sheet and the assessment grid are additions built only
 out of rules the course design document already states.
 
