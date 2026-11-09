@@ -1,12 +1,19 @@
 # ---------------------------------------------------------------------------
-# Rendered media and production tooling: never uploaded.
-# Trainer decision of 6 Nov 2026 — that whole workstream stays local and is not
-# shared on the Internet; distribution goes through the partner package. The
-# rules below exist so that an accidental `git add -A` cannot republish it.
+# Production tooling and biometric source material: never uploaded.
+# A trainer decision of 6 Nov 2026 kept the whole narration workstream local. A
+# second decision, of 9 Nov 2026, published the *rendered* narration and nothing
+# else: the per-slide tracks, the full-length tracks and the subtitles now ship
+# inside the course player, so a visitor can listen to the lesson. What still
+# stays out is the recipe and the source — the voice samples, the synthesis
+# command line, the build scripts and the run ledgers behind that audio. The
+# rules below exist so that an accidental `git add -A` cannot republish any of
+# it.
 # ---------------------------------------------------------------------------
 **/docs/tools/tts/
 
-# Derivatives of rendered media: review player, checks, package notice.
+# Local sources of the published page: the player template, its data files, the
+# checks and the package notice. The player is published as generated output
+# under Formation-IA-Images-Videos-Marketing/course/, never from here.
 **/build/course-site/
 **/build/qc.mjs
 **/build/README-package.txt
@@ -28,13 +35,23 @@
 *.mov
 *.mkv
 
-# Sole exception — the practical-works pack versions its 47 demo extracts, so
-# the workbook plays exactly as it was verified. Largest clip 21,275,720 bytes,
-# well under GitHub's 100 MB per-file limit; 248,915,344 bytes for all 94 media
-# files. The negation is scoped to that one directory, so no other *.mp4
-# anywhere in the repository can be staged. The poster stills are .jpg and were
-# never excluded. The narrated audio stays out: biometric data, local only.
+# Two scoped exceptions, each narrowed to one directory so that no other media
+# file anywhere in the repository can be staged.
+#
+# 1. The practical-works pack versions its 47 demo extracts, so the workbook
+#    plays exactly as it was verified. Largest clip 21,275,720 bytes, well under
+#    GitHub's 100 MB per-file limit; 248,915,344 bytes for all 94 media files.
+#    The poster stills are .jpg and were never excluded.
 !Formation-IA-Images-Videos-Marketing/lab/assets/demos/media/*.mp4
+
+# 2. The course player publishes the rendered narration, so a visitor can listen
+#    to the lesson: one track per slide, the whole course in one piece, and the
+#    subtitles, in each of French and English — 46 files for 258,790,368 bytes,
+#    the largest 67,285,562, under the same 100 MB limit. The voice samples the
+#    narration was cloned from are the biometric, and they stay out; publishing
+#    the rendered audio does not publish them. The .srt and .png files beside it
+#    were never excluded.
+!Formation-IA-Images-Videos-Marketing/course/assets/audio/**/*.m4a
 
 # Secrets — the CLI reads them outside the repository, never inside it.
 .env

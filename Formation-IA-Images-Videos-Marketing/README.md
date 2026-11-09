@@ -16,9 +16,15 @@ untranslated prose. The lecture scripts themselves are each in the language they
 
 ## What is in this folder
 
-Seventeen source files — fifteen Markdown, HTML, text and PowerShell sources, and two binary `.pptx`
-decks — plus the 94 media files of the practical-works pack. Thirteen sources sit in `docs/` and
-`build/`; the other four, and the media, are the pack in [`lab/`](lab/).
+Seventeen tracked source files — fourteen Markdown, HTML, text and PowerShell sources, plus three
+binaries: the two `.pptx` decks and the presenter-profile PDF. Twelve sit in `docs/` and `build/`, four
+are the practical-works pack in [`lab/`](lab/), and this file is the seventeenth.
+
+Two kinds of rendered output are versioned beside them. The **listening player** in
+[`course/`](course/) is 87 files for 264,069,071 bytes: the page itself, the narration and its
+subtitles, and the exported slide images. The **practical-works media** in
+[`lab/assets/demos/`](lab/assets/demos/) is 94 files for 248,915,344 bytes: the 47 demo extracts and
+their 47 poster stills. Together with the 17 sources that is 198 tracked files.
 
 | File | Role | IIOE stage |
 |---|---|---|
@@ -35,6 +41,7 @@ decks — plus the 94 media files of the practical-works pack. Thirteen sources 
 | [`lab/PROMPTS.md`](lab/PROMPTS.md) | The 51 prompts as plain text, grouped by course slide, for reading and diffing | learner support |
 | [`lab/README.md`](lab/README.md) | What the pack contains, how the two gates work, and how the extracts are provenanced | learner support |
 | [`lab/assets/demos/`](lab/assets/demos/) | The 47 AI-generated extracts (`media/`, 246,868,311 bytes) and their 47 poster stills (`posters/`, 2,047,033 bytes), played by both workbooks | 5 · Video and asset production |
+| [`course/`](course/) | **Listening player** — one page, [`course/index.html`](course/index.html), 255,518 bytes, with the assets it plays beside it: 40 slide PNGs at 1920×1080 (5,023,185 bytes) and 46 audio files (258,790,368 bytes), being 22 AAC tracks per language — a welcome message, one per slide, and the whole lesson in one piece — plus that language's SRT. French and English. 87 files for 264,069,071 bytes. Not an IIOE upload artefact, since the partner package asks for MP4 video; this is how a visitor listens to the lesson on the site | learner support |
 | [`docs/UNESCO_AI_Image_Video_Course_Page.html`](docs/UNESCO_AI_Image_Video_Course_Page.html) | Trilingual learner page (EN / FR / ZH), one self-contained file with no external dependency, printable to A4 | learner support |
 | [`docs/trainer-profile.txt`](docs/trainer-profile.txt) | Presenter biography, long and short versions | learner support |
 | [`docs/Trainer_Profile_Yuefeng_SUN.html`](docs/Trainer_Profile_Yuefeng_SUN.html) | The same biography as a standalone HTML page | learner support |
@@ -160,16 +167,23 @@ from the prompts and the course.
 ## What is not in this repository
 
 This repository versions the **sources** — course design, lecture scripts, the learner page, the
-presenter profile and the two slide decks — plus the one piece of rendered media the practical-works
-pack teaches from: the 47 demo extracts and their 47 poster stills. Everything else derived from
-those sources is distributed in the partner package instead, and the `.gitignore` excludes it:
+presenter profile and the two slide decks — and two kinds of **rendered output**: the 47 demo extracts
+and their 47 poster stills that the practical-works pack teaches from, and the listening player in
+[`course/`](course/) with the narration and the slide images it plays. What is deliberately left out is
+everything from which that narration could be reproduced, everything carrying the trainer's biometric
+source material, and the partner's own distribution. The `.gitignore` excludes:
 
-- **the narrated audio.** It is a voice biometric, so the per-slide tracks, the full-length tracks
-  and the subtitles built from them stay on the local machine and are never shared publicly;
-- **exported slide images, and the tooling that produces any of it.** The per-slide PNGs, the review
-  player, the build scripts and the synthesis command line behind them stay out of the repository.
-  The `.gitignore` carries a single scoped negation — `lab/assets/demos/media/*.mp4` — so no other
-  video anywhere in the tree can be staged;
+- **the voice samples, and the ledgers behind the narration.** The recordings the voice was cloned from
+  are biometric data and never leave the trainer's machine. Neither do the per-run manifests, the usage
+  ledgers, the intermediate renders or the synthesis command line. A trainer decision of 6 November
+  2026 kept this whole workstream local; a second decision, of 9 November 2026, published the *rendered*
+  narration so that a visitor can listen to the lesson. That second decision published the audio. It
+  did not publish the recipe, and it did not publish the source;
+- **the tooling that produces any of it.** The narration command line, the page assembler and the deck
+  build scripts all stay local, so nothing in this tree can regenerate a delivered artefact. The
+  `.gitignore` carries **two** scoped negations, each narrowed to a single directory —
+  `lab/assets/demos/media/*.mp4` and `course/assets/audio/**/*.m4a` — so no other video or audio file
+  anywhere in the tree can be staged;
 - **the partner `.zip` archives.** They carry the whole rendered course — narration, subtitles,
   per-slide images and the demo extracts together. The delivered package (2026-11-08 build) is
   185 files for 514,316,804 bytes uncompressed, and the archive itself is 477,556,673 bytes, more than
@@ -186,6 +200,48 @@ references and standards document (`IIOE课程合作研发流程、参考与标�
 relative link is the only one that resolves: the one to
 [`docs/UNESCO_AI_Image_Video_Course_EN.md`](docs/UNESCO_AI_Image_Video_Course_EN.md).
 No other file in the published set carries a link that does not resolve.
+
+## Provenance, and what may be reused
+
+**The 47 demo extracts and their 47 poster stills are generated video and generated images.** The
+author is the trainer, Yuefeng SUN, and the generation tool is Alibaba Cloud Model Studio, with the
+HappyHorse and WAN models. **No reuse licence is granted.** They are published here to be taught
+from, inside this course and no further. A republication, a derivative work or a commercial
+placement must be requested from the author case by case; nothing in this repository authorises it.
+The same statement appears wherever a learner can reach the media, so that it cannot be arrived at
+by accident: both practical-works workbooks
+([`lab/index-fr.html`](lab/index-fr.html) and [`lab/index-en.html`](lab/index-en.html)) and the
+listening player ([`course/index.html`](course/index.html)), in the player as the page footer and
+again as the note beside the extracts themselves.
+
+**Each poster still is a frame of its own clip, not a separate generation.** All 47 are 800 pixels
+wide, and each carries the aspect ratio of the video it stands in for: one at 800×548, twenty-three
+at 800×422, twenty-three at 800×420.
+
+**The narration is a cloned voice, and saying so is a legal obligation rather than a detail.**
+Article 50 of the European AI Act, applicable since 2 August 2026, requires synthetic speech that
+could pass for a human voice to be marked as such. The player therefore states on the page, in both
+languages, that the voice is the trainer's own cloned voice and that the audio is generated — and
+the lab workbooks say the same of the extracts. The recordings the voice was cloned from are
+biometric data and are not published; see
+[What is not in this repository](#what-is-not-in-this-repository).
+
+### What that claim does not cover
+
+Four kinds of image in this tree are **not** generated, and the statement above must not be read as
+sweeping them in. Both decks carry exactly four raster images each, and every one is accounted for:
+
+| Image | What it actually is |
+|---|---|
+| The trainer's portrait, page 2 of both decks | A real photograph, supplied by the trainer. The same 600×600 PNG of 372,789 bytes sits in the French and the English deck, circle-cropped — and upscaled, since the original measures 356×356 |
+| The UNESCO-ICHEI logo, 420×257 | The partner's own artwork, byte-identical to its copy in the official IIOE recording template. The slide master places it as the shape `ichei-logo Master`, so it is on all twenty pages |
+| The IIOE logo, 560×249 | The same provenance, byte-identical to the template's second master image, placed as the shape `iioe-logo Master` |
+| The 405×1072 graphic, page 20 of both decks | The graphic the official IIOE recording template puts on its two transition pages — its slides 23 and 24 — byte-identical to that template's own copy |
+
+So three of the four are the partner's artwork from the supplied template, and the fourth is a real
+photograph. **Nothing inside either deck is AI-generated.** Neither are the 40 slide PNGs under
+[`course/assets/slides/`](course/assets/slides/): those are PowerPoint's own renders of the two
+delivered decks at 1920×1080, one per page per language.
 
 ## Published copy vs. local production record
 

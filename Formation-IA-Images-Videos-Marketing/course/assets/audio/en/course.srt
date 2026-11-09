@@ -1,0 +1,3590 @@
+1
+00:00:00,000 --> 00:00:01,705
+Hello, and welcome!
+
+2
+00:00:01,705 --> 00:00:05,565
+This course is delivered on the platform of
+
+3
+00:00:05,565 --> 00:00:10,771
+the International Institute of
+Online Education… the IIOE.
+
+4
+00:00:10,771 --> 00:00:14,990
+It is a micro-credential
+of forty-five minutes.
+
+5
+00:00:14,990 --> 00:00:20,106
+It is called Applied Generative
+AI for Marketing Visuals.
+
+6
+00:00:20,226 --> 00:00:23,722
+It is for people who run
+marketing, communications,
+
+7
+00:00:23,722 --> 00:00:26,943
+online commerce, or training
+inside a business.
+
+8
+00:00:26,943 --> 00:00:29,342
+No technical knowledge is required.
+
+9
+00:00:29,342 --> 00:00:32,289
+We will look at how to write an instruction
+
+10
+00:00:32,289 --> 00:00:36,675
+that produces a reliable image…
+how to set that image in motion,
+
+11
+00:00:36,675 --> 00:00:39,554
+and how to govern this work inside a team.
+
+12
+00:00:39,674 --> 00:00:41,750
+One note before we begin.
+
+13
+00:00:41,750 --> 00:00:46,651
+Every prompt example shown on
+screen is written in English,
+
+14
+00:00:46,651 --> 00:00:50,472
+and you should type it
+in English too… because
+
+15
+00:00:50,472 --> 00:00:55,373
+that is the language in which
+the models are most accurate.
+
+16
+00:00:55,373 --> 00:00:56,452
+Let us begin!
+
+17
+00:00:57,052 --> 00:01:01,910
+This session is not for designers…
+and it is not for engineers.
+
+18
+00:01:01,910 --> 00:01:08,465
+Nothing here assumes you have ever opened a
+camera, a design tool, or a line of code.
+
+19
+00:01:08,465 --> 00:01:14,788
+It is for the person who has to approve the
+visual, pay for it, and answer for it.
+
+20
+00:01:14,788 --> 00:01:17,796
+Before I teach anything… two questions!
+
+21
+00:01:17,916 --> 00:01:21,356
+And I would like you to answer them honestly.
+
+22
+00:01:21,356 --> 00:01:24,644
+How many of you paid an outside agency or a
+
+23
+00:01:24,644 --> 00:01:29,155
+freelancer for marketing visuals
+in the last twelve months?
+
+24
+00:01:29,155 --> 00:01:31,831
+For most of you, the answer is yes.
+
+25
+00:01:31,831 --> 00:01:37,948
+And how many of you waited more than one
+week for a single revision… one change,
+
+26
+00:01:37,948 --> 00:01:38,942
+to one image?
+
+27
+00:01:39,062 --> 00:01:43,310
+That is not a new campaign,
+and it is not a new idea.
+
+28
+00:01:43,310 --> 00:01:46,837
+That is one detail changed, and a week lost.
+
+29
+00:01:46,837 --> 00:01:49,722
+Keep those two numbers in your head.
+
+30
+00:01:49,722 --> 00:01:53,329
+In the next forty-five minutes I want to give
+
+31
+00:01:53,329 --> 00:01:56,776
+you a method that changes both of them… and
+
+32
+00:01:56,776 --> 00:02:01,505
+I want to be honest with you
+about what it does not change.
+
+33
+00:02:02,105 --> 00:02:07,195
+Before I give you that method… let
+me tell you who is speaking.
+
+34
+00:02:07,195 --> 00:02:09,053
+My name is Yuefeng SUN.
+
+35
+00:02:09,053 --> 00:02:15,839
+I have spent twenty years building enterprise
+data platforms and cloud architecture.
+
+36
+00:02:15,959 --> 00:02:19,286
+And for most of those twenty years, my job
+
+37
+00:02:19,286 --> 00:02:22,850
+has been to teach generative AI to the people
+
+38
+00:02:22,850 --> 00:02:27,999
+who have to use it in a business…
+not to the people who build it.
+
+39
+00:02:27,999 --> 00:02:29,266
+Marketing teams.
+
+40
+00:02:29,266 --> 00:02:31,009
+Online commerce teams.
+
+41
+00:02:31,009 --> 00:02:32,672
+Communications teams.
+
+42
+00:02:32,672 --> 00:02:36,157
+People who have no designer and no engineer…
+
+43
+00:02:36,157 --> 00:02:39,959
+and who still have to
+publish on Monday morning.
+
+44
+00:02:40,079 --> 00:02:43,701
+That is exactly who this
+session was written for.
+
+45
+00:02:43,701 --> 00:02:50,132
+So everything you are about to see is built
+for your constraints… not for a laboratory.
+
+46
+00:02:50,732 --> 00:02:56,174
+So… what will you actually be able
+to do at the end of this session?
+
+47
+00:02:56,174 --> 00:02:57,614
+Let me be precise.
+
+48
+00:02:57,614 --> 00:03:02,495
+A promise you can check is worth
+more than an impressive one.
+
+49
+00:03:02,495 --> 00:03:03,375
+Six things.
+
+50
+00:03:03,375 --> 00:03:07,456
+One… you will write a prompt
+the model can execute.
+
+51
+00:03:07,456 --> 00:03:11,617
+Six elements, in order, with
+nothing left to chance.
+
+52
+00:03:11,737 --> 00:03:15,206
+Two… you will tell a wish
+from a shooting script,
+
+53
+00:03:15,206 --> 00:03:20,021
+and turn any adjective into something
+a camera can actually capture.
+
+54
+00:03:20,021 --> 00:03:23,985
+Three… you will choose the
+right capability for the job.
+
+55
+00:03:23,985 --> 00:03:28,162
+Lock the subject as a still image
+first… then make it move.
+
+56
+00:03:28,282 --> 00:03:33,127
+Four… you will sort every asset
+into one of three fidelity tiers,
+
+57
+00:03:33,127 --> 00:03:37,674
+and know when a real photograph
+must replace a generated one.
+
+58
+00:03:37,674 --> 00:03:41,177
+Five… you will hold one
+brand consistent across
+
+59
+00:03:41,177 --> 00:03:45,649
+a whole campaign… instead of
+rediscovering it every morning.
+
+60
+00:03:45,649 --> 00:03:49,450
+And six… you will publish
+without hurting yourself.
+
+61
+00:03:49,570 --> 00:03:53,037
+Rights, disclosure, and the four artefacts
+
+62
+00:03:53,037 --> 00:03:57,329
+that turn one person's skill
+into a team capability.
+
+63
+00:03:57,329 --> 00:04:00,218
+One thing this session will not do.
+
+64
+00:04:00,218 --> 00:04:02,859
+It will not teach you a product.
+
+65
+00:04:02,859 --> 00:04:05,335
+Tools change every six months.
+
+66
+00:04:05,335 --> 00:04:06,986
+The method does not.
+
+67
+00:04:07,586 --> 00:04:10,782
+Let me name the problem precisely… because
+
+68
+00:04:10,782 --> 00:04:16,488
+saying that artificial intelligence will
+help your marketing is not a plan!
+
+69
+00:04:16,488 --> 00:04:19,608
+There are four pressures on a small team.
+
+70
+00:04:19,608 --> 00:04:21,130
+One: cost per asset.
+
+71
+00:04:21,130 --> 00:04:25,695
+A single product photograph, lit
+and retouched, has a price.
+
+72
+00:04:25,695 --> 00:04:28,967
+A ten second video has a much larger price.
+
+73
+00:04:29,087 --> 00:04:33,535
+Now multiply that by every
+market you sell into.
+
+74
+00:04:33,535 --> 00:04:35,018
+Two: turnaround.
+
+75
+00:04:35,018 --> 00:04:39,189
+The work is not slow because anybody is lazy.
+
+76
+00:04:39,189 --> 00:04:42,989
+It is slow because a brief has to travel.
+
+77
+00:04:42,989 --> 00:04:46,881
+From you, to an agency, to a photographer,
+
+78
+00:04:46,881 --> 00:04:54,573
+to a retoucher… back to you, and then around
+the whole loop again for one revision.
+
+79
+00:04:54,694 --> 00:04:56,908
+Three: the volume of variants.
+
+80
+00:04:56,908 --> 00:05:00,895
+The same product needs a
+square crop for one platform,
+
+81
+00:05:00,895 --> 00:05:03,848
+a vertical crop for another, a different
+
+82
+00:05:03,848 --> 00:05:09,016
+language overlay for each market… and
+a seasonal version twice a year.
+
+83
+00:05:09,016 --> 00:05:11,821
+The creative idea finished months ago.
+
+84
+00:05:11,821 --> 00:05:13,667
+Only the variants remain.
+
+85
+00:05:13,787 --> 00:05:17,035
+This is the work that drains teams the most…
+
+86
+00:05:17,035 --> 00:05:20,579
+and it is the work that
+generation handles best!
+
+87
+00:05:20,579 --> 00:05:21,908
+Four: no designer.
+
+88
+00:05:21,908 --> 00:05:27,003
+Many of you have nobody in the building
+who can make an image at all.
+
+89
+00:05:27,003 --> 00:05:29,291
+Now the promise… and the limit.
+
+90
+00:05:29,291 --> 00:05:34,460
+I will say this once at the start of
+the session, and once at the end.
+
+91
+00:05:34,579 --> 00:05:37,723
+Generative AI removes the
+production bottleneck!
+
+92
+00:05:37,723 --> 00:05:40,604
+It does not remove the judgement bottleneck.
+
+93
+00:05:40,604 --> 00:05:42,765
+Making the picture becomes cheap.
+
+94
+00:05:42,765 --> 00:05:45,187
+Deciding whether the picture is true,
+
+95
+00:05:45,187 --> 00:05:49,247
+whether it is on brand, whether
+you are allowed to publish it,
+
+96
+00:05:49,247 --> 00:05:53,765
+and whether it will mislead a customer…
+none of that becomes cheaper.
+
+97
+00:05:53,885 --> 00:05:56,992
+Some of it becomes more expensive, because
+
+98
+00:05:56,992 --> 00:06:01,875
+you can now produce a hundred bad
+decisions in a single afternoon!
+
+99
+00:06:01,875 --> 00:06:04,168
+So this session has two halves.
+
+100
+00:06:04,168 --> 00:06:08,977
+The first half is method: how to
+make the model do what you want.
+
+101
+00:06:08,977 --> 00:06:13,637
+The second half is judgement: how
+not to hurt yourself with it.
+
+102
+00:06:14,237 --> 00:06:18,693
+First, four terms we will use
+for the rest of the session.
+
+103
+00:06:18,693 --> 00:06:20,460
+Please write them down.
+
+104
+00:06:20,460 --> 00:06:24,224
+Generative AI is a system
+that produces new text,
+
+105
+00:06:24,224 --> 00:06:28,218
+images, audio, or video…
+from a written instruction.
+
+106
+00:06:28,218 --> 00:06:31,060
+A prompt is that written instruction.
+
+107
+00:06:31,060 --> 00:06:33,518
+It is the only channel you have.
+
+108
+00:06:33,518 --> 00:06:36,822
+There is no other way to talk to the model.
+
+109
+00:06:36,942 --> 00:06:42,075
+Text-to-image means: you give words,
+the model returns a still picture.
+
+110
+00:06:42,075 --> 00:06:46,195
+Image-to-video means: you give
+a still picture and words,
+
+111
+00:06:46,195 --> 00:06:48,798
+and the model returns a moving shot.
+
+112
+00:06:48,798 --> 00:06:51,618
+The picture fixes what is in the frame.
+
+113
+00:06:51,618 --> 00:06:54,003
+The words say what happens to it.
+
+114
+00:06:54,123 --> 00:06:59,795
+There is a third capability you will see
+advertised everywhere… text-to-video.
+
+115
+00:06:59,795 --> 00:07:02,631
+Words alone, straight to a moving shot.
+
+116
+00:07:02,631 --> 00:07:05,758
+I am not going to teach it as your default,
+
+117
+00:07:05,758 --> 00:07:08,812
+and I want to explain why… because this is
+
+118
+00:07:08,812 --> 00:07:12,885
+the single most common
+disappointment in the whole area.
+
+119
+00:07:13,005 --> 00:07:18,893
+With text-to-video, the model invents the
+subject and the movement at the same time,
+
+120
+00:07:18,893 --> 00:07:20,576
+on every single attempt.
+
+121
+00:07:20,576 --> 00:07:24,081
+So the product looks slightly
+different each time.
+
+122
+00:07:24,081 --> 00:07:26,955
+For an artist, that variety is a feature.
+
+123
+00:07:26,955 --> 00:07:30,250
+For a business that must
+show the same package,
+
+124
+00:07:30,250 --> 00:07:34,456
+on the same shelf, across the
+same campaign… it is a defect.
+
+125
+00:07:34,576 --> 00:07:37,657
+Image-to-video separates the two problems!
+
+126
+00:07:37,657 --> 00:07:40,886
+You decide the subject once, you approve it,
+
+127
+00:07:40,886 --> 00:07:45,141
+and then you generate movement
+from that approved picture.
+
+128
+00:07:45,141 --> 00:07:47,122
+The subject stops drifting.
+
+129
+00:07:47,122 --> 00:07:48,663
+So: two capabilities.
+
+130
+00:07:48,663 --> 00:07:52,405
+Text-to-image, to decide
+what the thing looks like.
+
+131
+00:07:52,405 --> 00:07:54,753
+Image-to-video, to make it move.
+
+132
+00:07:54,873 --> 00:07:57,232
+Everything else today is detail.
+
+133
+00:07:57,232 --> 00:08:00,034
+Remember that order… because at minute
+
+134
+00:08:00,034 --> 00:08:05,563
+thirty-five I will run an entire workflow
+built on exactly those two steps.
+
+135
+00:08:06,163 --> 00:08:11,258
+I want to prove something to you
+before I teach you anything.
+
+136
+00:08:11,258 --> 00:08:12,594
+Here is a brief.
+
+137
+00:08:12,594 --> 00:08:13,930
+Read it with me.
+
+138
+00:08:13,930 --> 00:08:18,523
+We are a small business that
+sells hand-woven textiles.
+
+139
+00:08:18,523 --> 00:08:22,783
+We need one product image
+for the export catalogue,
+
+140
+00:08:22,783 --> 00:08:26,457
+and one eight second video for social media.
+
+141
+00:08:26,457 --> 00:08:30,800
+We have no photographer, no
+studio, and no designer.
+
+142
+00:08:30,920 --> 00:08:34,912
+That is a real brief, from
+a real kind of business.
+
+143
+00:08:34,912 --> 00:08:38,748
+Now watch what a normal
+first attempt looks like.
+
+144
+00:08:38,748 --> 00:08:45,166
+I am going to type the prompt that most
+people type: a short, reasonable sentence.
+
+145
+00:08:45,166 --> 00:08:51,272
+And I am going to generate it four times,
+without changing a single character.
+
+146
+00:08:51,272 --> 00:08:52,289
+Four results.
+
+147
+00:08:52,289 --> 00:08:53,150
+Same words.
+
+148
+00:08:53,270 --> 00:08:55,978
+Different camera angle, every time.
+
+149
+00:08:55,978 --> 00:08:57,216
+Different light.
+
+150
+00:08:57,216 --> 00:08:59,537
+Different weave in the fabric.
+
+151
+00:08:59,537 --> 00:09:03,406
+In two of them, the product
+is a different colour.
+
+152
+00:09:03,406 --> 00:09:05,495
+Nobody made a mistake here.
+
+153
+00:09:05,495 --> 00:09:06,888
+Nothing is broken.
+
+154
+00:09:06,888 --> 00:09:09,673
+The tool worked exactly as designed.
+
+155
+00:09:09,673 --> 00:09:14,934
+So here is the rule… and it is the
+first of my three messages today.
+
+156
+00:09:15,054 --> 00:09:17,077
+The model does not guess!
+
+157
+00:09:17,077 --> 00:09:22,417
+Anything you leave out of the prompt,
+the model decides at random.
+
+158
+00:09:22,417 --> 00:09:26,462
+An unspecified dimension
+is not a neutral default.
+
+159
+00:09:26,462 --> 00:09:28,000
+It is a delegation.
+
+160
+00:09:28,000 --> 00:09:31,074
+You handed that decision to a machine,
+
+161
+00:09:31,074 --> 00:09:35,443
+silently… and you did not
+notice that you had done it.
+
+162
+00:09:36,043 --> 00:09:37,573
+So let us fix it!
+
+163
+00:09:37,573 --> 00:09:40,453
+And the fix is not a magic word.
+
+164
+00:09:40,453 --> 00:09:44,952
+It is a change in what kind
+of sentence you write.
+
+165
+00:09:44,952 --> 00:09:47,202
+Most people write a wish.
+
+166
+00:09:47,202 --> 00:09:54,311
+An elegant, high-quality textile product
+image with a warm, premium atmosphere.
+
+167
+00:09:54,311 --> 00:09:55,661
+That is a wish.
+
+168
+00:09:55,661 --> 00:10:00,610
+It describes the feeling you
+want the customer to have.
+
+169
+00:10:00,730 --> 00:10:04,392
+The problem is that a camera
+cannot film elegant.
+
+170
+00:10:04,392 --> 00:10:06,559
+A camera cannot film premium.
+
+171
+00:10:06,559 --> 00:10:08,576
+Those words have no pixels!
+
+172
+00:10:08,576 --> 00:10:14,629
+What the model needs is a shooting script…
+a description of what the camera sees,
+
+173
+00:10:14,629 --> 00:10:16,498
+and what the camera does.
+
+174
+00:10:16,498 --> 00:10:19,562
+Here is the test I want you to take away.
+
+175
+00:10:19,682 --> 00:10:24,532
+It is one question, and it works on
+every prompt you will ever write!
+
+176
+00:10:24,532 --> 00:10:28,610
+For every adjective, ask: how
+would a camera capture this?
+
+177
+00:10:28,610 --> 00:10:32,687
+If you cannot answer, the
+adjective is not an instruction.
+
+178
+00:10:32,687 --> 00:10:37,046
+Replace it with an action, a light
+position, or a composition.
+
+179
+00:10:37,046 --> 00:10:37,608
+Nervous.
+
+180
+00:10:37,608 --> 00:10:39,788
+How does a camera film nervous?
+
+181
+00:10:39,908 --> 00:10:43,532
+He rubs his cuff repeatedly with his thumb.
+
+182
+00:10:43,532 --> 00:10:47,577
+His eyes move to the door
+three times, and back.
+
+183
+00:10:47,577 --> 00:10:47,915
+Sad.
+
+184
+00:10:47,915 --> 00:10:49,600
+She lowers her head.
+
+185
+00:10:49,600 --> 00:10:51,960
+Her eyelashes tremble twice.
+
+186
+00:10:51,960 --> 00:10:55,584
+One drop of water slides along her jawline.
+
+187
+00:10:55,584 --> 00:10:57,691
+An oppressive atmosphere.
+
+188
+00:10:57,691 --> 00:10:58,534
+Top light.
+
+189
+00:10:58,534 --> 00:11:01,315
+The eye sockets fall into shadow.
+
+190
+00:11:01,315 --> 00:11:04,687
+The edges of the frame are underexposed.
+
+191
+00:11:04,807 --> 00:11:07,163
+The subject does not move.
+
+192
+00:11:07,163 --> 00:11:08,613
+Premium quality.
+
+193
+00:11:08,613 --> 00:11:10,879
+This is the business one.
+
+194
+00:11:10,879 --> 00:11:12,601
+Soft lateral light.
+
+195
+00:11:12,601 --> 00:11:14,685
+Shallow depth of field.
+
+196
+00:11:14,685 --> 00:11:15,863
+Matte finish.
+
+197
+00:11:15,863 --> 00:11:17,223
+A slow push-in.
+
+198
+00:11:17,223 --> 00:11:20,032
+Empty space around the product.
+
+199
+00:11:20,032 --> 00:11:22,298
+Trustworthy and friendly.
+
+200
+00:11:22,298 --> 00:11:23,839
+Eye-level camera.
+
+201
+00:11:23,839 --> 00:11:25,561
+Frontal soft light.
+
+202
+00:11:25,561 --> 00:11:30,364
+The subject faces the camera,
+and does not move away.
+
+203
+00:11:30,484 --> 00:11:33,838
+Notice what happened in every single case!
+
+204
+00:11:33,838 --> 00:11:39,588
+The adjective disappeared, and a
+physical, filmable fact took its place.
+
+205
+00:11:39,588 --> 00:11:42,383
+The camera now has something to do.
+
+206
+00:11:42,383 --> 00:11:48,453
+Let me rewrite our textile brief as a
+shooting script, and generate it once.
+
+207
+00:11:48,453 --> 00:11:49,411
+One attempt.
+
+208
+00:11:49,411 --> 00:11:50,529
+Correct angle.
+
+209
+00:11:50,529 --> 00:11:51,647
+Correct light.
+
+210
+00:11:51,647 --> 00:11:53,564
+The weave is consistent.
+
+211
+00:11:53,684 --> 00:11:55,073
+It is not perfect.
+
+212
+00:11:55,073 --> 00:11:56,540
+But it is directed.
+
+213
+00:11:56,540 --> 00:11:58,625
+And that is the difference.
+
+214
+00:11:58,625 --> 00:12:03,412
+Every part of it that is good,
+is good because I specified it.
+
+215
+00:12:03,412 --> 00:12:08,817
+And every part that is still wrong,
+I can now name… and therefore fix.
+
+216
+00:12:08,817 --> 00:12:11,596
+That is what a wish cannot give you.
+
+217
+00:12:11,596 --> 00:12:14,762
+A wish gives you no handle to debug with.
+
+218
+00:12:14,762 --> 00:12:15,843
+A script does!
+
+219
+00:12:15,963 --> 00:12:21,273
+Second message of the day: a prompt
+is a shooting script… not a wish.
+
+220
+00:12:21,873 --> 00:12:24,631
+Now I will give you the structure.
+
+221
+00:12:24,631 --> 00:12:25,685
+Six elements!
+
+222
+00:12:25,685 --> 00:12:29,742
+This is the entire method…
+and it is transferable.
+
+223
+00:12:29,742 --> 00:12:33,230
+It does not belong to any one tool — and it
+
+224
+00:12:33,230 --> 00:12:37,367
+will still be true when you
+change tools next year.
+
+225
+00:12:37,367 --> 00:12:38,421
+One: subject.
+
+226
+00:12:38,421 --> 00:12:40,693
+Who or what is in the frame?
+
+227
+00:12:40,693 --> 00:12:44,262
+Age, appearance, clothing, material, finish.
+
+228
+00:12:44,262 --> 00:12:45,236
+Two: action.
+
+229
+00:12:45,356 --> 00:12:47,079
+What they are doing!
+
+230
+00:12:47,079 --> 00:12:51,216
+A specific physical action…
+plus a speed adverb.
+
+231
+00:12:51,216 --> 00:12:52,508
+Three: setting.
+
+232
+00:12:52,508 --> 00:12:53,801
+Where and when?
+
+233
+00:12:53,801 --> 00:12:57,162
+Place, time of day, weather, key props.
+
+234
+00:12:57,162 --> 00:12:59,058
+Four: camera movement.
+
+235
+00:12:59,058 --> 00:13:03,194
+How the virtual camera
+moves… The movement type,
+
+236
+00:13:03,194 --> 00:13:08,537
+plus the shot size it starts on,
+and the shot size it ends on.
+
+237
+00:13:08,537 --> 00:13:09,571
+Five: style.
+
+238
+00:13:09,571 --> 00:13:10,347
+The look!
+
+239
+00:13:10,467 --> 00:13:15,078
+Colour grade, contrast, film
+character, depth of field.
+
+240
+00:13:15,078 --> 00:13:16,000
+Six: audio.
+
+241
+00:13:16,000 --> 00:13:22,036
+What we hear… Ambient sound, effects,
+score — or deliberately, no score.
+
+242
+00:13:22,036 --> 00:13:25,977
+I could now tell you what
+to write in each box.
+
+243
+00:13:25,977 --> 00:13:29,582
+That is the least useful way to teach this!
+
+244
+00:13:29,702 --> 00:13:32,720
+Instead I will tell you what happens when you
+
+245
+00:13:32,720 --> 00:13:35,671
+leave each one out… because that is what you
+
+246
+00:13:35,671 --> 00:13:38,823
+will actually recognise
+from your own attempts.
+
+247
+00:13:38,823 --> 00:13:43,854
+Leave out the subject, and the subject
+looks different in every generation.
+
+248
+00:13:43,854 --> 00:13:46,268
+You cannot build a campaign on that.
+
+249
+00:13:46,388 --> 00:13:51,570
+Leave out the action, and the frame is
+static… Or the movement is uncontrolled,
+
+250
+00:13:51,570 --> 00:13:53,800
+and the model invents one for you.
+
+251
+00:13:53,800 --> 00:13:56,620
+Leave out the setting, and you get a random
+
+252
+00:13:56,620 --> 00:13:59,769
+background that does not
+belong to your subject.
+
+253
+00:13:59,889 --> 00:14:05,775
+This is where the floating, placeless look
+comes from… Leave out camera movement,
+
+254
+00:14:05,775 --> 00:14:08,100
+and you get a locked-off camera.
+
+255
+00:14:08,100 --> 00:14:08,463
+Flat.
+
+256
+00:14:08,463 --> 00:14:09,117
+Lifeless.
+
+257
+00:14:09,117 --> 00:14:12,969
+It looks like a security
+recording… of a nice object.
+
+258
+00:14:12,969 --> 00:14:16,384
+Leave out style, and you
+get the default grade.
+
+259
+00:14:16,504 --> 00:14:19,922
+And the default grade is
+the generic look that
+
+260
+00:14:19,922 --> 00:14:25,198
+everybody can now recognise in under
+a second… and that reads as cheap!
+
+261
+00:14:25,198 --> 00:14:27,948
+Leave out audio, and you get silence.
+
+262
+00:14:27,948 --> 00:14:31,515
+Or worse: sound that does
+not match the picture.
+
+263
+00:14:31,515 --> 00:14:35,973
+Elements four and five… are the
+ones almost everybody omits.
+
+264
+00:14:36,093 --> 00:14:41,098
+They are also the two that carry
+the most visual quality per word!
+
+265
+00:14:41,098 --> 00:14:45,876
+So if you remember nothing else
+from this page — remember this:
+
+266
+00:14:45,876 --> 00:14:48,985
+camera and style… are where the money is.
+
+267
+00:14:48,985 --> 00:14:55,279
+Now take the prompt that is still on your
+screen, and count the six elements in it!
+
+268
+00:14:55,879 --> 00:14:59,055
+Let us take the first three elements into a
+
+269
+00:14:59,055 --> 00:15:03,708
+real business case… because the
+details are where the money is.
+
+270
+00:15:03,708 --> 00:15:04,299
+Subject.
+
+271
+00:15:04,299 --> 00:15:05,333
+Not a textile.
+
+272
+00:15:05,333 --> 00:15:08,362
+Say what it is made of, how old it looks,
+
+273
+00:15:08,362 --> 00:15:14,640
+what colour it actually is, what the finish
+is… and give the viewer a sense of scale.
+
+274
+00:15:14,760 --> 00:15:19,896
+A hand-woven wool blanket, undyed
+cream with two indigo stripes,
+
+275
+00:15:19,896 --> 00:15:26,236
+visible irregular weave, folded once…
+roughly the size of an adult's arms full.
+
+276
+00:15:26,236 --> 00:15:28,965
+Now the business rule for subject.
+
+277
+00:15:28,965 --> 00:15:32,736
+It is the most important
+sentence on this page.
+
+278
+00:15:32,736 --> 00:15:39,397
+If the product must look exactly like the
+real object… do not describe it in words!
+
+279
+00:15:39,517 --> 00:15:42,682
+Supply a real photograph as reference.
+
+280
+00:15:42,682 --> 00:15:45,348
+Words produce a similar product.
+
+281
+00:15:45,348 --> 00:15:48,013
+They never produce your product.
+
+282
+00:15:48,013 --> 00:15:53,427
+A described weave is a weave the
+model has seen somewhere before.
+
+283
+00:15:53,427 --> 00:15:55,093
+Your weave is yours.
+
+284
+00:15:55,213 --> 00:15:59,777
+So for anything that must match
+physical reality… the product,
+
+285
+00:15:59,777 --> 00:16:06,330
+the packaging, the label, you upload a photograph,
+and you let the model condition on it.
+
+286
+00:16:06,330 --> 00:16:07,656
+Hold that thought.
+
+287
+00:16:07,656 --> 00:16:13,104
+Later in this session I will turn it
+into a formal rule with three levels.
+
+288
+00:16:13,104 --> 00:16:13,620
+Action.
+
+289
+00:16:13,740 --> 00:16:17,759
+Give a physical process, and give it a speed.
+
+290
+00:16:17,759 --> 00:16:19,456
+Not flowing fabric.
+
+291
+00:16:19,456 --> 00:16:27,496
+The blanket is lifted at one corner by a hand…
+and falls back slowly under its own weight.
+
+292
+00:16:27,496 --> 00:16:31,426
+Now the model knows what changes between the
+
+293
+00:16:31,426 --> 00:16:35,892
+first frame and the last…
+and how fast it changes.
+
+294
+00:16:35,892 --> 00:16:36,607
+Setting.
+
+295
+00:16:36,727 --> 00:16:40,057
+Place, time of day, weather, and props.
+
+296
+00:16:40,057 --> 00:16:45,010
+And one warning: props are where
+cultural mistakes happen!
+
+297
+00:16:45,010 --> 00:16:48,682
+If you set a scene in a market, a workshop,
+
+298
+00:16:48,682 --> 00:16:53,976
+or a home… you are asserting facts
+about a place and a people.
+
+299
+00:16:53,976 --> 00:16:56,709
+Only assert what you can verify.
+
+300
+00:16:56,709 --> 00:17:01,576
+Here is the example I will keep
+returning to all session.
+
+301
+00:17:01,696 --> 00:17:04,155
+Listen to the density of it.
+
+302
+00:17:04,155 --> 00:17:08,634
+A fisherman in his sixties
+from the Brittany coast.
+
+303
+00:17:08,634 --> 00:17:10,566
+Short grey-white hair.
+
+304
+00:17:10,566 --> 00:17:12,323
+Dark oilskin jacket.
+
+305
+00:17:12,323 --> 00:17:15,308
+Hands marked with salt and cracks.
+
+306
+00:17:15,308 --> 00:17:18,207
+He slowly draws in a fishing net.
+
+307
+00:17:18,207 --> 00:17:21,368
+The rope slides between his fingers.
+
+308
+00:17:21,368 --> 00:17:24,705
+Water drips from the back of his hand.
+
+309
+00:17:24,825 --> 00:17:28,085
+Setting: a granite quay
+at five in the morning,
+
+310
+00:17:28,085 --> 00:17:33,842
+thin mist not yet lifted… a lighthouse beam
+still sweeping the sea in the distance,
+
+311
+00:17:33,842 --> 00:17:36,547
+cables and buoys scattered at his feet.
+
+312
+00:17:36,547 --> 00:17:39,738
+Camera: slow lateral
+track, from a medium shot
+
+313
+00:17:39,738 --> 00:17:45,356
+to a close-up of the hands… ending on the
+point where the knuckles meet the rope.
+
+314
+00:17:45,476 --> 00:17:49,445
+Style: documentary cinema,
+cold grey-blue dominant,
+
+315
+00:17:49,445 --> 00:17:52,325
+low colour-temperature morning light,
+
+316
+00:17:52,325 --> 00:17:56,838
+shallow depth of field… thirty-five
+millimetre film grain.
+
+317
+00:17:56,838 --> 00:18:02,286
+Audio: low-frequency surf, the creak
+of a loaded cable, distant gulls.
+
+318
+00:18:02,286 --> 00:18:02,986
+No score.
+
+319
+00:18:02,986 --> 00:18:04,465
+Count the elements.
+
+320
+00:18:04,465 --> 00:18:05,866
+All six are there!
+
+321
+00:18:05,986 --> 00:18:11,035
+That is why it works… and that is why
+it will still work in three years,
+
+322
+00:18:11,035 --> 00:18:13,419
+on a tool that does not exist yet.
+
+323
+00:18:14,019 --> 00:18:16,890
+Now the three elements people skip.
+
+324
+00:18:16,890 --> 00:18:18,203
+Camera movement.
+
+325
+00:18:18,203 --> 00:18:21,403
+I am not going to make you memorise ten
+
+326
+00:18:21,403 --> 00:18:26,325
+movements in three minutes… they
+are on your reference card.
+
+327
+00:18:26,325 --> 00:18:31,575
+I will give you the two rules that
+prevent almost every failure.
+
+328
+00:18:31,575 --> 00:18:36,087
+Rule one: always write the
+start and the end shot size.
+
+329
+00:18:36,087 --> 00:18:38,302
+Dolly in is not executable.
+
+330
+00:18:38,422 --> 00:18:44,320
+It does not say where you begin or where
+you stop… so the model picks for you.
+
+331
+00:18:44,320 --> 00:18:50,142
+Push from a full shot of the workshop to
+a close-up of the hands at the loom.
+
+332
+00:18:50,142 --> 00:18:51,578
+That is executable!
+
+333
+00:18:51,578 --> 00:18:53,998
+Rule two: one movement per shot.
+
+334
+00:18:54,118 --> 00:18:58,439
+When people stack three or four
+movements into a single prompt,
+
+335
+00:18:58,439 --> 00:19:02,830
+the model executes the first one…
+or blurs all of them together.
+
+336
+00:19:02,830 --> 00:19:06,260
+If you want three movements,
+you want three shots.
+
+337
+00:19:06,260 --> 00:19:06,672
+Style.
+
+338
+00:19:06,672 --> 00:19:09,210
+This is where the generic look lives.
+
+339
+00:19:09,210 --> 00:19:11,817
+And the word cinematic is not a style.
+
+340
+00:19:11,937 --> 00:19:14,531
+It is a mood you have about a style.
+
+341
+00:19:14,531 --> 00:19:18,927
+The model cannot execute it, so
+it falls back on its default:
+
+342
+00:19:18,927 --> 00:19:21,809
+over-smooth skin, over-saturated colour,
+
+343
+00:19:21,809 --> 00:19:26,637
+contrast that is too high, no grain…
+and light coming from nowhere.
+
+344
+00:19:26,637 --> 00:19:32,114
+Everybody now recognises that look in
+under a second, and it reads as cheap.
+
+345
+00:19:32,234 --> 00:19:35,497
+So write style in four separate parts.
+
+346
+00:19:35,497 --> 00:19:39,018
+Colour temperature: warm, cold, or mixed.
+
+347
+00:19:39,018 --> 00:19:40,907
+Contrast: high or low.
+
+348
+00:19:40,907 --> 00:19:47,090
+Grain or texture: thirty-five millimetre
+grain, clean digital, or matte.
+
+349
+00:19:47,090 --> 00:19:50,782
+Depth of field: shallow, or deep and sharp.
+
+350
+00:19:50,902 --> 00:19:56,232
+Cold grey-blue dominant, low
+colour-temperature morning light,
+
+351
+00:19:56,232 --> 00:20:01,218
+shallow depth of field… thirty-five
+millimetre film grain.
+
+352
+00:20:01,218 --> 00:20:02,594
+That is a style!
+
+353
+00:20:02,594 --> 00:20:04,055
+It is executable.
+
+354
+00:20:04,055 --> 00:20:08,784
+And, more importantly for a
+business… it is repeatable.
+
+355
+00:20:08,784 --> 00:20:09,299
+Audio.
+
+356
+00:20:09,299 --> 00:20:13,770
+Almost everybody forgets
+audio on the first attempt.
+
+357
+00:20:13,890 --> 00:20:19,872
+Write it in three layers: ambient
+sound, specific effects, and score.
+
+358
+00:20:19,872 --> 00:20:25,507
+Or write no score, which is a
+legitimate and often better choice.
+
+359
+00:20:25,507 --> 00:20:31,143
+Silence with one real sound in it
+beats generic music every time.
+
+360
+00:20:31,143 --> 00:20:35,478
+And now one enterprise
+warning, before we move on.
+
+361
+00:20:35,478 --> 00:20:37,819
+Please write this one down!
+
+362
+00:20:37,939 --> 00:20:42,994
+Image models render text, logos,
+and fine typography unreliably.
+
+363
+00:20:42,994 --> 00:20:44,811
+They get letters wrong.
+
+364
+00:20:44,811 --> 00:20:46,706
+They invent extra words.
+
+365
+00:20:46,706 --> 00:20:53,183
+They approximate a logo that is almost
+right… which is worse than obviously wrong!
+
+366
+00:20:53,183 --> 00:20:59,502
+So: never let the model draw your logo,
+your packaging text, or your legal copy.
+
+367
+00:20:59,502 --> 00:21:01,160
+Generate the picture.
+
+368
+00:21:01,280 --> 00:21:07,389
+Then put real vector artwork and real type on
+top, in a normal design tool… afterwards.
+
+369
+00:21:07,389 --> 00:21:13,076
+This one habit will save you from most of
+the embarrassments in this entire area.
+
+370
+00:21:13,076 --> 00:21:18,413
+And it costs you nothing… because it is
+only a change in the order you work.
+
+371
+00:21:19,013 --> 00:21:23,747
+This is the most important page
+of the session for a business.
+
+372
+00:21:23,747 --> 00:21:28,482
+If you forget the six elements,
+you will make an ugly picture.
+
+373
+00:21:28,482 --> 00:21:32,682
+If you forget this… you will
+make an expensive mistake!
+
+374
+00:21:32,682 --> 00:21:36,500
+Not every image has to be
+true to the same degree.
+
+375
+00:21:36,620 --> 00:21:42,334
+So before you write a single prompt,
+sort the asset into one of three tiers.
+
+376
+00:21:42,334 --> 00:21:44,815
+Tier one: must be literally true.
+
+377
+00:21:44,815 --> 00:21:46,244
+The product itself.
+
+378
+00:21:46,244 --> 00:21:47,297
+The packaging.
+
+379
+00:21:47,297 --> 00:21:48,049
+The label.
+
+380
+00:21:48,049 --> 00:21:49,552
+The ingredient list.
+
+381
+00:21:49,552 --> 00:21:51,658
+The face of a real employee.
+
+382
+00:21:51,658 --> 00:21:58,425
+Anything a customer could reasonably rely on…
+or compare against what arrives in the post.
+
+383
+00:21:58,545 --> 00:22:03,467
+The tier one rule: use real
+photography as your reference,
+
+384
+00:22:03,467 --> 00:22:07,285
+generate as little as you can, and verify the
+
+385
+00:22:07,285 --> 00:22:12,207
+output against the physical
+object before it is published.
+
+386
+00:22:12,207 --> 00:22:14,158
+Tier two: illustrative.
+
+387
+00:22:14,158 --> 00:22:15,601
+Lifestyle scenes.
+
+388
+00:22:15,601 --> 00:22:16,025
+Mood.
+
+389
+00:22:16,025 --> 00:22:17,043
+Backgrounds.
+
+390
+00:22:17,043 --> 00:22:17,807
+Concepts.
+
+391
+00:22:17,807 --> 00:22:22,474
+A hand holding a cup, a street,
+a landscape, a texture.
+
+392
+00:22:22,594 --> 00:22:28,106
+Nothing in a tier two asset makes a
+factual claim about your product.
+
+393
+00:22:28,106 --> 00:22:30,902
+The tier two rule: generate freely!
+
+394
+00:22:30,902 --> 00:22:37,931
+This is where the productivity gain actually
+lives… and most of your volume is tier two.
+
+395
+00:22:37,931 --> 00:22:40,407
+Tier three: a fictional person.
+
+396
+00:22:40,407 --> 00:22:43,123
+A spokesperson who does not exist.
+
+397
+00:22:43,123 --> 00:22:46,877
+A customer in your video
+who is not a customer.
+
+398
+00:22:46,997 --> 00:22:52,139
+The tier three rule: consent and
+disclosure obligations apply.
+
+399
+00:22:52,139 --> 00:22:54,959
+We come to them in twenty minutes.
+
+400
+00:22:54,959 --> 00:22:56,535
+Look at the screen.
+
+401
+00:22:56,535 --> 00:23:01,179
+On the left is the catalogue
+image we generated earlier.
+
+402
+00:23:01,179 --> 00:23:05,243
+On the right is a photograph
+of the real product.
+
+403
+00:23:05,243 --> 00:23:06,155
+Same weave?
+
+404
+00:23:06,155 --> 00:23:06,404
+No.
+
+405
+00:23:06,404 --> 00:23:08,643
+Same colour under daylight?
+
+406
+00:23:08,643 --> 00:23:09,140
+Close.
+
+407
+00:23:09,140 --> 00:23:10,219
+Not the same.
+
+408
+00:23:10,339 --> 00:23:11,452
+Same dimensions?
+
+409
+00:23:11,452 --> 00:23:12,496
+We cannot tell.
+
+410
+00:23:12,496 --> 00:23:16,323
+And neither can the customer…
+until the parcel arrives.
+
+411
+00:23:16,323 --> 00:23:18,063
+This is a tier one asset.
+
+412
+00:23:18,063 --> 00:23:21,264
+And what you have just
+seen is the single most
+
+413
+00:23:21,264 --> 00:23:25,439
+common way a small business harms
+itself with generative AI:
+
+414
+00:23:25,439 --> 00:23:28,919
+it treats a tier one asset
+as if it were tier two.
+
+415
+00:23:28,919 --> 00:23:30,728
+The image looks beautiful.
+
+416
+00:23:30,848 --> 00:23:33,774
+The customer receives something different.
+
+417
+00:23:33,774 --> 00:23:36,003
+That is not a technical problem.
+
+418
+00:23:36,003 --> 00:23:38,650
+That is a consumer protection problem.
+
+419
+00:23:38,650 --> 00:23:42,133
+And in most jurisdictions,
+it is also a legal one.
+
+420
+00:23:42,133 --> 00:23:48,193
+The whole discipline is one question, asked
+before you start: which tier is this asset?
+
+421
+00:23:48,313 --> 00:23:55,830
+The answer changes your workflow, your budget,
+your review step, and your legal exposure.
+
+422
+00:23:55,830 --> 00:23:57,941
+Ask it first… every time.
+
+423
+00:23:58,541 --> 00:24:04,342
+Two minutes on light, because it is the
+cheapest quality you can buy with words!
+
+424
+00:24:04,342 --> 00:24:05,792
+Light has direction.
+
+425
+00:24:05,792 --> 00:24:09,707
+Frontal light gives clear
+detail… and almost no depth.
+
+426
+00:24:09,707 --> 00:24:12,825
+It is flat, and it suits a product display.
+
+427
+00:24:12,825 --> 00:24:16,160
+Lateral light gives half
+light and half shade…
+
+428
+00:24:16,160 --> 00:24:19,568
+and that is where texture
+and volume come from!
+
+429
+00:24:19,688 --> 00:24:24,419
+This is your craftsmanship
+shot, your material close-up.
+
+430
+00:24:24,419 --> 00:24:27,798
+Backlight separates the subject from the
+
+431
+00:24:27,798 --> 00:24:32,866
+background with a bright outline…
+and underexposes the face.
+
+432
+00:24:32,866 --> 00:24:38,779
+It belongs in an aspirational brand
+film, usually as the closing shot.
+
+433
+00:24:38,779 --> 00:24:44,608
+Top light drops the eye sockets into
+shadow… and reads as oppressive.
+
+434
+00:24:44,728 --> 00:24:49,718
+Under-lighting looks wrong to
+every human eye on earth!
+
+435
+00:24:49,718 --> 00:24:53,619
+Avoid both in marketing unless you mean it.
+
+436
+00:24:53,619 --> 00:24:55,251
+Light has quality.
+
+437
+00:24:55,251 --> 00:25:00,332
+Hard light: sharp shadow edges,
+high contrast… dramatic.
+
+438
+00:25:00,332 --> 00:25:04,051
+Soft light: graduated shadows, forgiving,
+
+439
+00:25:04,051 --> 00:25:08,587
+and the right default for
+people and for products.
+
+440
+00:25:08,707 --> 00:25:15,218
+And volumetric light: visible beams… where the
+air itself carries mist, dust, or smoke!
+
+441
+00:25:15,218 --> 00:25:17,538
+Let me give you a trade secret.
+
+442
+00:25:17,538 --> 00:25:23,675
+Of every word in this session, volumetric
+lighting has the highest value per word!
+
+443
+00:25:23,675 --> 00:25:29,662
+One phrase, and the perceived production
+quality of your image jumps noticeably.
+
+444
+00:25:29,782 --> 00:25:33,515
+Use it deliberately… and do not overuse it.
+
+445
+00:25:33,515 --> 00:25:35,251
+Light also has time.
+
+446
+00:25:35,251 --> 00:25:39,504
+Golden hour is warm, low…
+and casts long shadows.
+
+447
+00:25:39,504 --> 00:25:41,067
+Blue hour is cold.
+
+448
+00:25:41,067 --> 00:25:48,792
+Solar noon is flat, and it is the reason
+professional photographers do not shoot at noon.
+
+449
+00:25:48,792 --> 00:25:49,747
+And colour.
+
+450
+00:25:49,867 --> 00:25:58,167
+Write three separate instructions: the dominant
+colour, the contrast, and the saturation.
+
+451
+00:25:58,167 --> 00:26:00,872
+Do not write a high-end feel!
+
+452
+00:26:00,872 --> 00:26:05,348
+Write: warm dominant, low
+contrast, desaturated.
+
+453
+00:26:05,348 --> 00:26:06,654
+One is a mood.
+
+454
+00:26:06,654 --> 00:26:09,265
+The other is an instruction!
+
+455
+00:26:09,865 --> 00:26:12,083
+Shot size is not decoration.
+
+456
+00:26:12,083 --> 00:26:15,250
+Shot size decides what this shot is for.
+
+457
+00:26:15,250 --> 00:26:16,517
+From the widest.
+
+458
+00:26:16,517 --> 00:26:21,744
+Extreme wide: the scale of the
+operation, the site, the geography.
+
+459
+00:26:21,744 --> 00:26:23,803
+Wide: establish the scene.
+
+460
+00:26:23,803 --> 00:26:28,159
+Full: the whole product, or
+the whole person in action.
+
+461
+00:26:28,159 --> 00:26:29,901
+Medium: the workhorse.
+
+462
+00:26:30,021 --> 00:26:37,219
+This is where demonstration and conversation
+live… and it will be most of your shots.
+
+463
+00:26:37,219 --> 00:26:40,267
+Close-up: reaction, quality, detail.
+
+464
+00:26:40,267 --> 00:26:45,857
+Extreme close-up: craftsmanship,
+texture, the one decisive object.
+
+465
+00:26:45,857 --> 00:26:47,974
+Three more worth knowing.
+
+466
+00:26:47,974 --> 00:26:52,038
+Point of view: the viewer
+becomes the character.
+
+467
+00:26:52,158 --> 00:26:55,618
+And it is the strongest
+identification tool you have.
+
+468
+00:26:55,618 --> 00:26:59,208
+Over-the-shoulder: the standard
+for two people talking.
+
+469
+00:26:59,208 --> 00:27:03,255
+And the insert: a cutaway to an
+object… which controls pacing,
+
+470
+00:27:03,255 --> 00:27:06,389
+and controls when the
+audience learns something.
+
+471
+00:27:06,509 --> 00:27:09,573
+Composition: rule of thirds, symmetry,
+
+472
+00:27:09,573 --> 00:27:14,089
+leading lines, foreground
+occlusion, and negative space.
+
+473
+00:27:14,089 --> 00:27:18,847
+One rule, and it is the same
+rule as everything else today:
+
+474
+00:27:18,847 --> 00:27:22,879
+composition words must be
+written into the prompt.
+
+475
+00:27:22,879 --> 00:27:26,830
+The model does not follow
+composition by default.
+
+476
+00:27:26,830 --> 00:27:30,863
+If you want the subject on
+the left third… say so.
+
+477
+00:27:30,983 --> 00:27:34,381
+And one business addition
+that designers already know,
+
+478
+00:27:34,381 --> 00:27:38,471
+and that marketers usually miss:
+if the asset is for advertising,
+
+479
+00:27:38,471 --> 00:27:40,737
+reserve negative space for the text.
+
+480
+00:27:40,737 --> 00:27:42,058
+Say it in the prompt.
+
+481
+00:27:42,058 --> 00:27:44,009
+Empty space in the upper third.
+
+482
+00:27:44,129 --> 00:27:46,778
+Because if you do not, there will be nowhere
+
+483
+00:27:46,778 --> 00:27:50,572
+to put your headline… and you will
+regenerate the entire thing!
+
+484
+00:27:51,172 --> 00:27:54,445
+We have now moved from still images to video.
+
+485
+00:27:54,445 --> 00:28:00,554
+In video, camera movement does the most work…
+and it is the element you cannot fake.
+
+486
+00:28:00,554 --> 00:28:02,227
+Here is the vocabulary.
+
+487
+00:28:02,227 --> 00:28:03,245
+Ten movements.
+
+488
+00:28:03,245 --> 00:28:06,445
+You will not memorise them in three minutes,
+
+489
+00:28:06,445 --> 00:28:09,791
+and you do not need to…
+they are on your card.
+
+490
+00:28:09,911 --> 00:28:12,953
+But you should be able to recognise them…
+
+491
+00:28:12,953 --> 00:28:18,294
+because naming a movement precisely
+is exactly what makes it executable.
+
+492
+00:28:18,294 --> 00:28:21,485
+Dolly in: the camera physically approaches.
+
+493
+00:28:21,485 --> 00:28:26,158
+It concentrates attention, and
+enters the subject's inner life.
+
+494
+00:28:26,158 --> 00:28:28,533
+Dolly out: the camera withdraws.
+
+495
+00:28:28,533 --> 00:28:33,132
+It reveals the environment, and
+it creates isolation or scale.
+
+496
+00:28:33,252 --> 00:28:36,718
+Pan: the camera turns
+horizontally on its axis.
+
+497
+00:28:36,718 --> 00:28:42,323
+It moves attention, and establishes where
+things are relative to each other.
+
+498
+00:28:42,323 --> 00:28:44,314
+Tilt: the same, vertically.
+
+499
+00:28:44,314 --> 00:28:48,591
+It shows height, and it takes
+us from a part to the whole.
+
+500
+00:28:48,591 --> 00:28:52,353
+Tracking: the camera travels
+alongside the subject.
+
+501
+00:28:52,353 --> 00:28:54,344
+Energy… and identification.
+
+502
+00:28:54,344 --> 00:28:56,261
+Orbit: the camera circles.
+
+503
+00:28:56,381 --> 00:29:00,701
+It says this subject is worth walking around.
+
+504
+00:29:00,701 --> 00:29:02,333
+It suspends time.
+
+505
+00:29:02,333 --> 00:29:07,804
+Crane: the viewpoint rises,
+from a person to a landscape.
+
+506
+00:29:07,804 --> 00:29:08,860
+Epic scale.
+
+507
+00:29:08,860 --> 00:29:11,644
+Handheld: the frame breathes.
+
+508
+00:29:11,644 --> 00:29:16,059
+Tension, documentary
+truth, a loss of control.
+
+509
+00:29:16,059 --> 00:29:20,187
+Aerial: geography, and comparison of scale.
+
+510
+00:29:20,187 --> 00:29:23,355
+Whip pan: a fast horizontal blur.
+
+511
+00:29:23,475 --> 00:29:28,124
+It is a transition and a rhythm
+change at the same time.
+
+512
+00:29:28,124 --> 00:29:34,765
+Now let us do this backwards… which is how
+you will actually use it in practice.
+
+513
+00:29:34,765 --> 00:29:37,007
+I will give you an emotion.
+
+514
+00:29:37,007 --> 00:29:39,082
+You tell me the movement.
+
+515
+00:29:39,082 --> 00:29:41,656
+Do not look for a right answer.
+
+516
+00:29:41,656 --> 00:29:44,562
+Look for the one that expresses it.
+
+517
+00:29:44,562 --> 00:29:45,143
+Relief.
+
+518
+00:29:45,143 --> 00:29:46,554
+A slow dolly out.
+
+519
+00:29:46,674 --> 00:29:52,394
+The frame opens, the character gets
+smaller… the world gets bigger.
+
+520
+00:29:52,394 --> 00:29:53,589
+Being watched.
+
+521
+00:29:53,589 --> 00:29:57,003
+A very slow push-in that never resolves.
+
+522
+00:29:57,003 --> 00:30:03,235
+The audience feels the approach, without
+ever seeing what is approaching.
+
+523
+00:30:03,235 --> 00:30:04,515
+Pride in craft.
+
+524
+00:30:04,515 --> 00:30:05,284
+An orbit.
+
+525
+00:30:05,284 --> 00:30:10,320
+Because an orbit says: this
+object is worth walking around.
+
+526
+00:30:10,440 --> 00:30:11,909
+A long day ending.
+
+527
+00:30:11,909 --> 00:30:16,315
+A crane, or a locked-off wide
+with the light changing.
+
+528
+00:30:16,315 --> 00:30:17,702
+Both are correct.
+
+529
+00:30:17,702 --> 00:30:20,557
+Notice what happened in every case.
+
+530
+00:30:20,557 --> 00:30:25,371
+You did not choose a movement
+because it looked impressive.
+
+531
+00:30:25,371 --> 00:30:28,635
+You chose it because it meant something.
+
+532
+00:30:28,755 --> 00:30:31,152
+That is the third rule of camera work,
+
+533
+00:30:31,152 --> 00:30:35,379
+and it is the one that separates a
+competent video from a showreel:
+
+534
+00:30:35,379 --> 00:30:37,461
+movement serves narrative intent.
+
+535
+00:30:37,461 --> 00:30:41,498
+If a movement does not mean anything…
+cut it, and hold the shot.
+
+536
+00:30:42,098 --> 00:30:44,468
+A brand video is never one shot.
+
+537
+00:30:44,468 --> 00:30:45,727
+It is a sequence.
+
+538
+00:30:45,727 --> 00:30:49,578
+So how do you write several
+shots inside one prompt?
+
+539
+00:30:49,578 --> 00:30:53,576
+There are three methods, and
+each one has a real cost.
+
+540
+00:30:53,576 --> 00:30:56,909
+I am going to give you the cost, not just the
+
+541
+00:30:56,909 --> 00:31:01,426
+technique… because choosing between
+them is a judgement call.
+
+542
+00:31:01,546 --> 00:31:04,094
+Method A: natural-language segments.
+
+543
+00:31:04,094 --> 00:31:06,785
+You write: the shot opens on the loom,
+
+544
+00:31:06,785 --> 00:31:12,236
+then the camera moves to the hands, then
+we see the finished blanket, folded.
+
+545
+00:31:12,236 --> 00:31:18,395
+It is the easiest to write, the easiest for a
+beginner, and it suits two to four shots.
+
+546
+00:31:18,395 --> 00:31:21,156
+The cost: shot boundaries are unstable.
+
+547
+00:31:21,276 --> 00:31:25,949
+The model may merge your three
+shots into one continuous move.
+
+548
+00:31:25,949 --> 00:31:29,415
+Or it may cut where you
+never asked for a cut.
+
+549
+00:31:29,415 --> 00:31:30,997
+Method B: timestamps.
+
+550
+00:31:30,997 --> 00:31:35,519
+You write: zero to three seconds,
+wide shot of the workshop.
+
+551
+00:31:35,519 --> 00:31:38,232
+Three to six, close-up of the hands.
+
+552
+00:31:38,232 --> 00:31:40,869
+Six to eight, the finished product.
+
+553
+00:31:40,869 --> 00:31:43,506
+The boundaries are now unambiguous!
+
+554
+00:31:43,626 --> 00:31:46,719
+This is the clearest method, and it suits
+
+555
+00:31:46,719 --> 00:31:51,623
+rhythm-driven advertising… where
+the cut has to land on the beat.
+
+556
+00:31:51,623 --> 00:31:55,169
+The cost: hard-coded time
+makes the model rush.
+
+557
+00:31:55,169 --> 00:31:59,091
+If you give an action two
+seconds and it needs four,
+
+558
+00:31:59,091 --> 00:32:02,034
+the model does not fail… it compresses.
+
+559
+00:32:02,154 --> 00:32:05,864
+The movement looks
+accelerated and artificial,
+
+560
+00:32:05,864 --> 00:32:11,672
+and you will not understand why… because
+the prompt was perfectly clear.
+
+561
+00:32:11,672 --> 00:32:13,850
+Method C: the style anchor.
+
+562
+00:32:13,850 --> 00:32:17,721
+This is not really a
+segmentation method at all.
+
+563
+00:32:17,721 --> 00:32:21,835
+It is the thing that makes
+segmentation survivable.
+
+564
+00:32:21,955 --> 00:32:28,586
+You write one global style declaration, and
+it applies to every shot in the sequence.
+
+565
+00:32:28,586 --> 00:32:30,146
+Something like this.
+
+566
+00:32:30,146 --> 00:32:34,437
+All shots: documentary cinema,
+cold grey-blue dominant,
+
+567
+00:32:34,437 --> 00:32:37,323
+low colour-temperature morning light,
+
+568
+00:32:37,323 --> 00:32:42,628
+shallow depth of field, thirty-five
+millimetre film grain… no score.
+
+569
+00:32:42,748 --> 00:32:46,248
+Then you write your individual
+shots underneath it.
+
+570
+00:32:46,248 --> 00:32:49,886
+Method C is the core technique
+of this entire module,
+
+571
+00:32:49,886 --> 00:32:53,524
+and I want to explain why…
+because it is not obvious.
+
+572
+00:32:53,524 --> 00:32:56,270
+When people make a multi-shot video, the
+
+573
+00:32:56,270 --> 00:33:00,801
+failure they complain about is
+almost never that shot two is ugly.
+
+574
+00:33:00,921 --> 00:33:05,968
+It is that shot two looks like a
+different film from shot one!
+
+575
+00:33:05,968 --> 00:33:08,328
+Warm grain in the first shot.
+
+576
+00:33:08,328 --> 00:33:11,177
+Cold, clean, digital in the second.
+
+577
+00:33:11,177 --> 00:33:14,027
+Same product, same day, same story.
+
+578
+00:33:14,027 --> 00:33:19,155
+And the audience feels the seam…
+even when they cannot name it.
+
+579
+00:33:19,155 --> 00:33:23,144
+Style drift is the real
+enemy of multi-shot work.
+
+580
+00:33:23,144 --> 00:33:24,283
+Not bad shots.
+
+581
+00:33:24,403 --> 00:33:25,890
+Inconsistent ones.
+
+582
+00:33:25,890 --> 00:33:29,111
+The style anchor is the countermeasure.
+
+583
+00:33:29,111 --> 00:33:35,802
+Write it once, at the top… and reuse it
+word for word across the entire campaign.
+
+584
+00:33:36,402 --> 00:33:38,969
+Three more levers for consistency.
+
+585
+00:33:38,969 --> 00:33:44,406
+They are small… and they matter more
+than anything else in this session.
+
+586
+00:33:44,406 --> 00:33:48,635
+Lever one: repeat the subject
+description word for word.
+
+587
+00:33:48,635 --> 00:33:51,127
+Not approximately… word for word!
+
+588
+00:33:51,127 --> 00:33:54,903
+A sixty-year-old fisherman,
+and the old fisherman,
+
+589
+00:33:54,903 --> 00:33:57,924
+are, to the model, two different people.
+
+590
+00:33:58,044 --> 00:34:01,254
+It has no memory of your last prompt.
+
+591
+00:34:01,254 --> 00:34:04,203
+So synonyms are not elegance here.
+
+592
+00:34:04,203 --> 00:34:05,851
+Synonyms are drift.
+
+593
+00:34:05,851 --> 00:34:11,056
+Copy and paste your subject
+sentence into every single shot.
+
+594
+00:34:11,056 --> 00:34:15,307
+Lever two: use image-to-video,
+not text-to-video.
+
+595
+00:34:15,307 --> 00:34:21,033
+Fix the character or the product
+once, with a text-to-image still.
+
+596
+00:34:21,033 --> 00:34:22,681
+Approve that still.
+
+597
+00:34:22,801 --> 00:34:25,364
+Then generate every shot from it.
+
+598
+00:34:25,364 --> 00:34:32,354
+This is the single largest consistency improvement
+available to you… and it costs nothing!
+
+599
+00:34:32,354 --> 00:34:35,927
+Lever three: name the key
+props in every shot.
+
+600
+00:34:35,927 --> 00:34:39,578
+If the story depends on
+an object… the blanket,
+
+601
+00:34:39,578 --> 00:34:44,549
+the tool, the cup, the box, mention
+it explicitly in every shot,
+
+602
+00:34:44,549 --> 00:34:46,801
+even when it feels redundant.
+
+603
+00:34:46,921 --> 00:34:49,721
+Especially when it feels redundant.
+
+604
+00:34:49,721 --> 00:34:53,240
+Now let me break all three rules on purpose.
+
+605
+00:34:53,240 --> 00:34:55,080
+Look at the third shot.
+
+606
+00:34:55,080 --> 00:34:57,399
+Different colour temperature.
+
+607
+00:34:57,399 --> 00:34:58,679
+Different grain.
+
+608
+00:34:58,679 --> 00:35:03,638
+And the product now has a different
+weave from the first shot!
+
+609
+00:35:03,638 --> 00:35:06,758
+Now I restore both, and generate again.
+
+610
+00:35:06,758 --> 00:35:07,558
+Same film.
+
+611
+00:35:07,558 --> 00:35:08,598
+Same product.
+
+612
+00:35:08,598 --> 00:35:09,717
+Same campaign!
+
+613
+00:35:09,837 --> 00:35:13,363
+That failure was more instructive than any
+
+614
+00:35:13,363 --> 00:35:20,331
+success I could have shown you… because this
+is exactly what happens in real teams.
+
+615
+00:35:20,331 --> 00:35:24,025
+Somebody rewrites a prompt to make it nicer.
+
+616
+00:35:24,025 --> 00:35:26,376
+Somebody tidies the wording.
+
+617
+00:35:26,376 --> 00:35:30,238
+And the campaign silently
+loses its coherence…
+
+618
+00:35:30,238 --> 00:35:34,687
+and nobody notices until the
+assets are side by side.
+
+619
+00:35:34,807 --> 00:35:41,078
+Now the business point, which is why this
+page matters more than the technique on it.
+
+620
+00:35:41,078 --> 00:35:44,251
+The style anchor is where your brand lives.
+
+621
+00:35:44,251 --> 00:35:45,210
+Brand colour.
+
+622
+00:35:45,210 --> 00:35:46,317
+Lens character.
+
+623
+00:35:46,317 --> 00:35:46,759
+Grade.
+
+624
+00:35:46,759 --> 00:35:47,202
+Grain.
+
+625
+00:35:47,202 --> 00:35:50,080
+You write them once, as a style anchor,
+
+626
+00:35:50,080 --> 00:35:54,064
+and you reuse them across
+every asset in the campaign.
+
+627
+00:35:54,184 --> 00:35:59,565
+And next year, and for the next product,
+and for the product after that.
+
+628
+00:35:59,565 --> 00:36:02,929
+At that point it is no longer a prompt trick.
+
+629
+00:36:02,929 --> 00:36:09,207
+It is a brand asset, stored in a file, that
+anyone on your team can pick up and use!
+
+630
+00:36:09,207 --> 00:36:12,346
+That is the moment prompting stops being a
+
+631
+00:36:12,346 --> 00:36:16,980
+personal skill… and starts being
+an organisational capability.
+
+632
+00:36:17,100 --> 00:36:18,010
+Hold that thought.
+
+633
+00:36:18,010 --> 00:36:20,286
+We come back to it at the end of the session.
+
+634
+00:36:20,886 --> 00:36:24,101
+Here is the entire method on one page!
+
+635
+00:36:24,101 --> 00:36:31,715
+This is the default business workflow, and it
+is exactly what I am about to run on screen.
+
+636
+00:36:31,715 --> 00:36:32,984
+One: the brief.
+
+637
+00:36:32,984 --> 00:36:35,183
+Not what image do we want.
+
+638
+00:36:35,183 --> 00:36:37,213
+What must this asset do?
+
+639
+00:36:37,213 --> 00:36:41,866
+Who sees it, where, and what
+should they do afterwards?
+
+640
+00:36:41,866 --> 00:36:44,320
+Two: the fidelity tier check.
+
+641
+00:36:44,440 --> 00:36:46,599
+Tier one, two, or three.
+
+642
+00:36:46,599 --> 00:36:53,165
+This decides whether you need a real
+photograph in hand before you begin.
+
+643
+00:36:53,165 --> 00:36:55,684
+Three: capability selection.
+
+644
+00:36:55,684 --> 00:36:58,923
+Text-to-image to decide the subject.
+
+645
+00:36:58,923 --> 00:37:01,711
+Image-to-video to make it move.
+
+646
+00:37:01,711 --> 00:37:03,240
+Four: the prompt.
+
+647
+00:37:03,240 --> 00:37:04,410
+Six elements.
+
+648
+00:37:04,410 --> 00:37:09,447
+Subject, action, setting,
+camera movement, style, audio.
+
+649
+00:37:09,447 --> 00:37:11,696
+Five: the reference lock.
+
+650
+00:37:11,816 --> 00:37:16,935
+An approved subject still,
+plus your brand style anchor.
+
+651
+00:37:16,935 --> 00:37:19,859
+Written once, reused everywhere!
+
+652
+00:37:19,859 --> 00:37:22,236
+Six: generate short shots.
+
+653
+00:37:22,236 --> 00:37:24,520
+Five to ten seconds each.
+
+654
+00:37:24,520 --> 00:37:26,348
+Seven: human review.
+
+655
+00:37:26,348 --> 00:37:27,262
+Brand fit.
+
+656
+00:37:27,262 --> 00:37:31,101
+Factual accuracy against the real product.
+
+657
+00:37:31,101 --> 00:37:32,015
+Artefacts!
+
+658
+00:37:32,015 --> 00:37:34,117
+Representation… Rights.
+
+659
+00:37:34,237 --> 00:37:37,821
+Eight: provenance mark and disclosure label,
+
+660
+00:37:37,821 --> 00:37:41,731
+for the platform you are
+actually publishing on.
+
+661
+00:37:41,731 --> 00:37:46,293
+Nine: publish, and store the
+prompt in the team library.
+
+662
+00:37:46,293 --> 00:37:47,433
+Let me run it.
+
+663
+00:37:47,433 --> 00:37:52,972
+Watch the length of each clip… About
+five seconds… About eight… Six.
+
+664
+00:37:52,972 --> 00:37:55,334
+That is not the tool failing.
+
+665
+00:37:55,454 --> 00:37:58,545
+That is the current reality
+of this technology,
+
+666
+00:37:58,545 --> 00:38:01,307
+and I want you to hear it plainly, because
+
+667
+00:38:01,307 --> 00:38:06,699
+managing this one expectation will save you
+a great deal of frustration next week.
+
+668
+00:38:06,699 --> 00:38:10,513
+Most tools generate roughly
+five to ten seconds at a time,
+
+669
+00:38:10,513 --> 00:38:13,603
+and consistency degrades
+as a clip gets longer.
+
+670
+00:38:13,603 --> 00:38:15,773
+So a brand film is not generated.
+
+671
+00:38:15,893 --> 00:38:19,650
+A brand film is assembled
+— from many short shots,
+
+672
+00:38:19,650 --> 00:38:24,984
+held together by one style anchor, and
+cut together in a normal editor.
+
+673
+00:38:24,984 --> 00:38:31,746
+If you go back to your office and try to produce
+a sixty second film from a single prompt,
+
+674
+00:38:31,746 --> 00:38:32,798
+you will fail.
+
+675
+00:38:32,798 --> 00:38:37,005
+And you will conclude that the
+technology does not work.
+
+676
+00:38:37,005 --> 00:38:37,982
+It does work.
+
+677
+00:38:38,102 --> 00:38:41,440
+It works at eight seconds at a time!
+
+678
+00:38:41,440 --> 00:38:46,633
+Plan for eight seconds, and
+you will look like a genius.
+
+679
+00:38:46,633 --> 00:38:51,270
+Plan for sixty, and you
+will look like a beginner.
+
+680
+00:38:51,870 --> 00:38:58,542
+Third message of the day: for business, one
+impressive image is not the deliverable!
+
+681
+00:38:58,542 --> 00:39:01,799
+Repeatable consistency, factual fidelity,
+
+682
+00:39:01,799 --> 00:39:06,804
+cleared rights, and honest disclosure…
+That is the deliverable!
+
+683
+00:39:06,804 --> 00:39:12,761
+A beautiful asset you cannot reproduce…
+or that misrepresents your product,
+
+684
+00:39:12,761 --> 00:39:13,953
+is a liability.
+
+685
+00:39:13,953 --> 00:39:15,303
+Four obligations.
+
+686
+00:39:15,423 --> 00:39:21,521
+And one disclaimer first, which I will
+not skip: this is not legal advice!
+
+687
+00:39:21,521 --> 00:39:24,158
+I am a trainer, not your lawyer.
+
+688
+00:39:24,158 --> 00:39:30,256
+Regulation in this area is moving
+quickly, and it differs by jurisdiction.
+
+689
+00:39:30,256 --> 00:39:34,211
+What I am teaching you is
+the habit of checking.
+
+690
+00:39:34,211 --> 00:39:35,530
+One: disclosure.
+
+691
+00:39:35,650 --> 00:39:38,807
+In the European Union, Article fifty of the
+
+692
+00:39:38,807 --> 00:39:44,680
+Artificial Intelligence Act applies from
+the second of August twenty twenty-six.
+
+693
+00:39:44,680 --> 00:39:48,571
+A deepfake, meaning a synthetic
+or manipulated image,
+
+694
+00:39:48,571 --> 00:39:51,802
+audio, or video that would falsely appear to
+
+695
+00:39:51,802 --> 00:39:57,455
+a person to be authentic… must be disclosed
+to the viewer, at first exposure!
+
+696
+00:39:57,575 --> 00:40:01,544
+And here is the detail
+that catches people out.
+
+697
+00:40:01,544 --> 00:40:07,457
+An embedded, machine-readable mark
+alone does not discharge that duty.
+
+698
+00:40:07,457 --> 00:40:12,186
+A provenance mark is a technical
+signal inside the file.
+
+699
+00:40:12,186 --> 00:40:16,831
+A disclosure label is a message
+a human being can read.
+
+700
+00:40:16,951 --> 00:40:22,950
+They are different objects, doing different
+jobs… and you may well need both.
+
+701
+00:40:22,950 --> 00:40:27,468
+For systems already placed on
+the market before that date,
+
+702
+00:40:27,468 --> 00:40:31,675
+the machine-readable marking
+duty under Article fifty,
+
+703
+00:40:31,675 --> 00:40:37,050
+paragraph two, applies from the second
+of December twenty twenty-six.
+
+704
+00:40:37,050 --> 00:40:38,686
+Two: platform labels.
+
+705
+00:40:38,806 --> 00:40:42,849
+Completely independently
+of any law, the major
+
+706
+00:40:42,849 --> 00:40:46,452
+advertising and social platforms each run
+
+707
+00:40:46,452 --> 00:40:53,571
+their own artificial intelligence labelling
+rule… And they are not the same rule!
+
+708
+00:40:53,571 --> 00:40:56,910
+Check the one you actually publish on.
+
+709
+00:40:56,910 --> 00:40:57,877
+Every time.
+
+710
+00:40:57,877 --> 00:40:59,811
+Three: substantiation.
+
+711
+00:40:59,811 --> 00:41:04,293
+Generating an image does not
+relax advertising law!
+
+712
+00:41:04,413 --> 00:41:07,943
+Your claims still need
+evidence… and a generated
+
+713
+00:41:07,943 --> 00:41:12,577
+image must not materially mislead
+a consumer about the product.
+
+714
+00:41:12,577 --> 00:41:17,358
+This is exactly the tier one problem
+from earlier in the session,
+
+715
+00:41:17,358 --> 00:41:20,006
+now with a regulator attached to it.
+
+716
+00:41:20,006 --> 00:41:21,772
+Four: likeness and data.
+
+717
+00:41:21,772 --> 00:41:27,068
+Get consent before you generate the
+face of a real, identifiable person!
+
+718
+00:41:27,188 --> 00:41:30,067
+Some jurisdictions now impose specific
+
+719
+00:41:30,067 --> 00:41:34,234
+advertising disclosure duties
+for synthetic performers.
+
+720
+00:41:34,234 --> 00:41:37,568
+And the one businesses most often get wrong:
+
+721
+00:41:37,568 --> 00:41:40,371
+do not upload customer personal data,
+
+722
+00:41:40,371 --> 00:41:44,008
+employee records, or
+unreleased product designs…
+
+723
+00:41:44,008 --> 00:41:49,843
+to a tool whose terms of service and data
+retention policy you have not read!
+
+724
+00:41:49,963 --> 00:41:52,345
+Your prompt is an upload.
+
+725
+00:41:52,345 --> 00:41:54,060
+Treat it like one.
+
+726
+00:41:54,060 --> 00:41:59,015
+Our demonstration asset is
+finished, and it is good.
+
+727
+00:41:59,015 --> 00:42:02,351
+Two questions before we publish it.
+
+728
+00:42:02,351 --> 00:42:04,161
+What must we label?
+
+729
+00:42:04,161 --> 00:42:07,973
+And on which platform, under which rule?
+
+730
+00:42:07,973 --> 00:42:13,023
+If you cannot answer both,
+the asset is not finished.
+
+731
+00:42:13,023 --> 00:42:15,024
+It is only generated.
+
+732
+00:42:15,624 --> 00:42:17,827
+Everything so far is a skill.
+
+733
+00:42:17,827 --> 00:42:20,789
+And a skill lives in one person's head,
+
+734
+00:42:20,789 --> 00:42:24,662
+and it leaves the building
+when that person leaves.
+
+735
+00:42:24,662 --> 00:42:30,434
+Here is how you turn it into a capability
+that belongs to your organisation!
+
+736
+00:42:30,434 --> 00:42:31,573
+Four artefacts.
+
+737
+00:42:31,573 --> 00:42:33,548
+None of them is expensive.
+
+738
+00:42:33,548 --> 00:42:36,509
+One: a written prompt template library.
+
+739
+00:42:36,629 --> 00:42:42,110
+Every prompt that produced a published
+asset goes into a shared file,
+
+740
+00:42:42,110 --> 00:42:45,764
+with the tool name, the
+date, and the licence.
+
+741
+00:42:45,764 --> 00:42:49,418
+Not a folder of pictures…
+a folder of recipes!
+
+742
+00:42:49,418 --> 00:42:51,880
+Two: an approved reference set.
+
+743
+00:42:51,880 --> 00:42:56,169
+The locked subject images,
+and the brand style anchor.
+
+744
+00:42:56,289 --> 00:43:03,766
+Once these exist, a new colleague can produce
+an on-brand asset on their first afternoon,
+
+745
+00:43:03,766 --> 00:43:08,302
+because the hard decisions
+were made once, and stored.
+
+746
+00:43:08,302 --> 00:43:12,754
+Three: a review step with a
+named person accountable.
+
+747
+00:43:12,754 --> 00:43:14,770
+Not the team reviews it.
+
+748
+00:43:14,770 --> 00:43:15,358
+A name!
+
+749
+00:43:15,358 --> 00:43:18,803
+Automation changes who produces the work.
+
+750
+00:43:18,923 --> 00:43:22,235
+It does not change who is accountable for it.
+
+751
+00:43:22,235 --> 00:43:24,223
+Four: a disclosure default.
+
+752
+00:43:24,223 --> 00:43:27,904
+Decide once, in advance,
+what you label and where,
+
+753
+00:43:27,904 --> 00:43:30,922
+so that nobody has to make that judgement
+
+754
+00:43:30,922 --> 00:43:35,339
+under deadline pressure… at four
+o'clock on a Friday, alone.
+
+755
+00:43:35,339 --> 00:43:39,241
+One more note for the library,
+and it is a legal one.
+
+756
+00:43:39,361 --> 00:43:45,563
+The copyright position of artificially
+generated output varies by jurisdiction,
+
+757
+00:43:45,563 --> 00:43:47,290
+and it is not settled.
+
+758
+00:43:47,290 --> 00:43:50,901
+Rights in training data
+are actively disputed.
+
+759
+00:43:51,021 --> 00:43:55,871
+And generated images can accidentally
+contain a third-party logo,
+
+760
+00:43:55,871 --> 00:44:02,513
+a trademarked character, or a recognisable
+building design… So record what you generated,
+
+761
+00:44:02,513 --> 00:44:06,393
+with which tool, under which
+licence, on which date.
+
+762
+00:44:06,393 --> 00:44:09,005
+That record is almost free to keep.
+
+763
+00:44:09,005 --> 00:44:13,109
+And if it is ever questioned,
+it is extremely valuable!
+
+764
+00:44:13,229 --> 00:44:14,471
+Four artefacts.
+
+765
+00:44:14,471 --> 00:44:15,299
+A library.
+
+766
+00:44:15,299 --> 00:44:16,624
+A reference set.
+
+767
+00:44:16,624 --> 00:44:18,032
+A named approver.
+
+768
+00:44:18,032 --> 00:44:19,770
+A disclosure default.
+
+769
+00:44:19,770 --> 00:44:22,999
+That is the entire organisational work!
+
+770
+00:44:23,599 --> 00:44:24,841
+Three messages.
+
+771
+00:44:24,841 --> 00:44:26,662
+And then one question.
+
+772
+00:44:26,662 --> 00:44:29,144
+One: the model does not guess!
+
+773
+00:44:29,144 --> 00:44:32,869
+Anything you leave out, it decides at random.
+
+774
+00:44:32,869 --> 00:44:38,662
+An unspecified dimension is not a
+neutral default… It is a delegation.
+
+775
+00:44:38,662 --> 00:44:42,552
+Two: a prompt is a shooting
+script, not a wish.
+
+776
+00:44:42,552 --> 00:44:47,104
+For every adjective, ask how
+a camera would capture it?
+
+777
+00:44:47,224 --> 00:44:52,067
+If you cannot answer, replace
+the adjective with an action,
+
+778
+00:44:52,067 --> 00:44:54,940
+a light position, or a composition.
+
+779
+00:44:54,940 --> 00:45:00,276
+Three: for business, one impressive
+image is not the deliverable!
+
+780
+00:45:00,276 --> 00:45:02,164
+Repeatable consistency.
+
+781
+00:45:02,164 --> 00:45:03,559
+Factual fidelity.
+
+782
+00:45:03,559 --> 00:45:04,790
+Cleared rights.
+
+783
+00:45:04,790 --> 00:45:06,268
+Honest disclosure.
+
+784
+00:45:06,388 --> 00:45:09,114
+A beautiful asset you cannot reproduce,
+
+785
+00:45:09,114 --> 00:45:12,678
+or that misrepresents your
+product… is a liability.
+
+786
+00:45:12,678 --> 00:45:15,334
+And the whole session in one sentence.
+
+787
+00:45:15,334 --> 00:45:19,738
+Generative AI removes the production
+bottleneck from marketing.
+
+788
+00:45:19,738 --> 00:45:22,813
+It does not remove the judgement bottleneck!
+
+789
+00:45:22,933 --> 00:45:26,241
+The businesses that benefit are the ones that
+
+790
+00:45:26,241 --> 00:45:30,872
+pair a disciplined prompt method
+with an honest fidelity check,
+
+791
+00:45:30,872 --> 00:45:33,959
+and a named person who approves the asset.
+
+792
+00:45:33,959 --> 00:45:36,238
+The tool will change next year.
+
+793
+00:45:36,238 --> 00:45:40,648
+The method, the tier check, and
+the accountability will not!
+
+794
+00:45:40,648 --> 00:45:42,119
+Your course project?
+
+795
+00:45:42,239 --> 00:45:45,899
+Produce one tier one catalogue product image,
+
+796
+00:45:45,899 --> 00:45:49,722
+built from a real photograph
+of a real product.
+
+797
+00:45:49,722 --> 00:45:56,637
+And one eight second, three shot brand video…
+held together by a single style anchor.
+
+798
+00:45:56,637 --> 00:45:59,403
+Submit the assets and the prompts.
+
+799
+00:45:59,403 --> 00:46:02,575
+The prompts are half of the assessment,
+
+800
+00:46:02,575 --> 00:46:06,805
+because the prompts are the
+part that is repeatable!
+
+801
+00:46:06,925 --> 00:46:11,162
+Now the question I want you
+to answer before you leave.
+
+802
+00:46:11,162 --> 00:46:14,243
+Which one asset will you make on Monday?
+
+803
+00:46:14,243 --> 00:46:16,554
+And which fidelity tier is it?
+
+804
+00:46:16,554 --> 00:46:17,864
+Hold that answer.
+
+805
+00:46:17,864 --> 00:46:21,022
+That is where the course actually starts!
+
+806
+00:46:21,022 --> 00:46:21,792
+Thank you.
+
